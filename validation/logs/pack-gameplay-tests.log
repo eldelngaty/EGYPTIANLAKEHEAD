@@ -1,0 +1,17 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS: Field guide opens on launch
+PASS: Enter closes field guide
+PASS: Keyboard movement works with new camera
+PASS: R reveals ancient world and bridge
+PASS: Golden transition and magic particles complete
+PASS: Staggered bridge restoration reaches original geometry
+PASS: R returns to present and hides bridge
+PASS: Present-day scarabs cannot be collected
+PASS: Three ancient scarabs collected
+PASS: Wrong altar order resets progress
+PASS: Reverse altar sequence grants key
+PASS: Key opens chamber
+PASS: Map discovered and displayed
+PASS: Queen rescue completes game
+PASS: Guidance reflects completion

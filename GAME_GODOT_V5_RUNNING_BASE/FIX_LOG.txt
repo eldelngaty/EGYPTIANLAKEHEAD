@@ -1,0 +1,1 @@
+V4 FIXED: Corrected main.gd line 803: added var declaration and Node3D type to fin before assigning _box result. Original erroneous syntax prevented GDScript from parsing. Godot editor launch/runtime not verified in this environment.

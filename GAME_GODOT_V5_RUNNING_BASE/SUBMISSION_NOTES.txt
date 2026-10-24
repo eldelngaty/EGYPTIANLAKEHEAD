@@ -1,0 +1,7 @@
+TITLE: Sphinx Reversal: Lakehead Rescue
+TYPE: 3D exploration / reversal puzzle
+ENGINE: Godot 4.7.2, GDScript
+CONTROLS: WASD Shift C R E M F1
+GAME LOOP: 3 scarabs -> reverse 3/2/1 altar -> key -> ATAC map vault -> Nefertiti at Lake Tamblyn
+THINK: "To move forward, reverse reality"
+NOTE: This is a playable project candidate pending engine validation on the user's Windows machine. Campus is a visual interpretation, not an exact virtual-tour reconstruction.

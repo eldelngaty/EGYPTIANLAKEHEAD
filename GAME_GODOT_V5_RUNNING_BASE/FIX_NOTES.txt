@@ -1,0 +1,5 @@
+V4 PATCHED — 24 October 2026
+
+Fixed 7 missing local variable declarations in _library_details and _atac_details, plus the existing fin declaration fix retained. The old errors at main.gd:775 and downstream y/x/z/h errors are resolved at source. All original gameplay and materials retained. This project is statically checked but has not been run in Godot 4.7 on this environment.
+
+Import project.godot from this directory into Godot; do not copy files into the old project while Godot is open. Press F5.

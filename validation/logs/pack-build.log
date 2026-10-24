@@ -1,0 +1,72 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/ancient_map.png-7ea2fb3a5924b6ab96cbd502e9986f5a.ctex[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://assets/ancient_map.png.import[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/art_brick.png-e56ca0e71cd9214dd165a35de5588f44.ctex[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://assets/art_brick.png.import[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/art_concrete.png-b2bea23c6bba68b0bc996aa070866643.ctex[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://assets/art_concrete.png.import[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/art_grass.png-3399c099ba369ff74cf065f52427d27f.ctex[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://assets/art_grass.png.import[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/art_paving.png-6a2c26b065311f33f5d96b7087ccdfc0.ctex[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://assets/art_paving.png.import[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/campus_brick.png-68120360bd776dcaf6e6ce0c4706d23c.ctex[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://assets/campus_brick.png.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/campus_concrete.png-30bea0a6b1e7e97c6e9f96b7fd57b884.ctex[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://assets/campus_concrete.png.import[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/campus_grass.png-141d8071efcfddfeb3799d65eea394b6.ctex[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://assets/campus_grass.png.import[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/campus_paving.png-29986567369cb750ec46b340a57c3173.ctex[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://assets/campus_paving.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/campus_radar.png-699c8af726e0096bf300fb376fe590cc.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://assets/campus_radar.png.import[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/campus_water.png-4c662fe94c0129cb1aa08f358fb0de0e.ctex[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://assets/campus_water.png.import[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/collect.wav-2e411dbf7effc361ba42de42a720007d.sample[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://assets/collect.wav.import[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/facade_agora_v5.jpg-83e2d0ec70ba2d9151e73bbb882f58e8.ctex[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://assets/facade_agora_v5.jpg.import[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/facade_paterson_v5.jpg-d003326cf7257cfc831ffa72d0acca46.ctex[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://assets/facade_paterson_v5.jpg.import[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/glass_atac_v5.jpg-a84946a50ccd559065b16dd47c65c868.ctex[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://assets/glass_atac_v5.jpg.import[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/hud_bottom.png-399080fafacd39453c8d23d27ad21fde.ctex[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://assets/hud_bottom.png.import[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/hud_header.png-4e0b2f042730f83f90cb1e906ec764c6.ctex[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://assets/hud_header.png.import[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/lakehead_sign.png-65783035c78ff7c1e32ab7960d5d3ecd.ctex[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://assets/lakehead_sign.png.import[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://assets/lake_water.gdshader[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/magic_circle.png-b578ee9b7efbf981e20041891b89fbce.ctex[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://assets/magic_circle.png.import[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/reverse.wav-e92691a82a9331272b542a8425817962.sample[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://assets/reverse.wav.import[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/sandstone_blocks.png-7fe9497a65a9755b5cafd3a46af11352.ctex[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://assets/sandstone_blocks.png.import[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/unlock.wav-5b45099b19d2b43e3fca99613495ed76.sample[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://assets/unlock.wav.import[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/victory.png-8637a1cea9501829f43a97dbe24baa6a.ctex[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://assets/victory.png.import[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/victory_fanfare.wav-f3b616a4dd35dec138cd004c1158ed00.sample[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://assets/victory_fanfare.wav.import[39m[0m
+[  88% ] [90m[1msavepack[22m | Storing File: res://environment_art.gdc[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://main.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://environment_art.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://main.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://main.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m

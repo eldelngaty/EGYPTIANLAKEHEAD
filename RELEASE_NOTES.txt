@@ -1,0 +1,29 @@
+SPHINX REVERSAL — LAKEHEAD CAMPUS EDITION
+Continues the existing Godot project; quest logic preserved.
+
+Open GAME_GODOT_V5_RUNNING_BASE/project.godot in Godot and press F5.
+Or run the packaged resource with Godot 4.6.3:
+  godot --main-pack build/SphinxReversal.pck
+The PCK requires Godot; it is not a standalone executable.
+
+VALIDATION
+- Godot 4.6.3 headless editor import: passed, no script errors.
+- Source gameplay suite: 15 checks passed.
+- Packaged PCK gameplay suite: same 15 checks passed.
+- PCK headless startup: passed.
+- PCK OpenGL rendering and screenshot save: passed (Mesa llvmpipe).
+- Actual scene screenshots included: Agora, Paterson, ATAC, character, lake,
+  ancient world, bridge, and normal gameplay camera.
+- Only graphical warning: virtual display does not support changing V-Sync.
+
+LIMITS
+- Supplied tour and cubemap URLs returned HTTP 403. Architecture is a stylized
+  approximation using included references, not a verified 1:1 reconstruction.
+- Windows export templates absent; no Windows executable produced.
+- Godot 4.7 was not installed; validation used 4.6.3.
+- Audio playback calls exercised, but audible output was not available.
+- No hardware GPU performance or Windows runtime test performed.
+
+Run source gameplay tests from the extracted archive root:
+  godot --headless --path GAME_GODOT_V5_RUNNING_BASE --editor --import --quit
+  godot --headless --path GAME_GODOT_V5_RUNNING_BASE --script ../validation/gameplay_smoke.gd
