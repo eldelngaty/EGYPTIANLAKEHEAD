@@ -1,3 +1,16 @@
+# Latest: Pharaoh / camera and quest upgrade
+
+The current uploaded Three.js game remains in [SPHINX_REVERSAL_WEB](SPHINX_REVERSAL_WEB/). Human armored Pharaoh, an actual-model portrait, swept camera collision and corner recovery, camera-relative movement, improved jumping/landing, three tested reversal puzzles and full Nefertiti rescue. Original tour imagery is preserved, with an optional correctly mapped Agora 360 reference and photographic reflections.
+
+- [Ready-to-play ZIP](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/SPHINX_REVERSAL_Pharaoh_Play.zip): extract and open PLAY_PHARAOH.html in Chrome/Edge.
+- [Complete project and all original panorama references](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/SPHINX_REVERSAL_Pharaoh_Project.zip).
+- [Actual Pharaoh portrait](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/Pharaoh_Portrait.png).
+- [Screenshots, full walkthrough and exact test scope](SPHINX_REVERSAL_WEB/qa/pharaoh/).
+
+Full normal-input quest 31/31; collision 24/24; camera math 9/9; final corrected-bundle review 9/9. Four original panoramas / 24 faces preserved bit-for-bit. The walkthrough precedes the final reference-orientation/glass correction, which has separate final-build evidence. Native Windows, gaming GPU, physical audio and human usability remain untested. Campus reconstruction is approximate; unavailable Sketchfab data/videos were not imported. Stable main is preserved and PR #1 stays unmerged.
+
+---
+
 # Latest: developed user-uploaded Three.js game
 
 The uploaded SPHINX_REVERSAL project is developed in [SPHINX_REVERSAL_WEB](SPHINX_REVERSAL_WEB/). Playable animated quadruped Sphinx, mouse orbit and wheel zoom, clearer mission marker, compact HUD, optimized static geometry and the original complete reversal quest.

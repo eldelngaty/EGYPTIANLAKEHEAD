@@ -131,13 +131,13 @@ export function createWorld(scene){
  const glyphRing=new THREE.Mesh(new THREE.TorusGeometry(1.9,.027,8,60),mats.egyptGlow);glyphRing.userData.dynamic=true;glyphRing.position.set(0,.15,12.7);glyphRing.rotation.x=Math.PI/2;root.add(glyphRing);
  const blockers = [
   ...agora.blockers,
-  ...[[-15.5,-11,11,.7],[-15.5,-3,11,.7],[-21,-7,.7,8],[-10,-10,.7,2],[-10,-4,.7,2]].map(([x,z,w,d])=>({x,z,w,d})),
-  {x:-10,z:-7,w:.8,d:3.95,when:'modern'},
-  {x:15.4,z:-7,w:.75,d:5.8,when:'ancient'},
-  {x:13,z:-10.05,w:15,d:.5},{x:13,z:-3.95,w:15,d:.5},{x:20.3,z:-7,w:.5,d:6.7},
+  ...[[-15.5,-11,11,.7],[-15.5,-3,11,.7],[-21,-7,.7,8],[-10,-10,.7,2],[-10,-4,.7,2]].map(([x,z,w,d])=>({x,z,w,d,y:1.15,h:2.3})),
+  {x:-10,z:-7,w:.8,d:3.95,y:1.45,h:2.9,when:'modern'},
+  {x:15.4,z:-7,w:.75,d:5.8,y:1.37,h:2.75,when:'ancient'},
+  {x:13,z:-10.05,w:15,d:.5,y:.8,h:.9},{x:13,z:-3.95,w:15,d:.5,y:.8,h:.9},{x:20.3,z:-7,w:.5,d:6.7,y:1,h:1.5},
   {x:-4,z:-23,w:.8,d:9},{x:4,z:-23,w:.8,d:9},{x:0,z:-27,w:8,d:.8},
   ...[[-3.1,-19.9],[3.1,-19.9],[-3.1,-26.1],[3.1,-26.1]].map(([x,z])=>({x,z,w:.6,d:.6})),
-  {x:0,z:-19,w:7,d:.5,when:'modern'},
+  {x:0,z:-19,w:7,d:.5,y:1.8,h:3.5,when:'modern'},
   {x:-11,z:9,w:9.4,d:5.8,when:'ancient'}
  ];
  const state={targetAncient:0,mix:0};
@@ -145,7 +145,7 @@ export function createWorld(scene){
  function inAncient(){return state.targetAncient===1}
  function blocked(x,z,ancientState=inAncient()){
   if(x < -23.8 || x>23.8||z< -28.6||z>18.6)return true;
-  const rad=.35;
+  const rad=.40;
   for(const b of blockers){if(b.when==='modern'&&ancientState)continue;if(b.when==='ancient'&&!ancientState)continue;
    if(Math.abs(x-b.x)<b.w/2+rad&&Math.abs(z-b.z)<b.d/2+rad)return true;
   }

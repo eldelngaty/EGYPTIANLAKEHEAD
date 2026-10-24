@@ -46,7 +46,7 @@ function textPanel(text,w,h,color='#9d7e43',size=84){
 function pavedTexture(){
  const canvas=document.createElement('canvas');canvas.width=512;canvas.height=512;
  const c=canvas.getContext('2d');c.fillStyle='#8f8079';c.fillRect(0,0,512,512);
- const tones=['#b9a49a','#b39e95','#bfaaa0','#ad9a92','#c2aea3','#b6a197','#a99890'];
+ const tones=['#b9b8b0','#b1b2aa','#c1c0b6','#aaa9a1','#c5c3b9','#b4b4ad','#a7a9a2'];
  for(let row=0;row<16;row++){const off=row%2?32:0;
   for(let col=-1;col<8;col++){const x=col*64+off,y=row*32,v=(row*7+col*11+13)%7;
    c.fillStyle=tones[v];c.fillRect(x+1.5,y+1.5,61,29);
@@ -89,7 +89,7 @@ export function createAgoraCampus(root){
  const blockers=[];
  const solid=(parent,x,y,z,w,h,d,mat,blocking=true)=>{
   const m=box(parent,x,y,z,w,h,d,mat);
-  if(blocking)blockers.push({x,z,w,d});return m;
+  if(blocking)blockers.push({x,z,w,d,y,h});return m;
  };
  // Wide slab-paved foreground (rectangular running-bond pavers, as photographed).
  const tileMat=patchReality(new THREE.MeshStandardMaterial({map:pavedTexture(),color:'#ffffff',roughness:.93}),{strength:.75,glyphs:1});
@@ -233,13 +233,15 @@ export function createAgoraCampus(root){
  const lobbyLight=new THREE.PointLight('#ffd9a6',14,16,1.6);lobbyLight.position.set(0,4,-14);atrium.add(lobbyLight);
  const signInterior=textPanel('AGORA',3.0,.7,'#f5e1b3',100);signInterior.position.set(0,3.35,-17.93);atrium.add(signInterior);
  let echo=0;
+ const cameraBounds=[];
+ for(const m of [...group.children,...atrium.children]){const p=m.geometry?.parameters;if(m.isMesh&&m.geometry.type==='BoxGeometry'&&p.width>2&&p.height>.15){cameraBounds.push({min:{x:m.position.x-p.width*.5,y:m.position.y-p.height*.5,z:m.position.z-p.depth*.5},max:{x:m.position.x+p.width*.5,y:m.position.y+p.height*.5,z:m.position.z+p.depth*.5}});if(m.position.y-p.height*.5<.5&&p.height>2)blockers.push({x:m.position.x,z:m.position.z,w:p.width,d:p.depth,y:m.position.y,h:p.height});}}
  return {
-  group,atrium,blockers,doors,
+  group,atrium,blockers,doors,cameraBounds,
   update(playerPosition,dt){
    // Facade transformation follows the reversal wavefront, not a global fade.
    echo=THREE.MathUtils.damp(echo,reality.target(0,frontZ),6,Math.max(dt||0,.016));
    frieze.material.opacity=echo*.95;ancientBanner.opacity=echo;modernBanner.opacity=1-echo*.9;cartouche.material.opacity=echo;sign.material.opacity=subtitle.material.opacity=1-echo;
-   skyGlass.emissive.setRGB(.55+echo*.4,.55+echo*.2,.55-echo*.25);lobbyLight.color.setRGB(1,.85-echo*.2,.65-echo*.35);
+   if(skyGlass.envMap)skyGlass.emissive.setRGB(echo*.35,echo*.16,echo*.02);else skyGlass.emissive.setRGB(.55+echo*.4,.55+echo*.2,.55-echo*.25);lobbyLight.color.setRGB(1,.85-echo*.2,.65-echo*.35);
    if(!playerPosition)return;
    const near=Math.abs(playerPosition.x)<3.55&&Math.abs(playerPosition.z-frontZ)<3.0;
    for(const {leaf,side,baseX} of doors){
@@ -251,3 +253,12 @@ export function createAgoraCampus(root){
   isInside(x,z){return Math.abs(x)<8.9&&z<frontZ&&z>backZ;}
  };
 }
+
+export function setCampusEnvironment(environment){
+ for(const m of [skyGlass,lowerGlass,doorGlass]){m.envMap=environment;m.envMapIntensity=.95;m.roughness=.16;m.needsUpdate=true;}
+ skyGlass.map=null;skyGlass.emissiveMap=null;skyGlass.emissive.set('#000000');skyGlass.color.set('#8cabb8');skyGlass.metalness=.66;
+ lowerGlass.map=null;lowerGlass.color.set('#365361');lowerGlass.opacity=.9;
+}
+
+const surfaceCanvas=document.createElement('canvas');surfaceCanvas.width=surfaceCanvas.height=128;const surfaceContext=surfaceCanvas.getContext('2d');surfaceContext.fillStyle='#bdbdbd';surfaceContext.fillRect(0,0,128,128);for(let i=0;i<2200;i++){const n=125+(i*19)%90;surfaceContext.fillStyle=`rgba(${n},${n},${n},.28)`;surfaceContext.fillRect((i*71)%128,(i*37+Math.floor(i/128)*13)%128,1,2);}const concreteGrain=new THREE.CanvasTexture(surfaceCanvas);concreteGrain.wrapS=concreteGrain.wrapT=THREE.RepeatWrapping;concreteGrain.repeat.set(3,2);for(const m of [cream,fascia,ribs,parapet,interiorWall]){m.bumpMap=concreteGrain;m.bumpScale=.018;m.roughness=.86;}
+const brickCanvas=document.createElement('canvas');brickCanvas.width=256;brickCanvas.height=256;const brickContext=brickCanvas.getContext('2d');brickContext.fillStyle='#8d8580';brickContext.fillRect(0,0,256,256);for(let row=0;row<10;row++)for(let col=-1;col<5;col++){const v=155+(row*17+col*31+50)%50;brickContext.fillStyle=`rgb(${v},${v-8},${v-13})`;brickContext.fillRect(col*64+(row%2?32:0)+1,row*26+1,61,23);}const brickRelief=new THREE.CanvasTexture(brickCanvas);brickRelief.wrapS=brickRelief.wrapT=THREE.RepeatWrapping;brickRelief.repeat.set(3,3);brick.map=brickRelief;brick.bumpMap=brickRelief;brick.bumpScale=.025;brick.needsUpdate=true;

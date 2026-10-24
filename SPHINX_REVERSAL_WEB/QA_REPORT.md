@@ -1,11 +1,13 @@
-# Current uploaded-project development pass
+# Pharaoh edition — current verified pass
 
-- Geometry/traversal: 24/24.
-- Actual WASD/mouse/wheel/Shift/R/E/CBA/M/ESC full quest and restart: 20/20 against source; 20/20 against self-contained HTML with network disabled.
-- Final packed HTML regression after visual fixes: 30/30. This additional regression uses the existing collision-checked movement replay between real keyboard/UI actions, unlike the full keyboard runs.
-- Final normal intro, solid four-legged hero profile and 1024px HUD rendered offline and inspected.
-- Actual screenshots, short gameplay recording, methods and logs: qa/current/.
+- Full normal-input mission and restart: **31/31**. Actual WASD/Shift/mouse/wheel/Space/R/E/CBA/M/ESC/UI; QA adapter observes only. Recorded in supported LOW quality on software WebGL.
+- Geometry/traversal: **24/24**. Swept camera/realm/corner math: **9/9**.
+- Final corrected bundle review: **9/9**, including 360 reference, premature-rescue rejection, bridge removal safety, opposite gate, hidden C and final camera clearance. This separate regression uses existing collision-checked travel replay.
+- Four original tour locations / 24 source panorama faces preserved bit-for-bit.
+- Actual running-game screenshots, actual-character portrait and full recording: qa/pharaoh/.
 
-The final visual pass corrected body triangle winding, foot height on plaza/atrium/bridge and the ending camera that crossed the Agora wall. Core quest state and original puzzle positions are retained.
+The final visual review found and fixed a cubemap convention/orientation issue in the optional reference viewer and photographic reflections. That visual correction and glass calibration occurred after the full recording; they were rechecked on the corrected final bundle. Camera/movement/quest/hero behavior matches the full normal-input run. Full details: qa/pharaoh/summary.json.
 
-Native Windows file launching is untested: local file URLs are blocked by administrator policy on this test runner. Standalone HTML was tested in actual Chromium with network disabled and its document supplied through a test response. Human usability, physical audio and gaming-GPU performance remain untested. See qa/current/summary.json for exact scope. Earlier reports are historical.
+Camera now sweeps a padded volume against real-height walls/doors and validates the smoothed result; tight corners choose an alternate orbit before entering the avatar. Movement follows the rendered camera, walls and water stop movement, and jump/landing animation and sound are improved. Main Agora geometry and three original realm-dependent puzzles remain.
+
+Limitations: architecture is approximate, small scenery has simplified collision, jumping is not platforming. Native Windows file launch, gaming GPU performance, physical audio and independent human usability remain untested. Local file URLs are blocked in this runner; bundled HTML was exercised in an actual browser with networking disabled. No unavailable user video or Sketchfab asset was imported. Earlier qa/current reports are historical.

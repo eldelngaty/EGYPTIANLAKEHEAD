@@ -10,7 +10,9 @@
     "preview": "node serve.mjs",
     "test:geometry": "node qa/agora-geometry.mjs",
     "build:standalone": "node scripts/standalone.mjs",
-    "test:input": "node qa/adventure-input.cjs"
+    "test:input": "node qa/adventure-input.cjs",
+    "build:portrait": "node scripts/portrait.mjs",
+    "test:camera": "node qa/camera-rig.mjs"
   },
   "dependencies": {
     "three": "^0.180.0"

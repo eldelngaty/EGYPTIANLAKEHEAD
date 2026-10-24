@@ -4,25 +4,38 @@ import {dressCampus} from './dressing.js';
 import {createAudio} from './audio.js';
 import {batchStaticMeshes} from './optimize.js';
 import {reality,createSky,createShockwave} from './reality.js';
+import {campusReflectionFaces} from './campus_reflections.js';
+import {setCampusEnvironment} from './agora.js';
+import {loadTourReference} from './tour_reference.js';
+import {FollowCamera,cameraVolumes,clipCamera} from './camera_rig.js';
 // CSS is loaded by index.html to support offline ESM without Vite.
 
 const $=id=>document.getElementById(id),app=$('app'),sound=createAudio();
+let campusReflectionReady=false,referenceMode=false,tourCube=null,referenceYaw=0,referencePitch=0;
 const scene=new THREE.Scene();scene.background=new THREE.Color('#88b7dc');scene.fog=new THREE.Fog('#88b7dc',30,110);
 let renderer;
 try{renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});}catch(e){$('fatal').classList.remove('hidden');throw e;}
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;app.prepend(renderer.domElement);
 renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();$('fatal-text').textContent='The graphics connection was interrupted. Reload to start a fresh adventure, or close other graphics-heavy tabs.';$('fatal').classList.remove('hidden');});
+// Real tour imagery supplies reflections, never the playable geometry.
+loadTourReference(campusReflectionFaces).then(tour=>{
+ const pmrem=new THREE.PMREMGenerator(renderer),target=pmrem.fromScene(tour,0,.1,10);
+ scene.environment=target.texture;scene.environmentIntensity=.55;setCampusEnvironment(target.texture);
+ referenceScene.copy(tour);campusReflectionReady=true;pmrem.dispose();
+});
 const camera=new THREE.PerspectiveCamera(65,innerWidth/innerHeight,.12,180);
-let cameraYaw=0,cameraPitch=.30,cameraDistance=7.6,lastTurn=0;
+const referenceScene=new THREE.Scene(),referenceCamera=new THREE.PerspectiveCamera(70,innerWidth/innerHeight,.1,10);
+const followRig=new FollowCamera();
+let cameraYaw=0,cameraPitch=.30,cameraDistance=6.8,lastTurn=0;
 const cameraRight=new THREE.Vector3(),cameraForward=new THREE.Vector3();
 let looking=false,lastMouseX=0,lastMouseY=0;
 const clampPitch=()=>cameraPitch=THREE.MathUtils.clamp(cameraPitch,.12,.85);
-function rotateCamera(dx,dy){cameraYaw-=dx*.005;cameraPitch+=dy*.0035;clampPitch();}
+function rotateCamera(dx,dy){if(referenceMode){referenceYaw-=dx*.005;referencePitch=THREE.MathUtils.clamp(referencePitch+dy*.0035,-1.35,1.35);return;}cameraYaw-=dx*.005;cameraPitch+=dy*.0035;clampPitch();}
 // Drag with the left/right mouse button, or click the viewport to lock the cursor.
 renderer.domElement.addEventListener('pointerdown',e=>{
  if(e.button!==0 && e.button!==2)return;
- if(!running||modal||finished)return;
+ if(!running||(modal&&!referenceMode)||finished)return;
  looking=true;lastMouseX=e.clientX;lastMouseY=e.clientY;
  renderer.domElement.setPointerCapture?.(e.pointerId);
 });
@@ -48,18 +61,18 @@ batchStaticMeshes(world.root);
 const focus=new THREE.Vector3(0,0,4.1),desiredCamera=new THREE.Vector3(),velocity=new THREE.Vector2();
 player.group.position.copy(focus);camera.position.set(0,4.8,13.1);camera.lookAt(0,1.2,4.1);
 let running=false,finished=false,mapFound=false,shrineActive=false,anchorReleased=false,modal=null,interactTarget=null;
-let reversals=0,elapsed=0,clock=0,last=performance.now(),reverseAt=-10,toastTimeout,sequence=[],sequenceLocked=false,sequenceResetAt=0,cinema=0,quality=true,waterNoticeAt=-10,qaWalking=false,introT=-1,jumpY=0,jumpV=0;
+let reversals=0,elapsed=0,clock=0,last=performance.now(),reverseAt=-10,toastTimeout,sequence=[],sequenceLocked=false,sequenceResetAt=0,cinema=0,quality=true,waterNoticeAt=-10,qaWalking=false,introT=-1,jumpY=0,jumpV=0,landImpact=0;
 const qaMode=new URLSearchParams(location.search).has('qa'),INTRO=5.5;
-const introLines=[[0,'YOU ARE THE SPHINX.'],[1.6,'NEFERTITI IS TRAPPED IN TIME.'],[3.5,'FIND THE THREE SACRED SEALS TO SAVE HER.']];
+const introLines=[[0,'YOU ARE THE PHARAOH.'],[1.6,'NEFERTITI IS TRAPPED IN TIME.'],[3.5,'FIND THE THREE SACRED SEALS TO SAVE HER.']];
 // Progression is reset entirely by start().
 const ONE=new THREE.Vector3(1,1,1),keys=new Set(),reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const colorSunA=new THREE.Color('#fff2d5'),colorSunB=new THREE.Color('#ff9e55'),hemiA=new THREE.Color('#e5f1fc'),hemiB=new THREE.Color('#ffd7b0');
 const notices={A:'SEAL A RESTORED · The archive remembers.',B:'SEAL B RESTORED · Every open path has a price.',C:'SEAL C RESTORED · What is hidden is not gone.'};
-function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}
+function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();referenceCamera.aspect=w/h;referenceCamera.updateProjectionMatrix();}
 addEventListener('resize',resize);resize();
 function toast(message,duration=3000){$('toast').textContent=message;$('toast').classList.add('active');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>$('toast').classList.remove('active'),duration);}
 function clearInput(){keys.clear();velocity.set(0,0);looking=false;if(document.pointerLockElement===renderer.domElement)document.exitPointerLock?.();}
-function setModal(id){if(modal)$(modal).classList.add('hidden');modal=id;clearInput();if(id)$(id).classList.remove('hidden');app.classList.toggle('paused',!!id);$('interaction').classList.add('hidden');if(id==='map-modal')updateMapText();}
+function setModal(id){if(modal)$(modal).classList.add('hidden');modal=id;referenceMode=id==='reference-view';clearInput();if(id)$(id).classList.remove('hidden');app.classList.toggle('paused',!!id);$('interaction').classList.add('hidden');if(id==='map-modal')updateMapText();}
 function updateObjective(){const n=world.coins.filter(c=>c.picked).length;$('seal-count').textContent=`${n} / 3 RESTORED`;
  let chapter='01 / THE THREE SEALS',objective;
  if(n<3){const next=world.coins.find(c=>!c.picked);objective={A:'GO TO THE WESTERN ARCHIVE',B:'CROSS THE BRIDGE · FIND SEAL B',C:'ENTER THE AGORA · FIND SEAL C'}[next.id];}
@@ -102,7 +115,7 @@ function offer(s){if(modal!=='shrine-modal'||sequenceLocked)return;sequence.push
   setTimeout(()=>{if(sequenceLocked&&sequenceResetAt){sequence=[];sequenceLocked=false;sequenceResetAt=0;$('sequence').textContent='—  —  —';}},1100);}}
 }
 function updateMapText(){$('map-text').textContent=mapFound?'Nefertiti waits in the northern sanctuary. Enter in the ancient echo. Sever the anchor in the present. Return to the echo to bring her home.':'The three seals awaken the shrine south of Agora. Seek A in the western archive, B beyond the eastern bridge, and C in the ancient echo north of Agora.';$('map-modal').classList.toggle('revealed',mapFound);}
-function complete(){finished=true;cinema=.001;player.group.userData.rescueStart=player.group.position.clone();clearInput();setModal(null);$('interaction').classList.add('hidden');app.classList.add('cinematic');$('cinematic-caption').classList.remove('hidden');sound.win();dressing.reverse(0,-24);
+function complete(){if(!world.coins.every(c=>c.picked)||!shrineActive||!mapFound||!anchorReleased)return;finished=true;cinema=.001;player.group.userData.rescueStart=player.group.position.clone();clearInput();setModal(null);$('interaction').classList.add('hidden');app.classList.add('cinematic');$('cinematic-caption').classList.remove('hidden');sound.win();dressing.reverse(0,-24);
  // The curse breaks: one last wavefront rolls out from Nefertiti and restores the campus.
  setTimeout(()=>{if(!finished)return;world.setAncient(false);reality.speed=14;reality.trigger(0,-24,false);reverseAt=clock;sound.reverse(false);$('world-name').textContent='PRESENT DAY';$('world-label').classList.remove('ancient');},2600);}
 function showVictory(){running=false;$('victory').classList.remove('hidden');$('cinematic-caption').classList.add('hidden');const secs=Math.max(1,Math.floor(elapsed));let best;try{const old=Number(localStorage.getItem('sphinx-best'))||Infinity;best=Math.min(old,secs);localStorage.setItem('sphinx-best',String(best));}catch{best=secs;}
@@ -110,8 +123,8 @@ function showVictory(){running=false;$('victory').classList.remove('hidden');$('
  $('stats').innerHTML=`<b class="rank">${rank}</b><br>RESCUE TIME ${fmt(secs)}   ·   ${reversals} REVERSALS   ·   BEST ${fmt(best)}`;
 }
 function start(){running=true;finished=false;mapFound=false;shrineActive=false;anchorReleased=false;reversals=0;elapsed=0;cinema=0;sequence=[];sequenceLocked=false;sequenceResetAt=0;reverseAt=-10;waterNoticeAt=-10;
- clearInput();setModal(null);world.setAncient(false);world.state.mix=0;reality.reset();reality.speed=24;jumpY=jumpV=0;sound.init();sound.setAncient(false);$('world-label').classList.remove('ancient');$('world-name').textContent='PRESENT DAY';
- player.group.position.set(0,.10,4.1);player.group.rotation.y=Math.PI;cameraDistance=7.6;focus.copy(player.group.position);cameraYaw=0;cameraPitch=.30;camera.position.set(0,4.8,13.1);camera.zoom=1;camera.updateProjectionMatrix();
+ clearInput();setModal(null);world.setAncient(false);world.state.mix=0;reality.reset();reality.speed=24;jumpY=jumpV=landImpact=0;sound.init();sound.setAncient(false);$('world-label').classList.remove('ancient');$('world-name').textContent='PRESENT DAY';
+ player.group.position.set(0,.10,4.1);player.group.rotation.y=Math.PI;cameraDistance=6.8;focus.copy(player.group.position);cameraYaw=0;cameraPitch=.30;camera.position.set(0,4.8,13.1);camera.zoom=1;camera.updateProjectionMatrix();
  for(const c of world.coins){c.picked=false;c.pickT=1;c.group.scale.setScalar(1);$('c'+c.id).classList.remove('got');}world.update(0,clock);dressing.update(0,clock,0,{});
  $('intro').classList.add('hidden');$('victory').classList.add('hidden');$('cinematic-caption').classList.add('hidden');app.classList.remove('cinematic');app.classList.add('playing');updateObjective();
  if(qaMode&&!new URLSearchParams(location.search).has('intro')){introT=-1;endIntro();}else{introT=0;app.classList.add('cinematic');$('cinematic-caption').classList.remove('hidden');$('skip-intro').classList.remove('hidden');}
@@ -134,25 +147,29 @@ function updateIntro(rawDt){introT+=rawDt;const t=introT;
 function moveVector(dx,dz,dt,sprint=false){if(!running||finished||modal)return;const moving=Math.hypot(dx,dz)>.01,speed=sprint?6.7:4.5;
  if(moving){const length=Math.hypot(dx,dz);dx=dx/length*speed;dz=dz/length*speed;}else{dx=0;dz=0;}
  velocity.x=THREE.MathUtils.damp(velocity.x,dx,moving?12:28,dt);velocity.y=THREE.MathUtils.damp(velocity.y,dz,moving?12:28,dt);
- const p=player.group.position,substeps=3;
+ const p=player.group.position,startX=p.x,startZ=p.z,substeps=3;
  for(let i=0;i<substeps;i++){const nx=p.x+velocity.x*dt/substeps,nz=p.z+velocity.y*dt/substeps;
-  if(!world.blocked(nx,p.z))p.x=nx;if(!world.blocked(p.x,nz))p.z=nz;
-  if(world.inWater(p.x,p.z)){p.x=p.x>10?12.65:7.65;p.z=-7;velocity.set(0,0);if(clock-waterNoticeAt>3){toast('THE BRIDGE IS BROKEN · Press R to restore it.');waterNoticeAt=clock;sound.error();}}
+  const waterX=world.inWater(nx,p.z),waterZ=world.inWater(p.x,nz);
+  if(!world.blocked(nx,p.z)&&!waterX)p.x=nx;else velocity.x=0;
+  if(!world.blocked(p.x,nz)&&!waterZ)p.z=nz;else velocity.y=0;
+  if((waterX||waterZ)&&clock-waterNoticeAt>3){toast('THE BRIDGE IS BROKEN · R restores a real crossing.');waterNoticeAt=clock;sound.error();}
+
  }
  if(moving){let target=Math.atan2(-dx,-dz),difference=THREE.MathUtils.euclideanModulo(target-player.group.rotation.y+Math.PI,Math.PI*2)-Math.PI;lastTurn=difference;player.group.rotation.y+=difference*(1-Math.exp(-dt*12));}
- player.animate(dt,velocity.length(),clock,lastTurn);
+ player.animate(dt,Math.hypot(p.x-startX,p.z-startZ)/Math.max(dt,.001),clock,lastTurn,{height:jumpY,verticalVelocity:jumpV,landing:landImpact});
  const px=player.group.position.x,pz=player.group.position.z;
  const floor=world.agora.isInside(px,pz)?.13:world.inAncient()&&px>8.12&&px<12.1&&Math.abs(pz+7)<1.5?.33:Math.abs(px)<3.6&&pz< -19&&pz> -27?.08:Math.abs(px)<14&&pz> -10.9&&pz<17.1?.10:0;
  player.group.position.y=floor+jumpY;
 
 }
 function move(dt){
- if(jumpY>0||jumpV>0){jumpV-=15*dt;jumpY=Math.max(0,jumpY+jumpV*dt);if(jumpY===0){jumpV=0;player.ring.scale.setScalar(1.45);}}
+ landImpact=THREE.MathUtils.damp(landImpact,0,12,dt);
+ if(jumpY>0||jumpV>0){jumpV-=15*dt;jumpY=Math.max(0,jumpY+jumpV*dt);if(jumpY===0){jumpV=0;landImpact=1;player.ring.scale.setScalar(1.45);sound.land();}}
  player.ring.scale.lerp(ONE,1-Math.exp(-dt*6));
  const x=Number(keys.has('d')||keys.has('arrowright'))-Number(keys.has('a')||keys.has('arrowleft'));
  const z=Number(keys.has('w')||keys.has('arrowup'))-Number(keys.has('s')||keys.has('arrowdown'));
- cameraRight.set(Math.cos(cameraYaw),0,-Math.sin(cameraYaw));
- cameraForward.set(-Math.sin(cameraYaw),0,-Math.cos(cameraYaw));
+ camera.getWorldDirection(cameraForward);cameraForward.y=0;cameraForward.normalize();
+ cameraRight.crossVectors(cameraForward,THREE.Object3D.DEFAULT_UP).normalize();
  moveVector(cameraRight.x*x+cameraForward.x*z,cameraRight.z*x+cameraForward.z*z,dt,keys.has('shift'));
 }
 function updateLocation(){const {x,z}=player.group.position;let name='AGORA CIRCLE',hint='The western archive holds the first seal. Follow the map to your right.';
@@ -190,6 +207,7 @@ function drawMap(){const c=mapCtx,k=world.inAncient();c.clearRect(0,0,220,220);c
  if(mapFound){const [qx,qy]=point(0,-24);c.fillStyle='#84efe8';c.beginPath();c.moveTo(qx,qy-7);c.lineTo(qx+5,qy);c.lineTo(qx,qy+7);c.lineTo(qx-5,qy);c.fill();}
  const [px,py]=point(player.group.position.x,player.group.position.z);c.fillStyle='#fff8df';c.shadowColor='#ffffff';c.shadowBlur=8;c.beginPath();c.arc(px,py,4,0,Math.PI*2);c.fill();c.shadowBlur=0;
 }
+$('tour-reference').onclick=()=>{if(campusReflectionReady)setModal('reference-view');else toast('Preparing the local Agora photographs…');};$('close-reference').onclick=()=>setModal('pause-modal');
 $('skip-intro').onclick=()=>{if(introT>=0)endIntro();};$('start').onclick=start;$('restart').onclick=start;$('reset-pause').onclick=start;$('resume').onclick=()=>setModal(null);$('close-shrine').onclick=()=>setModal(null);$('close-map').onclick=()=>setModal(null);
 for(const b of document.querySelectorAll('[data-seal]'))b.onclick=()=>offer(b.dataset.seal);
 function toggleAudio(){const muted=sound.toggle();$('audio-toggle').textContent=muted?'SOUND OFF':'SOUND ON';$('audio-toggle').setAttribute('aria-label',muted?'Unmute audio':'Mute audio');}
@@ -215,39 +233,22 @@ function animate(now){requestAnimationFrame(animate);const rawDt=Math.min(.25,(n
  const targetFocus=finished?new THREE.Vector3(0,1,-24):player.group.position;
  focus.lerp(targetFocus,1-Math.exp(-dt*6));
  if(finished){cinema+=rawDt;const t=Math.min(cinema/7,1),a=reducedMotion?.6:.6+cinema*.09;player.group.position.x=THREE.MathUtils.damp(player.group.position.x,-1.65,3,dt);player.group.position.z=THREE.MathUtils.damp(player.group.position.z,-23.7,3,dt);player.group.rotation.y=THREE.MathUtils.damp(player.group.rotation.y,Math.PI,4,dt);desiredCamera.set(focus.x+1.5,focus.y+2.1,focus.z+3.8);camera.zoom=THREE.MathUtils.damp(camera.zoom,1,3,dt);camera.updateProjectionMatrix();$('cinematic-caption').textContent=cinema<2.6?'“I knew you would find a way through.”':cinema<4.6?'The curse of the Sphinx is broken.':'Two worlds. One way home.';if(cinema>7&&running)showVictory();}
- else{
+ else if(introT<0){
   const inside=world.agora.isInside(player.group.position.x,player.group.position.z);
-  const distance=inside?Math.min(cameraDistance,5.3):cameraDistance, elevation=distance;
-  const horizontal=Math.cos(cameraPitch)*distance;
-  desiredCamera.set(focus.x+Math.sin(cameraYaw)*horizontal,focus.y+Math.sin(cameraPitch)*elevation+1.5,
-                    focus.z+Math.cos(cameraYaw)*horizontal);
-  // Camera visibility collision: avoid placing the follow camera behind solid Agora walls.
-  const from=new THREE.Vector3(player.group.position.x,1.5,player.group.position.z);
-  const dir=desiredCamera.clone().sub(from);
-  let cameraSafe=1;
-  const playerRadius=.14;
-  const b=world.blockers.filter(q=>!(q.when==='modern'&&world.inAncient())&&!(q.when==='ancient'&&!world.inAncient()));
-  for(let i=1;i<=40;i++){
-   const a=i/40,x=from.x+dir.x*a,z=from.z+dir.z*a;
-   if(b.some(q=>!q.low&&Math.abs(x-q.x)<q.w/2+playerRadius&&Math.abs(z-q.z)<q.d/2+playerRadius)){
-    cameraSafe=Math.max(.18,(i-2)/40);break;
-   }
-  }
-  if(cameraSafe<1)desiredCamera.copy(from).addScaledVector(dir,cameraSafe);
-  // Shorten immediately at walls; smooth only the outward camera release.
-  if(cameraSafe<1&&camera.position.distanceTo(from)>desiredCamera.distanceTo(from))camera.position.copy(desiredCamera);
-  camera.zoom=THREE.MathUtils.damp(camera.zoom,1,3,dt);camera.updateProjectionMatrix();
+  const anchor=player.group.position.clone().add(new THREE.Vector3(0,1.35,0));
+  followRig.update(camera,anchor,cameraYaw,cameraPitch,inside?Math.min(cameraDistance,5.3):cameraDistance,cameraVolumes(world),dt);
  }
- if(introT<0){camera.position.lerp(desiredCamera,1-Math.exp(-dt*5));camera.lookAt(focus.x,focus.y+1.18,focus.z);}
+ if(introT<0&&finished){camera.position.lerp(desiredCamera,1-Math.exp(-dt*5));camera.lookAt(focus.x,focus.y+1.18,focus.z);}
  // Reversal camera feedback: a short FOV punch that breathes back out.
  {const r=clock-reverseAt,kick=r<1.1&&!reducedMotion?Math.sin(r/1.1*Math.PI)*(1-r/1.1)*16:0;camera.fov=65+kick;camera.updateProjectionMatrix();}
  if(!reducedMotion&&clock-reverseAt<.8){const f=1-(clock-reverseAt)/.8,shake=.09*f*f;camera.position.x+=Math.sin((clock-reverseAt)*37)*shake;camera.position.y+=Math.cos((clock-reverseAt)*29)*shake*.7;}
- sun.position.set(focus.x-16,35,focus.z+14);sun.target.position.copy(focus);sun.target.updateMatrixWorld();sky.update(mix,clock,camera);renderer.render(scene,camera);
+ if(introT<0&&!finished)followRig.enforce(camera);
+ sun.position.set(focus.x-16,35,focus.z+14);sun.target.position.copy(focus);sun.target.updateMatrixWorld();sky.update(mix,clock,camera);if(referenceMode){referenceCamera.rotation.order='YXZ';referenceCamera.rotation.set(referencePitch,referenceYaw,0);renderer.render(referenceScene,referenceCamera);}else renderer.render(scene,camera);
 }requestAnimationFrame(animate);
 
 // Opt-in QA adapter for local test builds (?qa); never activated during normal play.
 if(new URLSearchParams(location.search).has('qa'))window.__sphinxQA={
- snapshot:()=>({intro:introT>=0,jumpY,x:player.group.position.x,z:player.group.position.z,insideAgora:world.agora.isInside(player.group.position.x,player.group.position.z),doorOpen:Math.abs(world.agora.doors[0].leaf.position.x)>1.6,cameraYaw,cameraDistance,model:player.model,legCount:player.legs.length,ancient:world.inAncient(),coins:world.coins.filter(c=>c.picked).map(c=>c.id),shrineActive,mapFound,anchorReleased,finished,modal,reversals,elapsed,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles}),
+ snapshot:()=>({canReverse:clock-reverseAt>=.85,intro:introT>=0,jumpY,x:player.group.position.x,z:player.group.position.z,insideAgora:world.agora.isInside(player.group.position.x,player.group.position.z),doorOpen:Math.abs(world.agora.doors[0].leaf.position.x)>1.6,cameraYaw,cameraHeading:Math.atan2(-camera.getWorldDirection(new THREE.Vector3()).x,-camera.getWorldDirection(new THREE.Vector3()).z),cameraDistance,model:player.model,heroType:player.heroType,campusReflectionReady,cameraClearance:followRig.clearance,cameraObstructed:followRig.obstructed,cameraAutomaticOrbit:followRig.automaticOrbit,cameraCollisionSafe:clipCamera(followRig.anchor,camera.position,followRig.boxes).fraction>.999,referenceMode,legCount:player.legs.length,ancient:world.inAncient(),coins:world.coins.filter(c=>c.picked).map(c=>c.id),shrineActive,mapFound,anchorReleased,finished,modal,reversals,elapsed,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles}),
  walk:(x,z)=>{qaWalking=true;clearInput();for(let i=0;i<1800;i++){const p=player.group.position,dx=x-p.x,dz=z-p.z;if(Math.hypot(dx,dz)<.09)break;moveVector(dx,dz,1/60,false);world.update(1/60,clock,player.group.position);}clearInput();qaWalking=false;findInteraction();return {x:player.group.position.x,z:player.group.position.z};},
  settle:()=>{reverseAt=-10;world.update(2,clock);},world,
  inspect:()=>({camera:camera.position.toArray(),player:player.group.position.toArray(),render:renderer.info.render}),

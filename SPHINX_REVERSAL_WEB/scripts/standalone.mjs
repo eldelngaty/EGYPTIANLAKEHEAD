@@ -11,4 +11,5 @@ html=html.replace('<link rel="stylesheet" href="./src/style.css">',()=>'<style>'
 
 html=html.replace('<script type="module" src="./src/main.js"></script>',()=>'<script>'+script+'</script>');
 await writeFile('PLAY_SPHINX.html',html);
+await writeFile('PLAY_PHARAOH.html',html);
 console.log('Created PLAY_SPHINX.html: double-click to play offline without a server.');

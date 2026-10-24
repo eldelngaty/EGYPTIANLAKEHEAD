@@ -1,0 +1,10 @@
+PASS Open-space camera distance never creeps inward
+PASS Swept camera sphere stops before wall and near plane
+PASS Height-aware sweep clears low furniture
+PASS Clear side of doorway does not shorten camera
+PASS Modern camera obstacles match modern gate state
+PASS Ancient camera obstacles match opposite gate state
+PASS Spawn recovery keeps camera out of guardian body
+PASS Tight wall orbit keeps guardian viewing distance
+PASS Continuous corner orbit and smoothing never pass through walls
+RESULT 9 camera collision checks passed

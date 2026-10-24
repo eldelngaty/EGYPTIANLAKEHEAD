@@ -1,0 +1,54 @@
+{
+  "source_page": "https://virtualtour.lakeheadu.ca/lakehead/lakehead-thunder-bay/agora-circle",
+  "verified_page_id": 13,
+  "image_id": 19,
+  "cube_map_id": 8,
+  "use": "512px photographic reflections on modeled 3D surfaces; not walkable panorama geometry",
+  "permission": "User explicitly confirmed reuse/distribution inside ZIP and GitHub earlier in this conversation",
+  "three_face_order": [
+    "+X right",
+    "-X left",
+    "+Y top",
+    "-Y bottom",
+    "+Z back",
+    "-Z front"
+  ],
+  "faces": [
+    {
+      "face": "right",
+      "original_file": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/right.png",
+      "original_sha256": "fe89f7e49c1e2da0bcfac70d2e275aae7812fea9d9d1f96f3b27869a1f7f5ff2",
+      "reflection_jpeg_sha256": "91b7c1cd0a4eebac09dd78aa173672be2c250725d679e746d0dc80eb354cf202"
+    },
+    {
+      "face": "left",
+      "original_file": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/left.png",
+      "original_sha256": "d120d8f323776cf10d94147ec2fbc737836e000c11267e3d83eb51e7cc078eed",
+      "reflection_jpeg_sha256": "bc0cd82e7b064e36609dac278c365884b5dbd076c7743af1017896ba02e8a943"
+    },
+    {
+      "face": "top",
+      "original_file": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/top.png",
+      "original_sha256": "da384b605cb9d6db5b3fbf6bcb9971b4ef77c9e206eaa5d1e7b062e6c66fc20f",
+      "reflection_jpeg_sha256": "fe5e3c3ad1fb9f431b5f40da75503dc72c8ba93742da3b80c00d03fa2164c93f"
+    },
+    {
+      "face": "bottom",
+      "original_file": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/bottom.png",
+      "original_sha256": "4e62adfd338ce90182dd68b3b47276af110e6017846564ce9416f6c6cee174b4",
+      "reflection_jpeg_sha256": "d46cc9398e2f56d0e22e64e98e8a29f0b078e12dd6c9509c356c79bf17393bbe"
+    },
+    {
+      "face": "back",
+      "original_file": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/back.png",
+      "original_sha256": "6abf0cc014b9cdbce6f0a9286ee64e11da0b9a5115f9206b8e72318e305b008f",
+      "reflection_jpeg_sha256": "c10e4d1e5e67effeed56b92e2574ce0f33b1269eab509b16c50b2a47516e95ae"
+    },
+    {
+      "face": "front",
+      "original_file": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/front.png",
+      "original_sha256": "d9cd719b3cdab7b974000d5150bd0f3d97e9034d2675717fef9419d6c4864792",
+      "reflection_jpeg_sha256": "720898987c94e865c2e1a6c7fd8f5fe31dfadda61e5c488601441fa37329a377"
+    }
+  ]
+}

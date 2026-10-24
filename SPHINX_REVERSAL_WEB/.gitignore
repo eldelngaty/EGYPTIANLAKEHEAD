@@ -6,3 +6,6 @@ qa/*.png
 qa/*.webm
 checkpoints.bundle
 SPHINX_REVERSAL_WEB.zip
+
+qa/pharaoh/video/
+qa/pharaoh/*.webm

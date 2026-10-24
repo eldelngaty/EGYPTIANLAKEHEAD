@@ -1,0 +1,12 @@
+import * as THREE from '../vendor/three.module.min.js';
+import {makePharaoh} from './pharaoh.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color('#081321');scene.fog=new THREE.Fog('#081321',8,16);
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.2;renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.appendChild(renderer.domElement);
+const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.1,30);camera.position.set(2.3,1.95,-4.9);camera.lookAt(0,1.15,0);
+scene.add(new THREE.HemisphereLight('#d7e7ff','#312716',1.8));const key=new THREE.DirectionalLight('#fff1d3',4.0);key.position.set(-3,5,-4);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-3;key.shadow.camera.right=3;key.shadow.camera.top=4;key.shadow.camera.bottom=-2;key.shadow.normalBias=.025;scene.add(key);const fill=new THREE.DirectionalLight('#5196eb',1.8);fill.position.set(4,2,-1);scene.add(fill);const rim=new THREE.DirectionalLight('#f5cd75',3.0);rim.position.set(0,4,3);scene.add(rim);
+const floor=new THREE.Mesh(new THREE.CircleGeometry(6,96),new THREE.MeshStandardMaterial({color:'#101d2d',roughness:.7,metalness:.15}));floor.rotation.x=-Math.PI/2;floor.position.y=-.015;floor.receiveShadow=true;scene.add(floor);
+const halo=new THREE.Mesh(new THREE.TorusGeometry(.97,.008,8,128),new THREE.MeshBasicMaterial({color:'#b9944d',transparent:true,opacity:.55}));halo.position.set(0,1.45,.50);scene.add(halo);
+const hero=makePharaoh(scene);hero.animate(.016,0,1.5);hero.head.rotation.y=-.15;
+const haloLight=new THREE.PointLight('#47d4e2',1.1,3);haloLight.position.set(.55,1.8,-.6);scene.add(haloLight);
+addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.render(scene,camera);});
+renderer.render(scene,camera);window.__portraitReady=true;

@@ -1,0 +1,21 @@
+{
+  "engine": "Existing uploaded Three.js 0.180 offline ESM / Chromium 154 Linux software WebGL",
+  "hero": "Original armored human Pharaoh; actual portrait and in-game model share src/pharaoh.js",
+  "full_normal_input": "31/31; actual mouse/keys/UI from start to all seals, CBA, map, anchor, rescue, victory, restart. No teleporting, direct quest mutations or movement replay. Recorded in supported LOW quality mode.",
+  "collision_geometry": "24/24",
+  "camera_math": "9/9 including sphere clearance, doorway gaps, realm-specific gates and continuous corner orbit",
+  "final_build_review": "9/9; corrected photographic reference, premature rescue rejected, bridge removal safety, opposite gates, hidden C present rejection, final camera clearance, zero browser errors. This additional regression uses the existing collision-checked travel replay.",
+  "final_visual_fix_after_full_recording": "The optional panorama/reflection face orientation and glass material calibration were corrected after the full recorded mission; final rendering and negative-gate checks ran against the corrected bundle. Camera, movement, quest and guardian code were unchanged after the full mission run.",
+  "preserved_original_tour": "4 locations / 24 original faces, all original SHA256 hashes match",
+  "known_limits": [
+    "Stylized reference-based Agora and surrounding fictional puzzle courts; not a surveyed full-campus reconstruction",
+    "Small scenery uses simplified collision; jumping does not bypass solid obstacles or provide platforming",
+    "Native Windows file launch, human usability, physical audio, Firefox/Safari/mobile and hardware GPU performance untested",
+    "Sketchfab asset and the two unavailable videos were not imported; hero is original and references are the existing official materials"
+  ],
+  "file_launch_test": "Self-contained HTML in network-disabled actual browser through a test document response; file URLs are blocked by administrator policy in the runner",
+  "source_provenance": "docs/HERO_AND_REFERENCE_SOURCES.md",
+  "photographic_reflection_provenance": "docs/reflection_sources.json",
+  "main_branch_preserved": "98939ff90400034dcee45c5d7d137fb11bb95b73",
+  "merge": "Do not merge automatically; PR remains open"
+}
