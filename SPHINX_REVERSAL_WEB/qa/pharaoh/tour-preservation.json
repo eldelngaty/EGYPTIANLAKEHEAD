@@ -1,0 +1,152 @@
+{
+  "verified_locations": 4,
+  "unchanged_original_faces": 24,
+  "all_hashes_match": true,
+  "runtime_reference": "Actual Agora cube8 reused for optional 360 reference view and environment reflections; original four panorama sets remain unchanged",
+  "faces": [
+    {
+      "scene": "agora",
+      "face": "front",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/front.png",
+      "sha256": "d9cd719b3cdab7b974000d5150bd0f3d97e9034d2675717fef9419d6c4864792"
+    },
+    {
+      "scene": "agora",
+      "face": "right",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/right.png",
+      "sha256": "fe89f7e49c1e2da0bcfac70d2e275aae7812fea9d9d1f96f3b27869a1f7f5ff2"
+    },
+    {
+      "scene": "agora",
+      "face": "back",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/back.png",
+      "sha256": "6abf0cc014b9cdbce6f0a9286ee64e11da0b9a5115f9206b8e72318e305b008f"
+    },
+    {
+      "scene": "agora",
+      "face": "left",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/left.png",
+      "sha256": "d120d8f323776cf10d94147ec2fbc737836e000c11267e3d83eb51e7cc078eed"
+    },
+    {
+      "scene": "agora",
+      "face": "top",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/top.png",
+      "sha256": "da384b605cb9d6db5b3fbf6bcb9971b4ef77c9e206eaa5d1e7b062e6c66fc20f"
+    },
+    {
+      "scene": "agora",
+      "face": "bottom",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/agora/bottom.png",
+      "sha256": "4e62adfd338ce90182dd68b3b47276af110e6017846564ce9416f6c6cee174b4"
+    },
+    {
+      "scene": "corridor",
+      "face": "front",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/corridor/front.png",
+      "sha256": "99dfb8ba10ab5c566d9e78fce97a82f4e44cbd36082439b69125fc9dd2426bb3"
+    },
+    {
+      "scene": "corridor",
+      "face": "right",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/corridor/right.png",
+      "sha256": "74b2bb67e2bad32872f455192aa6f3dc542333a1a8ae6331baeddc4161828ae6"
+    },
+    {
+      "scene": "corridor",
+      "face": "back",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/corridor/back.png",
+      "sha256": "12b375824e2188368940f50d2b2413dcb9f676fac274cc41173e37db1f64b82f"
+    },
+    {
+      "scene": "corridor",
+      "face": "left",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/corridor/left.png",
+      "sha256": "b5c29c27e3ab62c15a4d9784c3efe97da7c945a6bb5705bb2d998e9e02c78e57"
+    },
+    {
+      "scene": "corridor",
+      "face": "top",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/corridor/top.png",
+      "sha256": "a36c9bd36a0d36ba8ff7b4bd1c2b0fb3b6dd1a8d05de83dbca867b137b562098"
+    },
+    {
+      "scene": "corridor",
+      "face": "bottom",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/corridor/bottom.png",
+      "sha256": "671652a6cae27805dc1475397ce5e9d60252c9a4ec83c05ecfe8dac2f4462208"
+    },
+    {
+      "scene": "atac",
+      "face": "front",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/atac/front.png",
+      "sha256": "efaa59b31150f55651e8f84b546602f9e8ee8bec2ce389b0d742e0ed2234c4c2"
+    },
+    {
+      "scene": "atac",
+      "face": "right",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/atac/right.png",
+      "sha256": "26f60239cde5d7d89565e711ffa65425c93794c387096fe4af29eff3ed2b2012"
+    },
+    {
+      "scene": "atac",
+      "face": "back",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/atac/back.png",
+      "sha256": "69a31d9fc8bc4c9699711941261de371e21c693159254e6d6a4a3ef87f0ec2bf"
+    },
+    {
+      "scene": "atac",
+      "face": "left",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/atac/left.png",
+      "sha256": "53cb12bc93fc98f482aca049222a32e9ef69741e75162f2b57b175bb4a3d2e10"
+    },
+    {
+      "scene": "atac",
+      "face": "top",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/atac/top.png",
+      "sha256": "a0f510af236e3b79b430902fe617912d6bd599cf82f37d29f7cbc05bca470339"
+    },
+    {
+      "scene": "atac",
+      "face": "bottom",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/atac/bottom.png",
+      "sha256": "0708a6e98f19dfece6a46aef4f98be18318590184b007bf493955760f9eccb86"
+    },
+    {
+      "scene": "lake",
+      "face": "front",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/lake/front.png",
+      "sha256": "4bfea2a71c413a48b876fdc4dbc8627d96ac975d08703c114468e40de11e5927"
+    },
+    {
+      "scene": "lake",
+      "face": "right",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/lake/right.png",
+      "sha256": "89fa6101873468e66a4eb22e0dba428aa1c86f4a78c683b8077ef2d77bfa92ab"
+    },
+    {
+      "scene": "lake",
+      "face": "back",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/lake/back.png",
+      "sha256": "358dbac26606ab1bb338355bec9abb48ca7cbecfad2db81d1b9225611818d1ba"
+    },
+    {
+      "scene": "lake",
+      "face": "left",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/lake/left.png",
+      "sha256": "2a657f260290278bdb2f2275891167f8018215aeb459ae2ad17652978a988646"
+    },
+    {
+      "scene": "lake",
+      "face": "top",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/lake/top.png",
+      "sha256": "a308a93162a54bd1b8bfff6b79923b23a69b67610aaf4c9380f78c0afc068463"
+    },
+    {
+      "scene": "lake",
+      "face": "bottom",
+      "source": "GAME_GODOT_V5_RUNNING_BASE/assets/tour/lake/bottom.png",
+      "sha256": "ba1e946db84542e5a77f37754386ca99dd37a552455960af513891f109f4ac87"
+    }
+  ]
+}

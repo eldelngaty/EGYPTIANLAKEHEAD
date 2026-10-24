@@ -1,0 +1,8 @@
+{
+  "filename": "SphinxReversalAdventure.exe",
+  "architecture": "PE32+ x86-64",
+  "size": 138967344,
+  "sha256": "2ae6b391e02e988bbe26929e883b4c78aae5a0f1490c4b92e919d22db3555105",
+  "zip_executable_matches": true,
+  "native_windows_execution": false
+}

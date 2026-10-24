@@ -1,15 +1,12 @@
-# Sphinx Reversal — REAL Lakehead Tour
+# Sphinx Reversal — Lakehead Rescue
+Open project.godot in Godot 4.7.2, then F5. All permitted photo assets are local; play is offline.
 
-Open project.godot in Godot 4.x and press F5. Tested on 4.6.3; 4.7 was unavailable.
+Right-drag / arrows: look. Click a large target or press E when highlighted. R: reverse. Click the named destinations to travel. M: discovered map. Click symbols or use 3, 2, 1 at the shrine. ENTER / Play Again: restart after victory.
 
-The default environment uses actual offline panoramas from the official Lakehead virtual tour: Agora Circle, the Paterson Library approach (Campus Corridor), ATAC interior and Lake Tamblyn. Each cubemap has six reconstructed 1024px faces. Source metadata, image IDs, tile URLs, hashes, mapping conventions and reuse basis are in assets/tour/manifest.json and ../tour_evidence.
+This is a fixed-camera 360 adventure, not a free-roam reconstructed campus. The four authentic panoramas remain; there is no small-radius avatar locomotion. The guardian appears in the intro, live HUD portrait, and rescue sequence. The separate library gallery photograph is not presented as a 360 panorama.
 
-Right-drag / arrows: look. WASD: move avatar within the local 3D proxy area. E: interact. R: reverse. M: discovered map. Blue hotspots: click, or look and press E to travel.
+The quest and three scarabs remain. Reversal reveals the first scarab, restores the Library echo passage, opens ATAC's time lock and frees Nefertiti. One objective and the next destination are highlighted at a time.
 
-Complete quest: three scarabs in three photo scenes → Agora altar 3–2–1 → golden key → ATAC map chest → map → Lake Tamblyn → reverse prison → rescue → victory.
+Source/API identities, face hashes and rights basis: assets/tour/manifest.json. Parent tour membership, not numeric adjacency, supplies the named location selector. Publication uses the user's confirmed ZIP/GitHub permission; no open asset license is claimed.
 
-The photographs remain fixed at verified camera locations. Objects are 3D overlays; the photo is not a reconstructed navigable mesh. The library's separate gallery picture is explicitly displayed as a gallery picture.
-
-Source and PCK quest suites: 41/41 passed; legacy modeled mode: 15/15 passed. Actual graphical screenshots are in ../screenshots. Windows templates absent: no EXE. Legacy modeled mode remains available only through SPHINX_MODELED=1; it is not the default.
-
-Photos: Lakehead University / Circuit; included under user-confirmed permission to redistribute in ZIP and GitHub. No open license is claimed.
+See ../validation/logs/repair and ../screenshots/repair for actual test output and renders. Automated screen/keyboard completion does not teleport the player, assign camera angles, or set quest flags. It is not a human playtest. A Windows build is exported; native Windows execution and audible output were not available to test here.

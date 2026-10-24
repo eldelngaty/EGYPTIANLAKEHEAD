@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "errors": [],
+  "method": "Actual Chromium with network disabled; bundled HTML supplied as navigation response; keyboard movement verified. File navigation itself blocked by runner administrator policy, so native Windows file launch untested.",
+  "state": {
+    "intro": false,
+    "jumpY": 0,
+    "x": 0,
+    "z": 3.7664149046790727,
+    "insideAgora": false,
+    "doorOpen": false,
+    "cameraYaw": 0,
+    "cameraDistance": 7.6,
+    "model": "Original articulated quadruped Sphinx",
+    "legCount": 4,
+    "ancient": false,
+    "coins": [],
+    "shrineActive": false,
+    "mapFound": false,
+    "anchorReleased": false,
+    "finished": false,
+    "modal": null,
+    "reversals": 0,
+    "elapsed": 2.5,
+    "drawCalls": 467,
+    "triangles": 25276
+  }
+}

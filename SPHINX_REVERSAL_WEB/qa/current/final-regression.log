@@ -1,0 +1,139 @@
+PASS Scene renders
+Movement snapshot {
+  initial: {
+    intro: false,
+    jumpY: 0,
+    x: 0,
+    z: 4.1,
+    insideAgora: false,
+    doorOpen: false,
+    cameraYaw: 0,
+    cameraDistance: 7.6,
+    model: 'Original articulated quadruped Sphinx',
+    legCount: 4,
+    ancient: false,
+    coins: [],
+    shrineActive: false,
+    mapFound: false,
+    anchorReleased: false,
+    finished: false,
+    modal: null,
+    reversals: 0,
+    elapsed: 1.5,
+    drawCalls: 274,
+    triangles: 25312
+  },
+  moved: {
+    intro: false,
+    jumpY: 0,
+    x: 0,
+    z: 2.465220210577767,
+    insideAgora: false,
+    doorOpen: false,
+    cameraYaw: 0,
+    cameraDistance: 7.6,
+    model: 'Original articulated quadruped Sphinx',
+    legCount: 4,
+    ancient: false,
+    coins: [],
+    shrineActive: false,
+    mapFound: false,
+    anchorReleased: false,
+    finished: false,
+    modal: null,
+    reversals: 0,
+    elapsed: 3,
+    drawCalls: 273,
+    triangles: 25232
+  }
+}
+PASS W moves forward relative to the camera
+PASS Western door blocks in modern reality
+PASS R activates ancient echo
+PASS Western door opens in ancient reality
+PASS Seal A collectible
+PASS Cannot close a door around the player
+PASS Cannot remove bridge under player
+PASS East gate blocks ancient reality
+PASS East gate opens in modern reality
+PASS Seal B collectible
+PASS Seal C collectible only in echo
+PASS Shrine opens only with all three seals
+PASS Wrong order rejected
+PASS C B A awakens shrine
+PASS Map unreadable in modern reality
+PASS Ancient map reveals location
+PASS Final barrier closed in modern reality
+PASS Anchor cannot break in ancient reality
+PASS Prison anchor breaks in present
+PASS Rescue requires final reversal
+PASS Nefertiti rescued
+PASS Cinematic reaches victory screen
+PASS Restart fully resets progression
+PASS Escape pauses
+PASS Escape resumes
+PASS Audio toggle works
+PASS Low quality works
+PASS 1024x768 layout renders
+PASS No browser JavaScript or resource errors
+{
+  "date": "2026-10-24T21:23:41.793Z",
+  "browser": "Chromium headless 131 / SwiftShader",
+  "method": "Actual WebGL browser. WASD/R/E and UI events; deterministic physics movement replay between interactions. No teleportation or progression mutations.",
+  "checks": [
+    "Scene renders",
+    "W moves forward relative to the camera",
+    "Western door blocks in modern reality",
+    "R activates ancient echo",
+    "Western door opens in ancient reality",
+    "Seal A collectible",
+    "Cannot close a door around the player",
+    "Cannot remove bridge under player",
+    "East gate blocks ancient reality",
+    "East gate opens in modern reality",
+    "Seal B collectible",
+    "Seal C collectible only in echo",
+    "Shrine opens only with all three seals",
+    "Wrong order rejected",
+    "C B A awakens shrine",
+    "Map unreadable in modern reality",
+    "Ancient map reveals location",
+    "Final barrier closed in modern reality",
+    "Anchor cannot break in ancient reality",
+    "Prison anchor breaks in present",
+    "Rescue requires final reversal",
+    "Nefertiti rescued",
+    "Cinematic reaches victory screen",
+    "Restart fully resets progression",
+    "Escape pauses",
+    "Escape resumes",
+    "Audio toggle works",
+    "Low quality works",
+    "1024x768 layout renders",
+    "No browser JavaScript or resource errors"
+  ],
+  "errors": [],
+  "state": {
+    "intro": false,
+    "jumpY": 0,
+    "x": 0,
+    "z": 4.1,
+    "insideAgora": false,
+    "doorOpen": false,
+    "cameraYaw": 0,
+    "cameraDistance": 7.6,
+    "model": "Original articulated quadruped Sphinx",
+    "legCount": 4,
+    "ancient": false,
+    "coins": [],
+    "shrineActive": false,
+    "mapFound": false,
+    "anchorReleased": false,
+    "finished": false,
+    "modal": null,
+    "reversals": 0,
+    "elapsed": 9.75,
+    "drawCalls": 268,
+    "triangles": 23912
+  }
+}

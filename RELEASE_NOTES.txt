@@ -1,27 +1,37 @@
-REAL LAKEHEAD TOUR EDITION
+SPHINX REVERSAL — LAKEHEAD RESCUE / PLAYABLE REPAIR RC1
+Target and validation runtime: Godot 4.7.2 stable.
 
-Default: actual offline tour imagery, not the previous generic modeled campus.
-Agora: page 13 / image 19 / cube 8.
-Campus Corridor and Paterson Library entrance: page 18 / cube 16.
-ATAC interior: page 20 / image 26 / cube 19.
-Lake Tamblyn: page 11 / image 17 / cube 11.
-The library page 24 is an ordinary gallery, not a 360 panorama.
+FIXED
+- Removed fake tiny-radius walking from the photographic adventure.
+- Large named campus destination buttons; no generated numeric adjacency.
+- Clickable contextual targets, hover feedback, generous E selection and no
+  additional hidden proximity requirement in photographic mode.
+- One objective at a time, immediate scarab counter, highlighted next destination.
+- Graphical map, clickable 3-2-1 altar symbols, clear victory and restart.
+- Separate local reversal encounters: reveal, restore passage, open time lock.
+- Blue/gold transition, animated glyphs, collection feedback and existing sounds.
+- Rebuilt guardian and Nefertiti, intro, live 3D portrait, rescue close-up.
+- Preserved all four authentic offline panorama assets and the full quest.
 
-The source manifest supplies the complete mapping, source URLs, local files,
-per-file and tile hashes, face orientation and the metadata-selected resolution.
-All 96 tiles were stitched by column/row. All twelve cube edges were checked
-for every location. Maximum measured edge MAE: 10.18/255.
+TESTING
+- Source public screen/keyboard progression: 51/51 (no teleports, camera setters,
+  direct action calls or quest flag assignments in the test).
+- Asset/identity/navigation/layout checks: 51/51.
+- Original modeled-mode logic regression: 15/15.
+- Final Windows EXE embedded game data tested using Linux Godot 4.7.2.
+- Actual OpenGL screenshots captured; see validation/logs/repair for final counts.
 
-Import: passed. Full source quest: 41/41. Packaged PCK quest: 41/41.
-Legacy regression: 15/15. Five actual PCK screenshots captured in OpenGL.
-Tested with Godot 4.6.3 on Linux/Mesa llvmpipe. The virtual display reports an
-unsupported V-Sync change warning. No other import/script/render errors remain.
-Windows templates absent, so no EXE. Godot 4.7 and Windows runtime not tested.
-Audio calls exercised with dummy output; audible sound and GPU performance untested.
+LIMITS
+- Windows PE is exported, but native Windows execution is not tested here.
+- Graphical runner uses Mesa software rendering and dummy audio: no hardware
+  performance or audible-output claim.
+- Automated GUI input plus screenshot review is not a human usability study.
+- The previous user recording exceeded the 32 MiB attachment transfer limit and
+  could not be inspected. Current screenshots are from actual execution.
+- Static photos have no dynamic occlusion/depth reconstruction. Named travel
+  represents verified peer locations in the official tour, not surveyed footpaths.
+- Original Lakehead/Circuit imagery is included under the user's expressly
+  confirmed redistribution permission. No ownership or public license claimed.
 
-This is a fixed-camera 360/photo + local 3D proxy game, not photogrammetry.
-Photographed people and scenery do not animate. Hotspot graph is game-authored.
-Images are redistributed on the basis of the user's express permission confirmation
-covering ZIP and GitHub publication. Copyright remains with the respective owners.
-
-Open GAME_GODOT_V5_RUNNING_BASE/project.godot in Godot, then F5.
+WINDOWS: Extract the Windows ZIP; run SphinxReversal.exe.
+SOURCE: Open GAME_GODOT_V5_RUNNING_BASE/project.godot in Godot 4.7.2 and press F5.

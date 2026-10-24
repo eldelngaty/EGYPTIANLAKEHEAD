@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "Final build renders the human Pharaoh and real reflections",
+    "Corrected six-face photographic reference opens without changing seals",
+    "Nefertiti cannot be released before all three seals and map",
+    "Reversal refuses to remove the bridge beneath the player",
+    "Present opens the opposite eastern gate",
+    "Ancient restores the crossing and closes the opposite gate",
+    "Hidden seal C cannot be collected in the present",
+    "Final camera remains outside geometry and hero",
+    "Zero final-build browser script/resource errors"
+  ],
+  "passed": 9,
+  "errors": [],
+  "method": "Offline final bundle. Real mouse/keys/UI; deterministic collision-checked travel replay in this additional negative/render regression. Full mission normal-input proof is separate."
+}

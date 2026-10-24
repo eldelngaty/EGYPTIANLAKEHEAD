@@ -1026,11 +1026,31 @@
     "local_file": "res://assets/tour/library_gallery.jpg",
     "type": "ordinary photograph, not a 360 panorama"
   },
-  "navigation": "Game-authored hotspot graph between verified camera locations; not a surveyed walking route",
+  "navigation": {
+    "mode": "named location selector",
+    "source_tour_id": 52,
+    "source_group_id": 51,
+    "verified_page_ids": {
+      "agora": 13,
+      "corridor": 18,
+      "atac": 20,
+      "lake": 11
+    },
+    "basis": "These named locations are peers in the official Thunder Bay tour and share parent group 51. Travel is between verified viewpoints; no direct physical footpath or adjacency is claimed.",
+    "quest_itinerary": [
+      "agora",
+      "corridor",
+      "atac",
+      "agora",
+      "atac",
+      "lake"
+    ]
+  },
   "photographic_camera_height_m": 1.65,
-  "local_proxy_radius_m": 3.8,
   "limitations": [
-    "Photographic people and scenery are static; gameplay objects are separate 3D meshes.",
-    "Photographic camera stays fixed; only the nearby 3D avatar moves."
-  ]
+    "Photographic scenery and photographed people are static; interactive Egyptian objects are separate 3D meshes.",
+    "Camera height is an artistic eye-level estimate, not surveyed depth data.",
+    "Location selector represents verified tour membership, not a reconstructed walking route."
+  ],
+  "camera_mode": "Fixed first-person 360 adventure. No local avatar locomotion; hero intro, HUD portrait and victory presentation."
 }

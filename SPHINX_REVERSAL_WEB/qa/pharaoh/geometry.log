@@ -1,0 +1,33 @@
+
+> sphinx-reversal-giant-jam@1.0.0 test:geometry
+> node qa/agora-geometry.mjs
+
+PASS Player spawns on outdoor Agora Circle
+PASS Main facade has solid walls on both sides
+PASS Main Agora entrance is actually open for traversal
+PASS Player cannot pass the facade except through the doorway
+PASS Entrance doors automatically slide open on approach
+PASS Player crosses threshold into collision-enabled Agora atrium
+PASS Player can explore the interior laterally
+PASS Interior side walls have real collision
+PASS Atrium rear walls block but central exit remains passable
+PASS Player can turn and exit to outdoor Agora Circle
+PASS Doors close after player walks away
+PASS Original west seal gate still blocks in modern mode
+PASS Original east gate opens in modern mode
+PASS Original queen barrier blocks in modern mode
+PASS Original west gate opens after reversal
+PASS Original east gate closes in the ancient echo
+PASS Original queen barrier opens after reversal
+PASS All three original story seals retain their positions
+PASS Western archive/seal A remains physically reachable in ancient mode
+PASS Rebuilt ancient bridge still crosses the former water
+PASS East seal B remains physically reachable from the landing
+PASS Hidden seal C remains physically reachable INSIDE reconstructed Agora
+PASS Original shrine of return remains reachable after exiting Agora
+PASS Queen area still accessible through the rear of Agora in ancient mode
+{
+  "passed": 24,
+  "physicsRoute": "outside -> main doors -> atrium sides -> main doors -> outside",
+  "browserRendered": false
+}

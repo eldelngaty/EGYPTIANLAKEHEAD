@@ -1,0 +1,19 @@
+{
+  "base": "User-uploaded SPHINX_REVERSAL.zip; Three.js preserved, not migrated",
+  "browser": "Chromium 154.0.8037.57, Linux software WebGL",
+  "geometry": "24/24",
+  "source_full_normal_input": "20/20",
+  "offline_standalone_full_normal_input": "20/20",
+  "final_bundle_regression": "30/30; real input for actions, existing deterministic collision-checked replay for travel",
+  "final_presentation": "Intro, outward-facing solid Sphinx mesh, profile, 1024px HUD, corrected rescue camera manually reviewed",
+  "normal_input_method": "Actual browser WASD/Shift/mouse/wheel/R/E/CBA/M/ESC and restart, QA adapter reads only; no teleports, physics replay or quest mutation in full input tests",
+  "final_visual_changes_after_full_input": "Outward body normals, surface height and close rescue camera; final bundle rechecked with existing regression and presentation checks",
+  "offline": "Bundled HTML runs with networking disabled. Navigation document supplied by Playwright because this runner blocks local file URLs. Native Windows file launching remains untested.",
+  "video": "24-second actual X11 gameplay clip captured before last visual-only fixes",
+  "limitations": [
+    "Stylized reference-based Agora; not a measured campus reconstruction",
+    "No native Windows, human usability, physical audio, mobile or Firefox/Safari playtest",
+    "Cosmetic jump does not bypass ground collision"
+  ],
+  "html_sha256": "5b7d774d65c8cc32434afdd912b6f8fabb850dc393c4968d5cc160fd0e3d0da7"
+}

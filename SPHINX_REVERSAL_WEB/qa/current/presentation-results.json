@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "Normal intro renders",
+    "Quadruped profile shown through actual mouse orbit",
+    "1024px HUD fits",
+    "Network disabled; zero script errors"
+  ],
+  "errors": []
+}

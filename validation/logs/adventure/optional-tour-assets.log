@@ -1,0 +1,54 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Four authentic panoramas retained
+PASS: Verified official source identity: agora
+PASS: Offline photo texture: agora/front
+PASS: Offline photo texture: agora/right
+PASS: Offline photo texture: agora/back
+PASS: Offline photo texture: agora/left
+PASS: Offline photo texture: agora/top
+PASS: Offline photo texture: agora/bottom
+PASS: Verified official source identity: corridor
+PASS: Offline photo texture: corridor/front
+PASS: Offline photo texture: corridor/right
+PASS: Offline photo texture: corridor/back
+PASS: Offline photo texture: corridor/left
+PASS: Offline photo texture: corridor/top
+PASS: Offline photo texture: corridor/bottom
+PASS: Verified official source identity: atac
+PASS: Offline photo texture: atac/front
+PASS: Offline photo texture: atac/right
+PASS: Offline photo texture: atac/back
+PASS: Offline photo texture: atac/left
+PASS: Offline photo texture: atac/top
+PASS: Offline photo texture: atac/bottom
+PASS: Verified official source identity: lake
+PASS: Offline photo texture: lake/front
+PASS: Offline photo texture: lake/right
+PASS: Offline photo texture: lake/back
+PASS: Offline photo texture: lake/left
+PASS: Offline photo texture: lake/top
+PASS: Offline photo texture: lake/bottom
+PASS: Portrait has compact readable HUD size
+PASS: Portrait does not overlap objective
+PASS: Navigation fits 1280x720: lake
+PASS: Named screen hotspot selects correct verified location: lake
+PASS: Navigation changes actual photograph: lake
+PASS: Navigation fits 1280x720: atac
+PASS: Named screen hotspot selects correct verified location: atac
+PASS: Navigation changes actual photograph: atac
+PASS: Navigation fits 1280x720: agora
+PASS: Named screen hotspot selects correct verified location: agora
+PASS: Navigation changes actual photograph: agora
+PASS: Navigation fits 1280x720: corridor
+PASS: Named screen hotspot selects correct verified location: corridor
+PASS: Navigation changes actual photograph: corridor
+PASS: Navigation fits 1280x720: lake
+PASS: Named screen hotspot selects correct verified location: lake
+PASS: Navigation changes actual photograph: lake
+PASS: Navigation fits 1280x720: agora
+PASS: Named screen hotspot selects correct verified location: agora
+PASS: Navigation changes actual photograph: agora
+PASS: Current objective hotspot stays on screen
+PASS: Navigation alone never grants quest progress
+RESULT: 51/51 passed; assets, public navigation, layout

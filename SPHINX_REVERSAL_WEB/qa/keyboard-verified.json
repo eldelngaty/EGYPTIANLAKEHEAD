@@ -1,0 +1,37 @@
+{
+  "method": "Complete normal keyboard playthrough: actual WASD, R, E, C/B/A, M and restart button. Adapter used only for observing state; no physics replay, teleports or state changes.",
+  "date": "2026-10-24T16:23:47.482Z",
+  "browser": "Chromium 131 headless / SwiftShader",
+  "milestones": [
+    "A reached with real WASD",
+    "Bridge/gate puzzle and B with real WASD/R/E",
+    "Hidden seal C with real WASD/R/E",
+    "Reverse-order shrine using C/B/A keys",
+    "Map revealed through E in ancient reality",
+    "Present-day prison anchor severed",
+    "Final reversal rescues Nefertiti",
+    "Cinematic finishes",
+    "Normal restart clears all progress",
+    "Zero critical browser errors"
+  ],
+  "errors": [],
+  "final": {
+    "x": -0.18006171934119122,
+    "z": -23.24121658832066,
+    "ancient": true,
+    "coins": [
+      "A",
+      "B",
+      "C"
+    ],
+    "shrineActive": true,
+    "mapFound": true,
+    "anchorReleased": true,
+    "finished": true,
+    "modal": null,
+    "reversals": 5,
+    "elapsed": 70.59750000000008,
+    "drawCalls": 111,
+    "triangles": 9434
+  }
+}

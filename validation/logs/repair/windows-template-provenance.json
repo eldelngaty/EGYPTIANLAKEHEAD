@@ -1,0 +1,9 @@
+{
+  "source": "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz",
+  "archive_size": 1281349702,
+  "entry": "templates/windows_release_x86_64.exe",
+  "entry_crc32": "1ee85628",
+  "crc_checked_by_zipfile": true,
+  "sha256_extracted": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+  "verification": "Official HTTPS source and ZIP entry CRC; full 1.28GB archive SHA not calculated because only selected Windows entry was fetched using HTTP ranges."
+}

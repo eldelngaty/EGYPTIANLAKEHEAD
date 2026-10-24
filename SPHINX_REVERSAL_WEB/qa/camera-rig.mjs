@@ -1,0 +1,16 @@
+import * as THREE from '../vendor/three.module.min.js';
+import {segmentEntry,clipCamera,FollowCamera,cameraVolumes} from '../src/camera_rig.js';
+import assert from 'node:assert/strict';
+let count=0;const check=(name,ok)=>{assert(ok,name);count++;console.log('PASS',name);};
+const from=new THREE.Vector3(0,1.35,0),wanted=new THREE.Vector3(0,3.4,6.8),wall={min:{x:-5,y:0,z:2},max:{x:5,y:4,z:2.6}};
+check('Open-space camera distance never creeps inward',clipCamera(from,wanted,[]).position.distanceTo(wanted)<1e-9);
+const hit=clipCamera(from,wanted,[wall]);check('Swept camera sphere stops before wall and near plane',hit.position.z<1.79&&hit.fraction<1);
+check('Height-aware sweep clears low furniture',segmentEntry(from,wanted,{min:{x:-4,y:0,z:2},max:{x:4,y:1,z:3}})===null);
+check('Clear side of doorway does not shorten camera',segmentEntry(from,wanted,{min:{x:1.5,y:0,z:2},max:{x:4,y:4,z:3}})===null);
+let ancient=false;const stub={inAncient:()=>ancient,blockers:[{x:1,z:0,w:.5,d:3,when:'modern'},{x:3,z:0,w:.5,d:3,when:'ancient'}],agora:{cameraBounds:[],doors:[]}};
+check('Modern camera obstacles match modern gate state',cameraVolumes(stub).length===1&&cameraVolumes(stub)[0].min.x<1);ancient=true;check('Ancient camera obstacles match opposite gate state',cameraVolumes(stub).length===1&&cameraVolumes(stub)[0].min.x>2);
+const camera=new THREE.PerspectiveCamera(65,1,.12,100),rig=new FollowCamera();camera.position.copy(from);rig.update(camera,from,0,.3,6.8,[],.016);check('Spawn recovery keeps camera out of guardian body',rig.clearance>=1.5);
+const box={min:{x:.6,y:0,z:-8},max:{x:1.1,y:4,z:8}};rig.update(camera,from,Math.PI/2,.3,6.8,[box],.1);check('Tight wall orbit keeps guardian viewing distance',rig.clearance>=1.5&&rig.automaticOrbit!==0);
+const room=[{min:{x:-3,y:0,z:2},max:{x:3,y:4,z:2.5}},{min:{x:-3,y:0,z:-2.5},max:{x:3,y:4,z:-2}},{min:{x:2,y:0,z:-3},max:{x:2.5,y:4,z:3}},{min:{x:-2.5,y:0,z:-3},max:{x:-2,y:4,z:3}}];
+let safe=true;for(let i=0;i<200;i++){rig.update(camera,from,i*.073,.32,6.8,room,.016);rig.enforce(camera);const c=clipCamera(from,camera.position,room);safe&&=c.fraction>.999&&rig.clearance>=1.45;}check('Continuous corner orbit and smoothing never pass through walls',safe);
+console.log('RESULT',count,'camera collision checks passed');

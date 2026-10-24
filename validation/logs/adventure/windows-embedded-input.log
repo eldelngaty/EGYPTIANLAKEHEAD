@@ -1,0 +1,62 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Default is walkable 3D, not panorama
+PASS: Sphinx has four articulated IK legs
+PASS: No blocking tutorial at startup
+PASS: Wheel zoom uses public input
+PASS: ESC opens pause/settings
+PASS: Pause blocks movement
+PASS: Visible UI button: OFFICIAL TOUR / REFERENCE VIEW
+PASS: Official photographic reference viewer opens
+PASS: Verified reference photo loaded for scene 0
+PASS: Visible UI button: NEXT VERIFIED LOCATION
+PASS: Verified reference photo loaded for scene 1
+PASS: Visible UI button: NEXT VERIFIED LOCATION
+PASS: Verified reference photo loaded for scene 2
+PASS: Visible UI button: NEXT VERIFIED LOCATION
+PASS: Verified reference photo loaded for scene 3
+PASS: Visible UI button: ROTATE VIEW / NEXT CUBE FACE
+PASS: Visible UI button: BACK TO GAME
+PASS: Mission map available immediately
+PASS: Walked to (-5.0, 1.0, -26.5); actual (-5.0, 1.0, -26.65132)
+PASS: Present scarab cannot be collected
+PASS: R materializes Agora scarab
+PASS: First scarab collected by normal E
+PASS: Cannot walk through Agora building
+PASS: Walked to (10.0, 1.0, -24.0); actual (10.07393, 1.0, -24.02652)
+PASS: Walked to (10.0, 1.0, -2.0); actual (9.999485, 1.0, -1.845769)
+PASS: Walked to (21.0, 1.0, -3.5); actual (21.07904, 1.0, -3.511886)
+PASS: Library time passage requires reversal
+PASS: R restores library passage
+PASS: Second scarab collected by walking
+PASS: Walked to (26.0, 1.0, -3.0); actual (26.0895, 1.0, -2.990689)
+PASS: Walked to (26.0, 1.0, -26.0); actual (25.99939, 1.0, -26.15804)
+PASS: Walked to (35.6, 1.0, -26.0); actual (35.59892, 1.0, -26.00002)
+PASS: ATAC ancient mechanism activated with E
+PASS: Walked to (38.0, 1.0, -26.0); actual (37.61417, 1.0, -26.00001)
+PASS: All three scarabs collected without teleporting
+PASS: Walked to (26.0, 1.0, -26.0); actual (25.91669, 1.0, -26.0)
+PASS: Walked to (26.0, 1.0, -3.0); actual (26.00061, 1.0, -2.832593)
+PASS: Walked to (0.0, 1.0, -3.0); actual (-0.126386, 1.0, -3.000814)
+PASS: Walked to (0.0, 1.0, 3.3); actual (0.001847, 1.0, 3.392068)
+PASS: Agora altar reached and activated
+PASS: Wrong altar input grants no key
+PASS: 3-2-1 grants golden key
+PASS: Walked to (11.0, 1.0, 0.0); actual (11.17977, 1.0, -0.055445)
+PASS: Walked to (26.0, 1.0, 0.0); actual (26.08386, 1.0, 0.000314)
+PASS: Walked to (49.0, 1.0, 0.0); actual (49.12797, 1.0, -0.000002)
+PASS: Walked to (49.0, 1.0, -20.0); actual (48.99946, 1.0, -20.08377)
+PASS: Golden key opens ATAC chamber
+PASS: Walked to (49.0, 1.0, -27.0); actual (49.0, 1.0, -27.0946)
+PASS: Secret map found by walking into chamber
+PASS: Walked to (49.0, 1.0, 0.0); actual (49.0, 1.0, 0.142861)
+PASS: Walked to (-17.0, 1.0, 0.0); actual (-17.08732, 1.0, -0.000189)
+PASS: Walked to (-17.0, 1.0, 20.0); actual (-16.99964, 1.0, 20.0838)
+PASS: Present water blocks crossing without a bridge
+PASS: Lake bridge restored with R
+PASS: Walked to (-46.0, 1.0, 20.0); actual (-44.91044, 1.0, 20.00361)
+PASS: Nefertiti rescued through complete walking quest
+PASS: Rescue composition clearly separates Sphinx and Nefertiti
+PASS: Victory follows short cinematic
+PASS: Enter restarts entire mission
+RESULT: 59/59 checks passed
