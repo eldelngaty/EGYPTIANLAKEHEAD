@@ -1,0 +1,90 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+
+PASS: Default is walkable 3D, not panorama
+PASS: Sphinx has four articulated IK legs
+PASS: Actual rendered screenshot 01_sphinx_arrival
+PASS: No blocking tutorial at startup
+PASS: Wheel zoom uses public input
+PASS: ESC opens pause/settings
+PASS: Pause blocks movement
+PASS: Visible UI button: OFFICIAL TOUR / REFERENCE VIEW
+PASS: Official photographic reference viewer opens
+PASS: Verified reference photo loaded for scene 0
+PASS: Visible UI button: NEXT VERIFIED LOCATION
+PASS: Verified reference photo loaded for scene 1
+PASS: Visible UI button: NEXT VERIFIED LOCATION
+PASS: Verified reference photo loaded for scene 2
+PASS: Visible UI button: NEXT VERIFIED LOCATION
+PASS: Verified reference photo loaded for scene 3
+PASS: Visible UI button: ROTATE VIEW / NEXT CUBE FACE
+PASS: Visible UI button: BACK TO GAME
+PASS: Mission map available immediately
+PASS: Walked to (-5.0, 1.0, -26.5); actual (-5.0, 1.0, -26.37493)
+PASS: Present scarab cannot be collected
+PASS: R materializes Agora scarab
+PASS: Actual rendered screenshot 02_agora_reversal
+PASS: First scarab collected by normal E
+PASS: Cannot walk through Agora building
+PASS: Walked to (10.0, 1.0, -24.0); actual (10.45435, 1.0, -24.16295)
+PASS: Walked to (10.0, 1.0, -2.0); actual (9.969464, 1.0, -1.718842)
+PASS: Walked to (21.0, 1.0, -3.5); actual (21.43271, 1.0, -3.629162)
+PASS: Library time passage requires reversal
+PASS: R restores library passage
+PASS: Actual rendered screenshot 03_library_passage
+PASS: Second scarab collected by walking
+PASS: Walked to (26.0, 1.0, -3.0); actual (26.35145, 1.0, -2.904494)
+PASS: Walked to (26.0, 1.0, -26.0); actual (25.96831, 1.0, -26.43703)
+PASS: Walked to (35.6, 1.0, -26.0); actual (35.91047, 1.0, -25.91805)
+PASS: ATAC ancient mechanism activated with E
+PASS: Walked to (38.0, 1.0, -26.0); actual (37.96048, 1.0, -25.9878)
+PASS: Actual rendered screenshot 04_atac_mechanism
+PASS: All three scarabs collected without teleporting
+PASS: Walked to (26.0, 1.0, -26.0); actual (25.602, 1.0, -25.99705)
+PASS: Walked to (26.0, 1.0, -3.0); actual (26.03624, 1.0, -2.610461)
+PASS: Walked to (0.0, 1.0, -3.0); actual (-0.438391, 1.0, -3.031751)
+PASS: Walked to (0.0, 1.0, 3.3); actual (0.145255, 1.0, 3.631236)
+PASS: Agora altar reached and activated
+PASS: Wrong altar input grants no key
+PASS: 3-2-1 grants golden key
+PASS: Actual rendered screenshot 05_altar_key
+PASS: Walked to (11.0, 1.0, 0.0); actual (11.36759, 1.0, -0.136797)
+PASS: Walked to (26.0, 1.0, 0.0); actual (26.32159, 1.0, 0.009566)
+PASS: Walked to (49.0, 1.0, 0.0); actual (49.35243, 1.0, -0.000306)
+PASS: Walked to (49.0, 1.0, -20.0); actual (48.97028, 1.0, -20.28764)
+PASS: Golden key opens ATAC chamber
+PASS: Walked to (49.0, 1.0, -27.0); actual (49.01103, 1.0, -27.47318)
+PASS: Secret map found by walking into chamber
+PASS: Actual rendered screenshot 06_secret_map
+PASS: Walked to (49.0, 1.0, 0.0); actual (48.99963, 1.0, 0.411919)
+PASS: Walked to (-17.0, 1.0, 0.0); actual (-17.41575, 1.0, -0.012793)
+PASS: Walked to (-17.0, 1.0, 20.0); actual (-16.9467, 1.0, 20.46465)
+PASS: Present water blocks crossing without a bridge
+PASS: Lake bridge restored with R
+PASS: Actual rendered screenshot 07_lake_bridge
+ERROR: Walked to (-46.0, 1.0, 20.0); actual (-20.89142, 1.0, 21.83668)
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:15)
+       [1] walk (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:56)
+ERROR: Nefertiti rescued through complete walking quest
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:15)
+       [1] run (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:193)
+       [2] tap (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:27)
+PASS: Actual rendered screenshot 08_rescue
+ERROR: Victory follows short cinematic
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:15)
+       [1] run (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:196)
+PASS: Actual rendered screenshot 09_victory
+ERROR: Enter restarts entire mission
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:15)
+       [1] run (/workspace/EGYPTIANLAKEHEAD/validation/adventure_walkthrough.gd:202)
+RESULT: 63/67 checks passed

@@ -1,0 +1,36 @@
+{
+  "engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+  "default": "true modeled third-person 3D, original articulated Sphinx",
+  "source_input_before_final_braking_fix": "58/58",
+  "source_graphical_before_final_braking_fix": "67/67",
+  "FINAL_windows_embedded_headless_input": "59/59",
+  "FINAL_windows_embedded_graphical_input": "68/68",
+  "optional_tour_assets_navigation": "51/51",
+  "automated_input": "Keyboard/mouse only; continuous movement; no assignment of player/camera transforms or quest flags",
+  "screenshots": [
+    "01_sphinx_arrival.png",
+    "02_agora_reversal.png",
+    "03_library_passage.png",
+    "04_atac_mechanism.png",
+    "05_altar_key.png",
+    "06_secret_map.png",
+    "07_lake_bridge.png",
+    "08_rescue.png",
+    "09_victory.png"
+  ],
+  "recording": {
+    "file": "downloads/Sphinx_Adventure_Gameplay.mp4",
+    "duration_seconds": 45,
+    "type": "Real X11 running-game capture; recorded before final braking adjustment"
+  },
+  "regression_fixed": "Run release deceleration caused camera/input walkthrough to miss narrow lake entry. Increased braking and explicitly settled input before waypoints. Final embedded graphical walking rescue/restart passes.",
+  "import_export": "No script/import/export errors in final logs",
+  "native_Windows_execution": false,
+  "human_usability_study": false,
+  "hardware_GPU_test": false,
+  "physical_audio_test": false,
+  "stable_main": "98939ff90400034dcee45c5d7d137fb11bb95b73",
+  "PR": "1, open and unmerged",
+  "reference_review": "tour_evidence/adventure_reference_review.json",
+  "final_rescue_presentation": "Nefertiti collision prevents overlap; she steps beside the Sphinx for a front-facing two-character victory shot, checked in final input run."
+}

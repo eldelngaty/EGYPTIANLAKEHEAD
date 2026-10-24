@@ -6,6 +6,7 @@ var checks := 0
 var game: Node
 var capture_dir := ""
 func _initialize() -> void:
+    OS.set_environment("SPHINX_TOUR","1")
     call_deferred("run")
 func check(value: bool, label: String) -> void:
     checks+=1

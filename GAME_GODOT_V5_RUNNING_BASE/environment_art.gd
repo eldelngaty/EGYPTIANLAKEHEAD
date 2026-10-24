@@ -41,27 +41,30 @@ func building(g: Node, title: String, at: Vector3, dims: Vector3) -> void:
     var is_agora := title.begins_with("AGORA")
     var library := title.begins_with("PATERSON")
     var atac := title == "ATAC"
-    var wall := concrete if library or atac else brick
+    var wall := concrete if library or is_agora else (material("atac_sandstone",Color("bb9584")) if atac else brick)
     # Keep original collision footprint; articulate the visible envelope.
     block(g,g,at+Vector3(0,dims.y*.5,0),dims,wall,true)
     block(g,g,at+Vector3(0,.2,0),Vector3(dims.x+.3,.4,dims.z+.3),concrete)
     block(g,g,at+Vector3(0,dims.y+.12,0),Vector3(dims.x+.45,.24,dims.z+.45),charcoal)
     var front := at.z-dims.z*.5-.19
-    var floors := 2 if is_agora else (4 if library else 5)
+    var floors := 2 if is_agora else (5 if library else 5)
     var floor_height := (dims.y-.55)/floors
-    var cols := 8 if is_agora else (7 if library else 12)
+    var cols := 10 if is_agora else (7 if library else 12)
     if atac:
-        # Faceted, gently bowed curtain wall, with projecting inclined fins.
-        for col in range(cols):
-            var x := at.x-dims.x*.5+(col+.5)*dims.x/cols
-            var z := front-.9+.012*pow(x-at.x,2)
-            for floor_id in range(floors):
-                window(g,Vector3(x,1.55+floor_id*2.9,z),Vector2(1.24,2.65),col+floor_id)
-            block(g,g,Vector3(x,7.9,z-.24),Vector3(.075,15.8,.3),concrete)
+        # Official exterior image42: sandstone grid and a projecting glazed atrium,
+        # rather than a generic fully glazed tower.
+        for col in range(9):
+            var x := at.x-dims.x*.5+(col+.5)*dims.x/9
+            for floor_id in range(5):
+                window(g,Vector3(x,1.6+floor_id*2.9,front-.12),Vector2(1.05,2.1),col+floor_id)
         for col in range(5):
-            var fin := block(g,g,Vector3(at.x-7+col*3.5,7.7,front-1.1),Vector3(.32,15.4,1.15),concrete)
-            fin.rotation_degrees.z = -7
-        g._cylinder(g,at+Vector3(8.1,8.2,2.5),2.1,16.4,Color("748691"))
+            var x := at.x-3.8+col*1.9
+            var z := front-2.6+.045*pow(x-at.x,2)
+            block(g,g,Vector3(x,4.6,z),Vector3(1.8,8.5,.17),material("atrium_glass",Color("397c88"),.16,.58))
+            block(g,g,Vector3(x-.92,4.6,z-.12),Vector3(.10,8.5,.16),material("atrium_frame",Color("afb7ae"),.3,.5))
+            block(g,g,Vector3(x,8.9,z),Vector3(1.9,.35,1),material("blue_atac",Color("224d70"),.3,.5))
+            for y in [2.8,5.5,8.1]:
+                block(g,g,Vector3(x,y,z-.15),Vector3(1.9,.08,.17),material("atrium_frame",Color("afb7ae"),.3,.5))
     else:
         for f in range(floors):
             var y := .8+floor_height*(f+.5)
@@ -94,9 +97,15 @@ func building(g: Node, title: String, at: Vector3, dims: Vector3) -> void:
     block(g,g,Vector3(at.x,3.22,entry_z-.1),Vector3(8.4,.22,2.7),charcoal)
     block(g,g,Vector3(at.x,.1,entry_z-1.8),Vector3(10,.2,3.8),concrete)
     if is_agora:
+        # Agora reference33: ribbed pale concrete, broad glazing and recessed doors.
+        for i in range(64):
+            block(g,g,Vector3(at.x-dims.x*.5+i*dims.x/64,3.95,front-.4),Vector3(.055,1.25,.09),concrete)
+        block(g,g,Vector3(at.x,3.95,front-.27),Vector3(dims.x,1.4,.3),concrete)
+        for i in range(16):
+            window(g,Vector3(at.x-8+(i+.5),5.9,front-.3),Vector2(.91,2.0),i)
         # Wide, low University Centre wings and red masonry piers.
         for side in [-1,1]:
-            block(g,g,at+Vector3(side*11.2,2.5,1.4),Vector3(4.4,5,8.8),brick)
+            block(g,g,at+Vector3(side*11.2,2.5,1.4),Vector3(4.4,5,8.8),concrete)
             for j in range(3):
                 window(g,at+Vector3(side*11.2+(j-1)*1.25,2.7,-3.2),Vector2(1.02,2.7),j)
         for i in range(5):
@@ -113,6 +122,12 @@ func building(g: Node, title: String, at: Vector3, dims: Vector3) -> void:
             rib.rotation_degrees.z = -x*5
         for z in range(6):
             block(g,g,Vector3(at.x,3.52,entry_z-3.5+z),Vector3(9.5,.09,.06),charcoal)
+        # Curved translucent canopy panels and longitudinal ribs.
+        for i in range(22):
+            var x := -4.7+i*.427
+            var y := 3.45+1.35*(1-pow(x/4.8,2))
+            var pane := block(g,g,Vector3(at.x+x+.21,y-.06,entry_z-1),Vector3(.42,.055,5.35),material("canopy_glass",Color("5aa7a4"),.24,.3))
+            pane.rotation_degrees.z=-x*5
         for x in [-4.6,4.6]:
             g._cylinder(g,Vector3(at.x+x,1.7,entry_z-3.1),.1,3.4,Color("a8babc"))
         facade_text(g,"CHANCELLOR PATERSON LIBRARY",Vector3(at.x,5.4,front-.48),24)
@@ -185,7 +200,7 @@ func courtyard(g: Node) -> void:
             g._sphere(g,at,.38,Color("5d704b"))
             for k in range(2):
                 g._sphere(g,at+Vector3(.19*k,.29,.06),.08,Color("aa8e6b"))
-    for x in [-18,-12,-6,0]:
+    for x in [-18,-12]:
         g._bench(Vector3(x,0,-29),0)
     for at in [Vector3(-24,0,-25),Vector3(8,0,-25),Vector3(-24,0,-8)]:
         tree(g,g,at,1.1)

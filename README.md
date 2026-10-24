@@ -1,3 +1,17 @@
+# Latest: third-person Sphinx adventure
+
+A four-legged playable Sphinx in the existing walkable campus. Mouse look, wheel zoom, accelerated movement, compact mission HUD and the full rescue quest. PR #1 remains unmerged; stable main is preserved.
+
+- [Windows x64 ZIP](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/Sphinx_Adventure_Windows_x64.zip)
+- [Complete Godot 4.7.2 project ZIP](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/Sphinx_Adventure_Project.zip)
+- [Actual screenshots](screenshots/adventure/)
+- [Actual gameplay recording](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/Sphinx_Adventure_Gameplay.mp4)
+- [Controls, validation and limitations](GAME_GODOT_V5_RUNNING_BASE/ADVENTURE_RELEASE.md)
+
+The compact modeled campus is an adaptation from official references, not an exact campus reconstruction. Photographic references remain optional. Native Windows execution has not been tested on this Linux runner.
+
+---
+
 # Sphinx Reversal — Lakehead Rescue / playable repair
 
 [Windows x64 game](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/refs/heads/repair/360-adventure-ux/downloads/Sphinx_Reversal_Playable_Repair_Windows_x64.zip) · [Complete Godot project](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/refs/heads/repair/360-adventure-ux/downloads/Sphinx_Reversal_Playable_Repair_Project.zip)

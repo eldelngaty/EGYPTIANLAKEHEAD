@@ -1,0 +1,47 @@
+{
+  "review": "Original modeled campus compared against official gallery images; compact mission geography is an adaptation, not surveyed campus topology.",
+  "sources": [
+    {
+      "area": "Agora",
+      "official_metadata": "agora_metadata.json",
+      "image_id": 33,
+      "features": "Ribbed pale concrete, horizontal glazing, recessed multiple glazed doors, paved forecourt."
+    },
+    {
+      "area": "Paterson Library",
+      "official_metadata": "library_metadata.json",
+      "image_id": 49,
+      "features": "Green curved translucent canopy, concrete window grid, red brick tower."
+    },
+    {
+      "area": "ATAC",
+      "official_metadata": "atac_metadata.json",
+      "image_id": 42,
+      "features": "Sandstone window grid and projecting blue/green glazed atrium."
+    },
+    {
+      "area": "Lake Tamblyn",
+      "official_metadata": "lake_metadata.json",
+      "features": "Waterfront/trees from verified tour cube11; fictional Egyptian rescue bridge."
+    }
+  ],
+  "limitations": [
+    "Official campus map endpoint was inaccessible (network403).",
+    "Sketchfab downloadable animated sphinx API inaccessible (network403). No third-party model or uncertain license imported.",
+    "Sphinx is original locally authored articulated mesh with procedural two-bone leg animation, not a downloaded rigged GLB.",
+    "Existing four verified panorama assets remain intact; optional pause-menu reference viewer shows all six faces per location."
+  ],
+  "manual_screenshot_review": {
+    "character": "Arrival shot shows pharaonic human head, blue/gold headdress, lion torso, four articulated legs, paws, tail and cast shadow at normal third-person scale.",
+    "agora": "Concrete ribbing and glazed entry match reference motifs; red piers/wing proportions remain stylized, not a measured replica.",
+    "library": "Actual screenshot shows recognizable curved jade canopy, brick stair tower and concrete/window grid; magical passage is clearly fictional.",
+    "atac": "Sandstone fenestration with blue/green projecting atrium uses official image42. Approximate facade proportions.",
+    "lake": "Modeled compact water/landscape and fictional traversable bridge; significantly compressed relative to actual Lake Tamblyn.",
+    "gates_not_claimed": [
+      "AAA or photogrammetric fidelity",
+      "native Windows playtest",
+      "independent human usability study",
+      "survey-accurate geographic relationships"
+    ]
+  }
+}

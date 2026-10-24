@@ -4,7 +4,9 @@ extends SceneTree
 var checks:=0
 var failures:=0
 var game: Node
-func _initialize() -> void: call_deferred("run")
+func _initialize() -> void:
+    OS.set_environment("SPHINX_TOUR","1")
+    call_deferred("run")
 func check(value: bool, label: String) -> void:
     checks+=1
     if value: print("PASS: ",label)
