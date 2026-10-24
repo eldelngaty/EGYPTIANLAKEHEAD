@@ -1,0 +1,24 @@
+{
+  "name": "sphinx-reversal-giant-jam",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node serve.mjs --source",
+    "build": "node scripts/build.mjs",
+    "build:vite": "vite build",
+    "preview": "node serve.mjs",
+    "test:geometry": "node qa/agora-geometry.mjs",
+    "build:standalone": "node scripts/standalone.mjs",
+    "test:input": "node qa/adventure-input.cjs"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.12"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "browser": "Chromium headless / software WebGL",
+  "date": "2026-10-24T16:22:26.141Z",
+  "checks": [
+    "Built dist served by dependency-free launcher",
+    "Production QA adapter absent",
+    "Title/start/reversal render",
+    "Pause restart restores modern reality",
+    "Quality toggle and 1024x768 render",
+    "No external asset requests",
+    "Zero browser JavaScript/resource errors"
+  ],
+  "requests": [
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/index-C2a8G5Eh.js",
+    "http://127.0.0.1:4173/assets/index-D2mtucih.css"
+  ],
+  "errors": []
+}

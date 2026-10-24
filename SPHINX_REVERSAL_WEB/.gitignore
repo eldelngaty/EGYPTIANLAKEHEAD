@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+qa/*.png
+qa/*.webm
+checkpoints.bundle
+SPHINX_REVERSAL_WEB.zip

@@ -1,3 +1,15 @@
+# Latest: developed user-uploaded Three.js game
+
+The uploaded SPHINX_REVERSAL project is developed in [SPHINX_REVERSAL_WEB](SPHINX_REVERSAL_WEB/). Playable animated quadruped Sphinx, mouse orbit and wheel zoom, clearer mission marker, compact HUD, optimized static geometry and the original complete reversal quest.
+
+- [Small ready-to-play ZIP](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/SPHINX_REVERSAL_Play.zip): extract and open PLAY_SPHINX.html in Chrome/Edge; no installation or server.
+- [Complete updated source ZIP](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/repair/360-adventure-ux/downloads/SPHINX_REVERSAL_Project.zip).
+- [Actual screenshots, recording and test evidence](SPHINX_REVERSAL_WEB/qa/current/).
+
+24 geometry checks; 20/20 full actual-input completion against source and again against network-disabled standalone HTML; final regression 30/30 and final presentation checks. Native Windows launching/human playtesting remain untested. Earlier Godot work is preserved below; stable main is unchanged.
+
+---
+
 # Latest: third-person Sphinx adventure
 
 A four-legged playable Sphinx in the existing walkable campus. Mouse look, wheel zoom, accelerated movement, compact mission HUD and the full rescue quest. PR #1 remains unmerged; stable main is preserved.
