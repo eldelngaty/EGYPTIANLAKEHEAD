@@ -156,68 +156,11 @@ func tree(g: Node, p: Node3D, at: Vector3, size: float) -> void:
         n.add_child(crown)
 
 func royal(g: Node, p: Node3D, guardian: bool) -> void:
-    var skin := material("skin",Color("ac8059"))
-    var gold := material("gold",Color("d7b05b"),.3,.65)
-    var blue := material("lapis",Color("174e80"),.42,.3)
-    var linen := material("linen",Color("e1d9bc"))
-    if not guardian:
-        linen = blue
-    for side in [-1,1]:
-        var leg := Node3D.new()
-        p.add_child(leg)
-        leg.position = Vector3(side*.25,1.25,0)
-        block(g,leg,Vector3(0,-.5,0),Vector3(.3,.95,.33),skin)
-        block(g,leg,Vector3(0,-1,.15),Vector3(.34,.12,.65),material("sandals",Color("5c4736")))
-        if guardian:
-            limbs.append(leg)
-    var torso := MeshInstance3D.new()
-    var chest := CylinderMesh.new()
-    chest.top_radius = .58
-    chest.bottom_radius = .38
-    chest.height = .9
-    chest.radial_segments = 8
-    torso.mesh = chest
-    torso.material_override = skin
-    torso.position.y = 2.05
-    p.add_child(torso)
-    var skirt: Node3D = g._cone(p,Vector3(0,1.24,0),.72,1.05,Color("ddd6bb"),10)
-    skirt.get_child(0).material_override = linen
-    block(g,p,Vector3(0,1.68,.04),Vector3(.96,.15,.8),gold)
-    block(g,p,Vector3(0,1.1,.58),Vector3(.37,.95,.08),blue)
-    for x in [-.22,.22]:
-        block(g,p,Vector3(x,1.1,.63),Vector3(.035,.95,.04),gold)
-    var collar: Node3D = g._cylinder(p,Vector3(0,2.43,0),.65,.17,Color.WHITE)
-    collar.get_child(0).material_override = gold
-    g._cylinder(p,Vector3(0,2.56,0),.18,.22,Color("ac8059"))
-    var head: Node3D = g._sphere(p,Vector3(0,2.91,0),.39,Color("ac8059"))
-    head.scale = Vector3(.9,1.16,.9)
-    # Nemes crown: curved crown and tapered striped cloth lappets.
-    var crown: Node3D = g._sphere(p,Vector3(0,3.14,-.06),.54,Color("174e80"))
-    crown.scale = Vector3(1.12,.8,.85)
-    for side in [-1,1]:
-        var cloth := block(g,p,Vector3(side*.48,2.92,-.03),Vector3(.34,1.05,.52),blue)
-        cloth.rotation_degrees.z = side*12
-        for stripe in range(7):
-            block(g,p,Vector3(side*(.47+(3-stripe)*.012),2.5+stripe*.135,.25),Vector3(.34,.043,.035),gold)
-        block(g,p,Vector3(side*.145,2.98,.341),Vector3(.105,.045,.04),material("eyes",Color("172c3c")))
-    block(g,p,Vector3(0,3.19,.39),Vector3(.06,.32,.07),gold)
-    g._sphere(p,Vector3(0,3.37,.42),.09,Color("e4c367"))
-    block(g,p,Vector3(0,2.91,.38),Vector3(.09,.15,.11),skin)
-    block(g,p,Vector3(0,2.69,.37),Vector3(.13,.2,.1),gold)
-    for side in [-1,1]:
-        var arm := Node3D.new()
-        p.add_child(arm)
-        arm.position = Vector3(side*.63,2.3,0)
-        var upper: Node3D = g._cylinder(arm,Vector3(side*.06,-.28,0),.14,.64,Color("ac8059"))
-        upper.rotation.z = side*.16
-        g._sphere(arm,Vector3(side*.1,-.58,0),.15,Color("ac8059"))
-        g._cylinder(arm,Vector3(side*.1,-.83,.02),.11,.47,Color("ac8059"))
-        g._cylinder(arm,Vector3(side*.1,-.97,.02),.14,.16,Color("d7b05b"))
-        if guardian:
-            limbs.append(arm)
-            if side == 1:
-                g._cylinder(arm,Vector3(.27,-.48,.18),.045,2.8,Color("d7b05b"))
-                g._ankh(arm,Vector3(.27,1.05,.18),.34)
+    var character = preload("res://guardian_art.gd").new()
+    var pivots: Array[Node3D] = character.build(g,p,guardian)
+    if guardian:
+        limbs.append_array(pivots)
+
 
 func animate(delta: float, speed: float) -> void:
     phase += delta * (9.0 if speed > .1 else 2.0)

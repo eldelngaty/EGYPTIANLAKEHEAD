@@ -1,0 +1,54 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Existing real-photo project starts
+PASS: Opening shot presents the guardian at human scale
+PASS: Guardian stays recognizable in a live 3D portrait
+PASS: First-person exploration avoids fake walking avatar
+PASS: No tiny-radius fake movement
+PASS: First objective is explicit immediately
+PASS: Ordinary right-drag rotates the panorama
+PASS: Visible screen control: Travel_corridor
+PASS: Screen click travels to Library
+PASS: Off-route player is guided back to Agora
+PASS: Visible screen control: Travel_agora
+PASS: Screen click returns to Agora
+PASS: Visible screen control: QuestHotspot
+PASS: Hidden scarab cannot be collected before reversal
+PASS: Reversal reveals the first scarab
+PASS: Visible screen control: QuestHotspot
+PASS: First scarab collected by screen click without teleport
+PASS: Counter and next objective agree
+PASS: Visible screen control: Travel_corridor
+PASS: Library begins with its own present-day puzzle
+PASS: Reversal restores Library passage
+PASS: Restored passage is visible above navigation controls
+PASS: Visible screen control: QuestHotspot
+PASS: Second scarab collected through ordinary click
+PASS: Visible screen control: Travel_atac
+PASS: ATAC time-lock geometry opens after reversal
+PASS: Visible screen control: QuestHotspot
+PASS: All three scarabs collected using public input
+PASS: Three-scarab objective sends player to shrine
+PASS: Visible screen control: Travel_agora
+PASS: Visible screen control: QuestHotspot
+PASS: Altar opens clear symbol puzzle
+PASS: Visible screen control: Altar_1
+PASS: Wrong symbol does not grant key
+PASS: Visible screen control: Altar_3
+PASS: Visible screen control: Altar_1
+PASS: Mouse and keyboard reverse order grants golden key
+PASS: Visible screen control: Travel_atac
+PASS: Visible screen control: QuestHotspot
+PASS: Key opens map chest through a screen hotspot
+PASS: Visible screen control: QuestHotspot
+PASS: Map is discovered through ordinary input
+PASS: Visible screen control: MapTravel_lake
+PASS: Map travel button reaches Lake Tamblyn
+PASS: Visible screen control: QuestHotspot
+PASS: Present prison prevents premature rescue
+PASS: Reversal removes the Queen's prison
+PASS: Highlighted target + E completes actual rescue
+PASS: Visible screen control: RestartGame
+PASS: Restart resets quest without developer shortcuts
+PASS: Restart restores initial location and reality
+RESULT: 51/51 passed; public screen/keyboard input only

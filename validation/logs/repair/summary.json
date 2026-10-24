@@ -1,0 +1,16 @@
+{
+  "engine": "Godot 4.7.2 stable official ed1daf0bf",
+  "source_input_checks": 51,
+  "asset_navigation_layout_checks": 51,
+  "legacy_modeled_checks": 15,
+  "final_exe_embedded_input_checks": 51,
+  "final_exe_embedded_graphical_checks": 58,
+  "graphical_check_count_includes": 7,
+  "screenshots": "screenshots/repair/*.png",
+  "input_method": "Public Godot viewport screen-coordinate mouse events and Input keyboard events. No quest state writes, player teleports, direct action calls or camera assignments in the runner.",
+  "review": "Automated input plus manual visual inspection of actual screenshots; not a human user study.",
+  "windows_exe_sha256": "d54e70a886d8e199c3d0e7e136bb5bf51319cf8cde23637f0c8e88c00d076848",
+  "windows_native_execution_tested": false,
+  "physical_audio_and_hardware_performance_tested": false,
+  "user_recording_review": "Previous video exceeded 32 MiB attachment transfer limit; not reviewed."
+}

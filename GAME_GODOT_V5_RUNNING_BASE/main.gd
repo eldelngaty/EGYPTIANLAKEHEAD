@@ -72,7 +72,7 @@ func _ready() -> void:
     _create_hud()
     _make_sfx()
     _update_world_state()
-    _flash("The guardian of Egypt has reached Lakehead. Reverse reality to save Nefertiti!", 6.0)
+    _flash("You are the Egyptian guardian. Recover three scarabs to rescue Nefertiti.", 3.2)
 
 func _process(delta: float) -> void:
     clock += delta
@@ -93,7 +93,7 @@ func _process(delta: float) -> void:
         else:
             cam.global_position = cam.global_position.lerp(player.global_position + (CAMERA_CLOSE_OFFSET if viewing_close else CAMERA_OFFSET), min(delta * 4.0, 1.0))
             cam.look_at(player.global_position + Vector3(0, 2.2, 5.0), Vector3.UP)
-    player_model.position.y = (-1.095 if tour_world != null else -1.0) + sin(clock * 2.5) * (.008 if tour_world != null else .04)
+    player_model.position.y = -1.0 + sin(clock * 2.5) * (.008 if tour_world != null else .04)
     art.animate(delta, player.velocity.length() if not help_panel.visible and not is_map_open else 0.0)
     for rune in rune_nodes:
         rune.rotation.y += delta * .3
@@ -200,6 +200,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
         _update_world_state()
         _animate_reversal()
         _flash("ANCIENT ECHO" if ancient else "PRESENT DAY", 1.5)
+        if tour_world != null:
+            tour_world.on_reversal()
     elif key_event.keycode == KEY_E:
         _interact()
 
@@ -969,7 +971,7 @@ func _interact() -> void:
         return
     # The nearest relevant object wins, so E has a predictable meaning.
     for i in range(3):
-        if not coins[i] and _target_allowed("coin%d" % i) and player.position.distance_to(COIN_SPOTS[i]) < 3.2:
+        if not coins[i] and _target_allowed("coin%d" % i) and _interaction_range(COIN_SPOTS[i],3.2):
             if not ancient:
                 _flash("The scarab is lost in time. Press R!", 2.5)
                 return
@@ -978,7 +980,7 @@ func _interact() -> void:
             _play_sfx("res://assets/collect.wav")
             _flash("Collected %s!" % COIN_TITLES[i], 3.0)
             return
-    if _target_allowed("altar") and player.position.distance_to(ALTAR_SPOT + Vector3.UP) < 4.0 and not has_key:
+    if _target_allowed("altar") and _interaction_range(ALTAR_SPOT + Vector3.UP,4.0) and not has_key:
         if coins[0] and coins[1] and coins[2]:
             altar_started = true
             altar_step = 0
@@ -986,7 +988,7 @@ func _interact() -> void:
         else:
             _flash("The altar needs all 3 scarabs.", 2.0)
         return
-    if _target_allowed("vault") and player.position.distance_to(VAULT_SPOT + vault_entry_offset) < 4.0 and not vault_open:
+    if _target_allowed("vault") and _interaction_range(VAULT_SPOT + vault_entry_offset,4.0) and not vault_open:
         if has_key:
             vault_open = true
             _play_sfx("res://assets/unlock.wav")
@@ -995,12 +997,12 @@ func _interact() -> void:
         else:
             _flash("Locked. Restore the scarabs at the Agora altar first.", 2.6)
         return
-    if _target_allowed("map") and vault_open and not map_found and player.position.distance_to(VAULT_SPOT + map_pickup_offset) < 4.0:
+    if _target_allowed("map") and vault_open and not map_found and _interaction_range(VAULT_SPOT + map_pickup_offset,4.0):
         map_found = true
         _flash("Map found! Press M to see where Nefertiti is held.", 4.0)
         _show_map(true)
         return
-    if _target_allowed("queen") and player.position.distance_to(QUEEN_SPOT + Vector3.UP) < 4.0:
+    if _target_allowed("queen") and _interaction_range(QUEEN_SPOT + Vector3.UP,4.0):
         if not map_found:
             _flash("Find the ancient map first!", 2.5)
         elif not ancient:
@@ -1333,3 +1335,6 @@ func _animate_reversal() -> void:
 
 func _target_allowed(key: String) -> bool:
     return tour_world == null or tour_world.can_target(key)
+
+func _interaction_range(at: Vector3, radius: float) -> bool:
+    return tour_world != null or player.position.distance_to(at)<radius
