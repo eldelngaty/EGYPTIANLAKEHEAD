@@ -42,7 +42,10 @@ var minimap_player: Label
 var minimap_coin_markers: Array[Label] = []
 var orbit_phase: float = 0.0
 var glow_nodes: Array[Node3D] = []
-var viewing_close: bool = false
+var viewing_close: bool = true
+var camera_yaw := PI
+var camera_pitch := 0.42
+var camera_drag := false
 var showcase_view: int = 0
 var hud_root: CanvasLayer
 var fx_player: AudioStreamPlayer
@@ -91,8 +94,17 @@ func _process(delta: float) -> void:
             cam.global_position = cam.global_position.lerp(shots[showcase_view], min(delta * 3.0, 1.0))
             cam.look_at(targets[showcase_view], Vector3.UP)
         else:
-            cam.global_position = cam.global_position.lerp(player.global_position + (CAMERA_CLOSE_OFFSET if viewing_close else CAMERA_OFFSET), min(delta * 4.0, 1.0))
-            cam.look_at(player.global_position + Vector3(0, 2.2, 5.0), Vector3.UP)
+            var focus := player.global_position + Vector3(0, 1.8, 0)
+            var distance := 8.5 if viewing_close else 16.0
+            var offset := Vector3(sin(camera_yaw) * cos(camera_pitch), sin(camera_pitch), cos(camera_yaw) * cos(camera_pitch)) * distance
+            var desired := focus + offset
+            var ray := PhysicsRayQueryParameters3D.create(focus, desired, 1)
+            ray.exclude = [player.get_rid()]
+            var hit := get_world_3d().direct_space_state.intersect_ray(ray)
+            if not hit.is_empty():
+                desired = hit.position + hit.normal * 0.35
+            cam.global_position = cam.global_position.lerp(desired, min(delta * 10.0, 1.0))
+            cam.look_at(focus, Vector3.UP)
     player_model.position.y = -1.0 + sin(clock * 2.5) * (.008 if tour_world != null else .04)
     art.animate(delta, player.velocity.length() if not help_panel.visible and not is_map_open else 0.0)
     for rune in rune_nodes:
@@ -139,6 +151,13 @@ func _physics_process(delta: float) -> void:
     _water_check()
 
 func _unhandled_input(event: InputEvent) -> void:
+    if tour_world == null:
+        if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
+            camera_drag = event.pressed
+            Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if camera_drag else Input.MOUSE_MODE_VISIBLE
+        if event is InputEventMouseMotion and camera_drag:
+            camera_yaw -= event.relative.x * 0.005
+            camera_pitch = clampf(camera_pitch + event.relative.y * 0.004, 0.12, 1.12)
     if tour_world != null and not (event is InputEventKey):
         tour_world.handle_input(event)
 
@@ -378,7 +397,7 @@ func _make_pillar(parent: Node3D, at: Vector3, h: float) -> void:
     _cylinder(parent, at + Vector3(0, h * 0.77, 0), 0.53, 0.17, Color("#3C7A8A"))
 
 func _create_world() -> void:
-    if OS.get_environment("SPHINX_MODELED") != "1" and FileAccess.file_exists("res://assets/tour/manifest.json"):
+    if OS.get_environment("SPHINX_TOUR") == "1" and FileAccess.file_exists("res://assets/tour/manifest.json"):
         tour_world = preload("res://tour_world.gd").new()
         add_child(tour_world)
         tour_world.build(self)
@@ -560,7 +579,7 @@ func _create_player() -> void:
     player.add_child(player_model)
     player_model.position.y = -1.0
     _royal_figure(player_model, true)
-    _sign(player_model, "GUARDIAN", Vector3(0, 4.65, 0), Color("ffe6a6"), 23)
+    # The modeled hero remains visible at normal third-person distance.
     cam = Camera3D.new()
     add_child(cam)
     cam.projection = Camera3D.PROJECTION_PERSPECTIVE
@@ -697,7 +716,7 @@ func _create_hud() -> void:
     help_style.content_margin_right = 28
     help_panel.add_theme_stylebox_override("panel", help_style)
     var help_text := Label.new()
-    help_text.text = "SPHINX REVERSAL  /  FIELD GUIDE\n\nWASD / Arrows: move    Shift: sprint\nR: reverse time    E: interact    C: camera zoom\nM: map (after discovery)    V: scenic views    F1: HUD\n\n1. Enter Ancient Echo and collect the three scarabs.\n2. Return to Agora. Activate the altar with 3, 2, 1.\n3. Unlock ATAC, find the map, then rescue the Queen.\n\nENTER / ESC: continue    H: reopen this guide"
+    help_text.text = "SPHINX REVERSAL  /  FIELD GUIDE\n\nWASD / Arrows: move    Shift: sprint\nRight mouse drag: orbit camera    C: camera zoom\nR: reverse time    E: interact\nM: map (after discovery)    V: scenic views    F1: HUD\n\n1. Enter Ancient Echo and collect the three scarabs.\n2. Return to Agora. Activate the altar with 3, 2, 1.\n3. Unlock ATAC, find the map, then rescue the Queen.\n\nENTER / ESC: continue    H: reopen this guide"
     help_text.add_theme_font_size_override("font_size", 19)
     help_text.add_theme_color_override("font_color", Color("f5e6c8"))
     help_panel.add_child(help_text)
