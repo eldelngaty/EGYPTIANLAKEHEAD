@@ -1,6 +1,6 @@
 # Sphinx Reversal — Lakehead Rescue / playable repair
 
-[Windows x64 game](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/releases/download/v0.3.0-repair-rc1/Sphinx_Reversal_Playable_Repair_Windows_x64.zip) · [Complete Godot project](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/releases/download/v0.3.0-repair-rc1/Sphinx_Reversal_Playable_Repair_Project.zip)
+[Windows x64 game](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/refs/heads/repair/360-adventure-ux/downloads/Sphinx_Reversal_Playable_Repair_Windows_x64.zip) · [Complete Godot project](https://github.com/eldelngaty/EGYPTIANLAKEHEAD/raw/refs/heads/repair/360-adventure-ux/downloads/Sphinx_Reversal_Playable_Repair_Project.zip)
 
 Windows: extract the ZIP and run `SphinxReversal.exe`; Godot is not required. Source: open `GAME_GODOT_V5_RUNNING_BASE/project.godot` in **Godot 4.7.2** and press F5.
 
