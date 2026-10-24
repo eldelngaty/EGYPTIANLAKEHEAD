@@ -1,29 +1,27 @@
-SPHINX REVERSAL — LAKEHEAD CAMPUS EDITION
-Continues the existing Godot project; quest logic preserved.
+REAL LAKEHEAD TOUR EDITION
 
-Open GAME_GODOT_V5_RUNNING_BASE/project.godot in Godot and press F5.
-Or run the packaged resource with Godot 4.6.3:
-  godot --main-pack build/SphinxReversal.pck
-The PCK requires Godot; it is not a standalone executable.
+Default: actual offline tour imagery, not the previous generic modeled campus.
+Agora: page 13 / image 19 / cube 8.
+Campus Corridor and Paterson Library entrance: page 18 / cube 16.
+ATAC interior: page 20 / image 26 / cube 19.
+Lake Tamblyn: page 11 / image 17 / cube 11.
+The library page 24 is an ordinary gallery, not a 360 panorama.
 
-VALIDATION
-- Godot 4.6.3 headless editor import: passed, no script errors.
-- Source gameplay suite: 15 checks passed.
-- Packaged PCK gameplay suite: same 15 checks passed.
-- PCK headless startup: passed.
-- PCK OpenGL rendering and screenshot save: passed (Mesa llvmpipe).
-- Actual scene screenshots included: Agora, Paterson, ATAC, character, lake,
-  ancient world, bridge, and normal gameplay camera.
-- Only graphical warning: virtual display does not support changing V-Sync.
+The source manifest supplies the complete mapping, source URLs, local files,
+per-file and tile hashes, face orientation and the metadata-selected resolution.
+All 96 tiles were stitched by column/row. All twelve cube edges were checked
+for every location. Maximum measured edge MAE: 10.18/255.
 
-LIMITS
-- Supplied tour and cubemap URLs returned HTTP 403. Architecture is a stylized
-  approximation using included references, not a verified 1:1 reconstruction.
-- Windows export templates absent; no Windows executable produced.
-- Godot 4.7 was not installed; validation used 4.6.3.
-- Audio playback calls exercised, but audible output was not available.
-- No hardware GPU performance or Windows runtime test performed.
+Import: passed. Full source quest: 41/41. Packaged PCK quest: 41/41.
+Legacy regression: 15/15. Five actual PCK screenshots captured in OpenGL.
+Tested with Godot 4.6.3 on Linux/Mesa llvmpipe. The virtual display reports an
+unsupported V-Sync change warning. No other import/script/render errors remain.
+Windows templates absent, so no EXE. Godot 4.7 and Windows runtime not tested.
+Audio calls exercised with dummy output; audible sound and GPU performance untested.
 
-Run source gameplay tests from the extracted archive root:
-  godot --headless --path GAME_GODOT_V5_RUNNING_BASE --editor --import --quit
-  godot --headless --path GAME_GODOT_V5_RUNNING_BASE --script ../validation/gameplay_smoke.gd
+This is a fixed-camera 360/photo + local 3D proxy game, not photogrammetry.
+Photographed people and scenery do not animate. Hotspot graph is game-authored.
+Images are redistributed on the basis of the user's express permission confirmation
+covering ZIP and GitHub publication. Copyright remains with the respective owners.
+
+Open GAME_GODOT_V5_RUNNING_BASE/project.godot in Godot, then F5.

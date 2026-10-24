@@ -1,0 +1,44 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS: Authentic tour mode is default
+PASS: Four metadata-verified campus photo locations
+PASS: Six real textured cube faces render environment
+PASS: Pharaoh arrives in actual Agora Circle
+PASS: Avatar movement survives photo integration
+PASS: Present reality hides sacred scarabs
+PASS: R reveals only the current scene scarab
+PASS: Gaze selects coin0
+PASS: Agora scarab collected
+PASS: Gaze selects travel:corridor
+PASS: Hotspot reaches Campus Corridor and real library gallery
+PASS: Hotspot replaces photographs, not just scene label
+PASS: Gaze selects coin1
+PASS: Library approach scarab collected
+PASS: Gaze selects travel:atac
+PASS: Hotspot reaches verified ATAC panorama
+PASS: Gaze selects vault
+PASS: Map chest cannot open without golden key
+PASS: Gaze selects coin2
+PASS: Three scarabs collected in three separate photo scenes
+PASS: Gaze selects travel:lake
+PASS: Gaze selects queen
+PASS: Nefertiti cannot be rescued before map discovery
+PASS: Gaze selects travel:agora
+PASS: Gaze selects altar
+PASS: Return to Agora starts shrine puzzle
+PASS: Wrong reverse-order input resets puzzle
+PASS: Reverse order 3-2-1 grants golden key
+PASS: Gaze selects travel:corridor
+PASS: Gaze selects travel:atac
+PASS: Gaze selects vault
+PASS: Golden key opens ATAC map chest
+PASS: Gaze selects map
+PASS: Map discovered and Nefertiti location revealed
+PASS: Map closes using existing control
+PASS: Gaze selects travel:lake
+PASS: Gaze selects queen
+PASS: Present-day temporal prison blocks rescue
+PASS: Reversal removes prison and restores lake bridge
+PASS: Gaze selects queen
+PASS: Full Nefertiti rescue reaches original victory screen
+RESULT: 41/41 passed

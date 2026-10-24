@@ -1,0 +1,339 @@
+{
+  "id": 18,
+  "meta": {
+    "search_description": "The Campus Corridor links key academic buildings, student spaces, and services, making it easy to navigate your day. Bright and open, it is a place where students cross paths, stop for a quick chat, and find their way to classes and study spots.",
+    "type": "place.LocationPage",
+    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/18/",
+    "html_url": "https://lakehead.madewithcircuit.com/scenes/lakehead-university/lakehead-university-thunder-bay/campus-corridor/",
+    "slug": "campus-corridor",
+    "show_in_menus": false,
+    "seo_title": "",
+    "first_published_at": "2025-09-19T17:31:45.626024-04:00",
+    "alias_of": null,
+    "parent": null
+  },
+  "title": "Campus Corridor",
+  "plate_type": "panorama_image",
+  "content": [
+    {
+      "type": "image",
+      "value": {
+        "id": 40,
+        "title": "Campus Corridor",
+        "medium": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18180-018.width-420.format-jpeg.jpg",
+          "width": 420,
+          "height": 279,
+          "alt": "Campus Corridor",
+          "background_position": "41% 60%",
+          "focus_x": 172.2,
+          "focus_y": 168.48837209302326,
+          "focus_width": 284.34000000000003,
+          "focus_height": 54.0
+        },
+        "large": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18180-018.width-1280.format-jpeg.jpg",
+          "width": 1280,
+          "height": 853,
+          "alt": "Campus Corridor",
+          "background_position": "41% 60%",
+          "focus_x": 524.8000000000001,
+          "focus_y": 515.1275318829707,
+          "focus_width": 866.5600000000001,
+          "focus_height": 165.09677419354847
+        },
+        "guide_card": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18180-018.width-420.format-jpeg.jpg",
+          "width": 420,
+          "height": 279,
+          "alt": "Campus Corridor",
+          "background_position": "41% 60%",
+          "focus_x": 172.2,
+          "focus_y": 168.48837209302326,
+          "focus_width": 284.34000000000003,
+          "focus_height": 54.0
+        }
+      },
+      "id": "8a3e34b1-de5c-4194-b7ff-c776fb3dda82"
+    },
+    {
+      "type": "title",
+      "value": "Campus Corridor",
+      "id": "9bd15633-9060-44e6-b6d9-054356ef84b0"
+    },
+    {
+      "type": "paragraph",
+      "value": "<p data-block-key=\"ma1f4\">The Campus Corridor links key academic buildings, student spaces, and services, making it easy to navigate your day. Bright and open, it is a place where students cross paths, stop for a quick chat, and find their way to classes and study spots.</p>",
+      "id": "8d92e160-564a-4104-bb78-af24247bbb55"
+    }
+  ],
+  "guide_audio": null,
+  "thumbnail": {
+    "url": "https://media.circuitcdn.com/lakehead/location/thumbnail/21_28pz42e.thumbnail.webp",
+    "width": 360,
+    "height": 270
+  },
+  "get_thumbnail": "https://media.circuitcdn.com/lakehead/location/thumbnail/21_28pz42e.thumbnail.webp",
+  "google_panoid": null,
+  "heading": "-0.09",
+  "pitch": "-0.10",
+  "z": "-0.99",
+  "fov": 75,
+  "north": 0,
+  "static_image": null,
+  "panorama_image": {
+    "id": 21,
+    "meta": {
+      "type": "media.CustomImage",
+      "detail_url": "https://lakehead.madewithcircuit.com/api/v2/images/21/",
+      "download_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1580_Campus_Corridor_Panorama-007.jpg"
+    },
+    "title": "Campus Corridor"
+  },
+  "panorama_image_jpeg": {
+    "low": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-2048x1024.jpg",
+      "width": 2048,
+      "height": 1024
+    },
+    "medium": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-4096x2048.jpg",
+      "width": 4096,
+      "height": 2048
+    },
+    "high": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-8192x4096.jpg",
+      "width": 8192,
+      "height": 4096
+    }
+  },
+  "panorama_image_webp": {
+    "low": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Cor.format-webp.max-2048x1024.webp",
+      "width": 2048,
+      "height": 1024
+    },
+    "medium": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Cor.format-webp.max-4096x2048.webp",
+      "width": 4096,
+      "height": 2048
+    },
+    "high": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Cor.format-webp.max-8192x4096.webp",
+      "width": 8192,
+      "height": 4096
+    }
+  },
+  "panorama_image_low": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-2048x1024.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-2048x1024.jpg",
+    "width": 2048,
+    "height": 1024,
+    "alt": "Campus Corridor"
+  },
+  "panorama_image_medium": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-4096x2048.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-4096x2048.jpg",
+    "width": 4096,
+    "height": 2048,
+    "alt": "Campus Corridor"
+  },
+  "panorama_image_high": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-8192x4096.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1580_Campus_Corr.format-jpeg.max-8192x4096.jpg",
+    "width": 8192,
+    "height": 4096,
+    "alt": "Campus Corridor"
+  },
+  "labels": [],
+  "hotspots": [
+    {
+      "id": 41,
+      "meta": {
+        "type": "place.ContentHotspot",
+        "live": true,
+        "has_unpublished_changes": false
+      },
+      "title": "The Chancellor Paterson Library",
+      "slug": "the-chancellor-paterson-library",
+      "content": [
+        {
+          "type": "image",
+          "value": {
+            "id": 71,
+            "title": "The Chancellor Paterson Library",
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20070-054.width-420.format-jpeg.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "The Chancellor Paterson Library",
+              "background_position": "23% 50%",
+              "focus_x": 100.38,
+              "focus_y": 141.27906976744185,
+              "focus_width": 107.94,
+              "focus_height": 145.046511627907
+            },
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20070-054.width-1280.format-jpeg.jpg",
+              "width": 1280,
+              "height": 853,
+              "alt": "The Chancellor Paterson Library",
+              "background_position": "23% 50%",
+              "focus_x": 305.92,
+              "focus_y": 431.93923480870217,
+              "focus_width": 328.96000000000004,
+              "focus_height": 443.4576144036009
+            },
+            "guide_card": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20070-054.width-420.format-jpeg.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "The Chancellor Paterson Library",
+              "background_position": "23% 50%",
+              "focus_x": 100.38,
+              "focus_y": 141.27906976744185,
+              "focus_width": 107.94,
+              "focus_height": 145.046511627907
+            }
+          },
+          "id": "72e7c9aa-0c58-4a4b-be9e-528402a81278"
+        },
+        {
+          "type": "title",
+          "value": "The Chancellor Paterson Library",
+          "id": "2f9c95b8-f18f-4355-be31-a3d522997e8e"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"fav7f\">The Chancellor Paterson Library offers quiet study areas, extensive resources, and helpful staff to support your academic success. Whether you need to research, collaborate, or unwind with a good book, it is the perfect place to focus and grow.</p>",
+          "id": "d57aa83b-4300-4f6f-a9a3-86ae82ac99a6"
+        }
+      ],
+      "guide_audio": null,
+      "x": "3522.33",
+      "y": "393.51",
+      "z": "3517.08",
+      "is_placed": true,
+      "get_thumbnail": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20070-054.b78fe5f4.fill-200x200.jpg"
+    },
+    {
+      "id": 45,
+      "meta": {
+        "type": "place.ContentHotspot",
+        "live": true,
+        "has_unpublished_changes": false
+      },
+      "title": "Nature at Your Doorstep",
+      "slug": "nature-at-your-doorstep",
+      "content": [
+        {
+          "type": "image",
+          "value": {
+            "id": 75,
+            "title": "Nature at Your Doorstep",
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/A7308033.width-420.format-jpeg.jpg",
+              "width": 420,
+              "height": 630,
+              "alt": "Nature at Your Doorstep",
+              "background_position": "58% 53%",
+              "focus_x": 245.20540954325082,
+              "focus_y": 339.1648239496513,
+              "focus_width": 351.73258484307223,
+              "focus_height": 596.9943868004763
+            },
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/A7308033.height-1024.format-jpeg.jpg",
+              "width": 682,
+              "height": 1024,
+              "alt": "Nature at Your Doorstep",
+              "background_position": "58% 53%",
+              "focus_x": 398.16687930594543,
+              "focus_y": 551.2774281340363,
+              "focus_width": 571.146721102322,
+              "focus_height": 970.3527810852185
+            },
+            "guide_card": {
+              "src": "https://media.circuitcdn.com/lakehead/images/A7308033.4c589040.fill-320x380.format-jpeg.jpg",
+              "width": 320,
+              "height": 380,
+              "alt": "Nature at Your Doorstep",
+              "background_position": "58% 41%",
+              "focus_x": 186.82316917581016,
+              "focus_y": 158.4013751611517,
+              "focus_width": 267.9867313090074,
+              "focus_height": 454.8732273313278
+            }
+          },
+          "id": "069f7f35-4469-4bfa-b6a3-cd693fc04a17"
+        },
+        {
+          "type": "title",
+          "value": "Nature at Your Doorstep",
+          "id": "7bce5b08-1b19-4aa1-be2f-137ab8ca2221"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"3a6by\">Lakehead\u2019s campus is surrounded by green spaces, wooded trails, and natural beauty that are an important part of our community. These spaces provide a place to relax, explore, and stay active while connecting with the environment that inspires our campus life.</p>",
+          "id": "53eeab39-2652-4b1e-a6f6-31a93d0f2461"
+        }
+      ],
+      "guide_audio": null,
+      "x": "-3902.71",
+      "y": "458.27",
+      "z": "-3077.89",
+      "is_placed": true,
+      "get_thumbnail": "https://media.circuitcdn.com/lakehead/images/A7308033.4c589040.fill-200x200.jpg"
+    }
+  ],
+  "parents": [
+    {
+      "id": 5,
+      "title": "Lakehead University",
+      "type": "place.ProjectPage",
+      "slug": "lakehead-university",
+      "live": true
+    },
+    {
+      "id": 51,
+      "title": "Lakehead University - Thunder Bay",
+      "type": "place.GroupPage",
+      "slug": "lakehead-university-thunder-bay",
+      "live": false
+    }
+  ],
+  "slug_paths": [
+    "scenes",
+    "lakehead-university",
+    "lakehead-university-thunder-bay",
+    "campus-corridor"
+  ],
+  "title_paths": [
+    "Scenes",
+    "Lakehead University",
+    "Lakehead University - Thunder Bay",
+    "Campus Corridor"
+  ],
+  "slug_path": "scenes/lakehead-university/lakehead-university-thunder-bay/campus-corridor",
+  "cube_map": {
+    "id": 16,
+    "levels": [
+      {
+        "nbTiles": 2,
+        "faceSize": 1024,
+        "zoomRange": [
+          0,
+          50
+        ]
+      },
+      {
+        "nbTiles": 4,
+        "faceSize": 2560,
+        "zoomRange": [
+          50,
+          100
+        ]
+      }
+    ]
+  }
+}

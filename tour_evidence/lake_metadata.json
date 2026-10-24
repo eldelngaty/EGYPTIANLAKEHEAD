@@ -1,0 +1,200 @@
+{
+  "id": 11,
+  "meta": {
+    "search_description": "Enjoy the serene beauty and peaceful atmosphere that make this a perfect spot for relaxation, reflection and connection with nature. Whether you're here to study, unwind or gather with friends, we invite you to experience Lake Tamblyn's tranquility and natural charm all-year round.",
+    "type": "place.LocationPage",
+    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/11/",
+    "html_url": "https://lakehead.madewithcircuit.com/scenes/lakehead-university/lakehead-university-thunder-bay/laketamblyn/",
+    "slug": "laketamblyn",
+    "show_in_menus": false,
+    "seo_title": "",
+    "first_published_at": "2025-09-19T17:26:55.341033-04:00",
+    "alias_of": null,
+    "parent": null
+  },
+  "title": "Lake Tamblyn",
+  "plate_type": "panorama_image",
+  "content": [
+    {
+      "type": "image",
+      "value": {
+        "id": 32,
+        "title": "Lake Tamblyn",
+        "medium": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17850-009.width-420.format-jpeg.jpg",
+          "width": 420,
+          "height": 279,
+          "alt": "Lake Tamblyn",
+          "background_position": "40% 58%",
+          "focus_x": 168.42,
+          "focus_y": 163.25581395348837,
+          "focus_width": 120.54,
+          "focus_height": 58.6046511627907
+        },
+        "large": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17850-009.width-1280.format-jpeg.jpg",
+          "width": 1280,
+          "height": 853,
+          "alt": "Lake Tamblyn",
+          "background_position": "40% 58%",
+          "focus_x": 513.28,
+          "focus_y": 499.12978244561145,
+          "focus_width": 367.36,
+          "focus_height": 179.1747936984246
+        },
+        "guide_card": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17850-009.width-420.format-jpeg.jpg",
+          "width": 420,
+          "height": 279,
+          "alt": "Lake Tamblyn",
+          "background_position": "40% 58%",
+          "focus_x": 168.42,
+          "focus_y": 163.25581395348837,
+          "focus_width": 120.54,
+          "focus_height": 58.6046511627907
+        }
+      },
+      "id": "7887ff2c-f861-442a-b696-e0aa81fa8180"
+    },
+    {
+      "type": "title",
+      "value": "Lake Tamblyn",
+      "id": "0a71ee86-3d03-45f8-9890-ae5398ad3798"
+    },
+    {
+      "type": "paragraph",
+      "value": "<p data-block-key=\"tdyln\">Enjoy the serene beauty and peaceful atmosphere that make this a perfect spot for relaxation, reflection and connection with nature. Whether you're here to study, unwind or gather with friends, we invite you to experience Lake Tamblyn's tranquility and natural charm all-year round.</p>",
+      "id": "ee81190b-eeb4-4dcc-94f3-ace6fb3a11db"
+    }
+  ],
+  "guide_audio": null,
+  "thumbnail": {
+    "url": "https://media.circuitcdn.com/lakehead/location/thumbnail/17_Hx76GeR.thumbnail.webp",
+    "width": 360,
+    "height": 270
+  },
+  "get_thumbnail": "https://media.circuitcdn.com/lakehead/location/thumbnail/17_Hx76GeR.thumbnail.webp",
+  "google_panoid": null,
+  "heading": "-0.86",
+  "pitch": "-0.05",
+  "z": "-0.51",
+  "fov": 75,
+  "north": 0,
+  "static_image": null,
+  "panorama_image": {
+    "id": 17,
+    "meta": {
+      "type": "media.CustomImage",
+      "detail_url": "https://lakehead.madewithcircuit.com/api/v2/images/17/",
+      "download_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1520_Lake_Tamblyn_Panorama-003.jpg"
+    },
+    "title": "Lake Tamblyn"
+  },
+  "panorama_image_jpeg": {
+    "low": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-2048x1024.jpg",
+      "width": 2048,
+      "height": 1024
+    },
+    "medium": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-4096x2048.jpg",
+      "width": 4096,
+      "height": 2048
+    },
+    "high": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-8192x4096.jpg",
+      "width": 8192,
+      "height": 4096
+    }
+  },
+  "panorama_image_webp": {
+    "low": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambl.format-webp.max-2048x1024.webp",
+      "width": 2048,
+      "height": 1024
+    },
+    "medium": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambl.format-webp.max-4096x2048.webp",
+      "width": 4096,
+      "height": 2048
+    },
+    "high": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambl.format-webp.max-8192x4096.webp",
+      "width": 8192,
+      "height": 4096
+    }
+  },
+  "panorama_image_low": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-2048x1024.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-2048x1024.jpg",
+    "width": 2048,
+    "height": 1024,
+    "alt": "Lake Tamblyn"
+  },
+  "panorama_image_medium": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-4096x2048.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-4096x2048.jpg",
+    "width": 4096,
+    "height": 2048,
+    "alt": "Lake Tamblyn"
+  },
+  "panorama_image_high": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-8192x4096.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1520_Lake_Tambly.format-jpeg.max-8192x4096.jpg",
+    "width": 8192,
+    "height": 4096,
+    "alt": "Lake Tamblyn"
+  },
+  "labels": [],
+  "hotspots": [],
+  "parents": [
+    {
+      "id": 5,
+      "title": "Lakehead University",
+      "type": "place.ProjectPage",
+      "slug": "lakehead-university",
+      "live": true
+    },
+    {
+      "id": 51,
+      "title": "Lakehead University - Thunder Bay",
+      "type": "place.GroupPage",
+      "slug": "lakehead-university-thunder-bay",
+      "live": false
+    }
+  ],
+  "slug_paths": [
+    "scenes",
+    "lakehead-university",
+    "lakehead-university-thunder-bay",
+    "laketamblyn"
+  ],
+  "title_paths": [
+    "Scenes",
+    "Lakehead University",
+    "Lakehead University - Thunder Bay",
+    "Lake Tamblyn"
+  ],
+  "slug_path": "scenes/lakehead-university/lakehead-university-thunder-bay/laketamblyn",
+  "cube_map": {
+    "id": 11,
+    "levels": [
+      {
+        "nbTiles": 2,
+        "faceSize": 1024,
+        "zoomRange": [
+          0,
+          50
+        ]
+      },
+      {
+        "nbTiles": 4,
+        "faceSize": 2560,
+        "zoomRange": [
+          50,
+          100
+        ]
+      }
+    ]
+  }
+}

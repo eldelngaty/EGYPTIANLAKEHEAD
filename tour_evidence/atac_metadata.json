@@ -1,0 +1,270 @@
+{
+  "id": 20,
+  "meta": {
+    "search_description": "This is the Advanced Technology & Academic Centre (ATAC). It is a high-tech teaching and learning centre that provides 1,400 student spaces and integrates advanced technology and smart communications into the learning environment. The ATAC features immersive Telepresence Classrooms that provide high-quality, alternative options for attending classes, meetings, and conferences.",
+    "type": "place.LocationPage",
+    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/20/",
+    "html_url": "https://lakehead.madewithcircuit.com/scenes/lakehead-university/lakehead-university-thunder-bay/atac-advanced-technology-academic-centre/",
+    "slug": "atac-advanced-technology-academic-centre",
+    "show_in_menus": false,
+    "seo_title": "",
+    "first_published_at": "2025-09-19T17:40:52.659126-04:00",
+    "alias_of": null,
+    "parent": null
+  },
+  "title": "ATAC (Advanced Technology & Academic Centre)",
+  "plate_type": "panorama_image",
+  "content": [
+    {
+      "type": "image",
+      "value": {
+        "id": 42,
+        "title": "ATAC",
+        "medium": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20840-068.width-420.format-jpeg.jpg",
+          "width": 420,
+          "height": 279,
+          "alt": "ATAC",
+          "background_position": "64% 61%",
+          "focus_x": 272.78999999999996,
+          "focus_y": 170.79069767441862,
+          "focus_width": 350.48999999999995,
+          "focus_height": 141.48837209302326
+        },
+        "large": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20840-068.width-1280.format-jpeg.jpg",
+          "width": 1280,
+          "height": 853,
+          "alt": "ATAC",
+          "background_position": "64% 61%",
+          "focus_x": 831.36,
+          "focus_y": 522.1665416354089,
+          "focus_width": 1068.16,
+          "focus_height": 432.5791447861966
+        },
+        "guide_card": {
+          "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_20840-068.width-420.format-jpeg.jpg",
+          "width": 420,
+          "height": 279,
+          "alt": "ATAC",
+          "background_position": "64% 61%",
+          "focus_x": 272.78999999999996,
+          "focus_y": 170.79069767441862,
+          "focus_width": 350.48999999999995,
+          "focus_height": 141.48837209302326
+        }
+      },
+      "id": "e496500c-d73a-48d2-b664-d456d1e8acb8"
+    },
+    {
+      "type": "title",
+      "value": "The ATAC",
+      "id": "655417b0-d719-4516-971b-1d062f37501c"
+    },
+    {
+      "type": "paragraph",
+      "value": "<p data-block-key=\"vpvg8\">This is the Advanced Technology &amp; Academic Centre (ATAC). It is a high-tech teaching and learning centre that provides 1,400 student spaces and integrates advanced technology and smart communications into the learning environment. The ATAC features immersive Telepresence Classrooms that provide high-quality, alternative options for attending classes, meetings, and conferences.</p>",
+      "id": "045aca39-2f05-4601-8424-227ce2a39376"
+    }
+  ],
+  "guide_audio": null,
+  "thumbnail": {
+    "url": "https://media.circuitcdn.com/lakehead/location/thumbnail/26_B9kJh3w.thumbnail.webp",
+    "width": 360,
+    "height": 270
+  },
+  "get_thumbnail": "https://media.circuitcdn.com/lakehead/location/thumbnail/26_B9kJh3w.thumbnail.webp",
+  "google_panoid": null,
+  "heading": "0.98",
+  "pitch": "0.02",
+  "z": "0.21",
+  "fov": 100,
+  "north": 0,
+  "static_image": null,
+  "panorama_image": {
+    "id": 26,
+    "meta": {
+      "type": "media.CustomImage",
+      "detail_url": "https://lakehead.madewithcircuit.com/api/v2/images/26/",
+      "download_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1658_ATAC_Panorama-012.jpg"
+    },
+    "title": "ATAC"
+  },
+  "panorama_image_jpeg": {
+    "low": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-2048x1024.jpg",
+      "width": 2048,
+      "height": 1024
+    },
+    "medium": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-4096x2048.jpg",
+      "width": 4096,
+      "height": 2048
+    },
+    "high": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-8192x4096.jpg",
+      "width": 8192,
+      "height": 4096
+    }
+  },
+  "panorama_image_webp": {
+    "low": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panor.format-webp.max-2048x1024.webp",
+      "width": 2048,
+      "height": 1024
+    },
+    "medium": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panor.format-webp.max-4096x2048.webp",
+      "width": 4096,
+      "height": 2048
+    },
+    "high": {
+      "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panor.format-webp.max-8192x4096.webp",
+      "width": 8192,
+      "height": 4096
+    }
+  },
+  "panorama_image_low": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-2048x1024.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-2048x1024.jpg",
+    "width": 2048,
+    "height": 1024,
+    "alt": "ATAC"
+  },
+  "panorama_image_medium": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-4096x2048.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-4096x2048.jpg",
+    "width": 4096,
+    "height": 2048,
+    "alt": "ATAC"
+  },
+  "panorama_image_high": {
+    "url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-8192x4096.jpg",
+    "full_url": "https://media.circuitcdn.com/lakehead/images/LakeheadU-IMG_1658_ATAC_Panora.format-jpeg.max-8192x4096.jpg",
+    "width": 8192,
+    "height": 4096,
+    "alt": "ATAC"
+  },
+  "labels": [],
+  "hotspots": [
+    {
+      "id": 42,
+      "meta": {
+        "type": "place.ContentHotspot",
+        "live": true,
+        "has_unpublished_changes": false
+      },
+      "title": "Dynamic Learning Spaces",
+      "slug": "dynamic-learning-spaces",
+      "content": [
+        {
+          "type": "image",
+          "value": {
+            "id": 72,
+            "title": "Classroom",
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_2019-Enhanced-NR0-057.width-420.format-jpeg.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "Classroom",
+              "background_position": "17% 16%",
+              "focus_x": 74.13,
+              "focus_y": 47.093023255813954,
+              "focus_width": 62.16,
+              "focus_height": 35.162790697674424
+            },
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_2019-Enhanced-NR0-057.width-1280.format-jpeg.jpg",
+              "width": 1280,
+              "height": 853,
+              "alt": "Classroom",
+              "background_position": "17% 16%",
+              "focus_x": 225.92,
+              "focus_y": 143.97974493623406,
+              "focus_width": 189.44,
+              "focus_height": 107.50487621905476
+            },
+            "guide_card": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_2019-Enhanced-NR0-057.width-420.format-jpeg.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "Classroom",
+              "background_position": "17% 16%",
+              "focus_x": 74.13,
+              "focus_y": 47.093023255813954,
+              "focus_width": 62.16,
+              "focus_height": 35.162790697674424
+            }
+          },
+          "id": "e6b8c6e6-a8c8-4fcc-8c31-0d47170a8c67"
+        },
+        {
+          "type": "title",
+          "value": "Dynamic Learning Spaces",
+          "id": "920fdf18-0d1d-4642-9f20-b75e137217cc"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"j61zc\">The ATAC building hosts modern classrooms and lecture theatres designed for interactive and engaging learning. Whether you are diving into discussions or listening to expert lectures, this is where knowledge comes alive every day.</p>",
+          "id": "05c8bf94-6656-4b78-a8ec-38e7451eaf92"
+        }
+      ],
+      "guide_audio": null,
+      "x": "-4962.62",
+      "y": "405.85",
+      "z": "388.62",
+      "is_placed": true,
+      "get_thumbnail": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_2019-Enhanced-NR0-057.91e4d9f7.fill-200x200.jpg"
+    }
+  ],
+  "parents": [
+    {
+      "id": 5,
+      "title": "Lakehead University",
+      "type": "place.ProjectPage",
+      "slug": "lakehead-university",
+      "live": true
+    },
+    {
+      "id": 51,
+      "title": "Lakehead University - Thunder Bay",
+      "type": "place.GroupPage",
+      "slug": "lakehead-university-thunder-bay",
+      "live": false
+    }
+  ],
+  "slug_paths": [
+    "scenes",
+    "lakehead-university",
+    "lakehead-university-thunder-bay",
+    "atac-advanced-technology-academic-centre"
+  ],
+  "title_paths": [
+    "Scenes",
+    "Lakehead University",
+    "Lakehead University - Thunder Bay",
+    "ATAC (Advanced Technology & Academic Centre)"
+  ],
+  "slug_path": "scenes/lakehead-university/lakehead-university-thunder-bay/atac-advanced-technology-academic-centre",
+  "cube_map": {
+    "id": 19,
+    "levels": [
+      {
+        "nbTiles": 2,
+        "faceSize": 1024,
+        "zoomRange": [
+          0,
+          50
+        ]
+      },
+      {
+        "nbTiles": 4,
+        "faceSize": 2560,
+        "zoomRange": [
+          50,
+          100
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 ; Godot 4.x project; validated on Godot 4.6.3. No third-party addons.
 config_version=5
 [application]
-config/name="Sphinx Reversal - Lakehead Campus Edition"
+config/name="Sphinx Reversal - Real Lakehead Tour"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 [display]

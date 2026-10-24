@@ -1,0 +1,5 @@
+Official viewer implementation: https://virtualtour.lakeheadu.ca/798.9a3a928fd81374a48a55.js
+Tile path: cube_maps/{cube_map.id}/{face}/level_{level_index+1}/{face}_{column}_{row}.webp
+The viewer reads nbTiles and faceSize from each scene cube_map.levels.
+This build uses metadata level index 0: 2x2 tiles, 1024x1024 per face. Available higher level: 4x4, 2560x2560 per face.
+Godot face UV conventions are recorded in assets/tour/manifest.json and independently checked against every adjoining edge.

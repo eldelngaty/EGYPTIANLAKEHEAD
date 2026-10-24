@@ -1,0 +1,571 @@
+{
+    "id": 52,
+    "meta": {
+        "type": "tour.TourPage",
+        "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/52/",
+        "html_url": "https://lakehead.madewithcircuit.com/tour/featured-tours/lakehead-thunder-bay/",
+        "slug": "lakehead-thunder-bay",
+        "show_in_menus": false,
+        "seo_title": "",
+        "search_description": "Discover the opportunities that await you here in Thunder Bay!",
+        "first_published_at": "2025-09-19T17:24:29.047683-04:00",
+        "alias_of": null,
+        "parent": {
+            "id": 7,
+            "meta": {
+                "type": "tour.TourGroupPage",
+                "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/7/",
+                "html_url": "https://lakehead.madewithcircuit.com/tour/featured-tours/"
+            },
+            "title": "Featured Tours"
+        }
+    },
+    "title": "Lakehead - Thunder Bay",
+    "tour_button_ctas": [
+        {
+            "cta": {
+                "id": 8,
+                "button_text": "Stay Updated",
+                "action": "external_link",
+                "timing": null,
+                "name": "Stay Updated - Button form",
+                "content": [
+                    {
+                        "type": "external_link",
+                        "value": {
+                            "url": "https://www.lakeheadu.ca/admissions/campus-tours/virtual/stay-updated"
+                        },
+                        "id": "fd5a5ddd-1422-42cc-bd2f-b84ecf290373"
+                    }
+                ]
+            }
+        }
+    ],
+    "finished_tour_button_ctas": [
+        {
+            "cta": {
+                "id": 1,
+                "button_text": "How To Apply",
+                "action": "external_link",
+                "timing": null,
+                "name": "How To Apply",
+                "content": [
+                    {
+                        "type": "external_link",
+                        "value": {
+                            "url": "https://www.lakeheadu.ca/admissions/how-to-apply"
+                        },
+                        "id": "0b52dae9-e321-490f-9848-f5d54746a4df"
+                    }
+                ]
+            }
+        },
+        {
+            "cta": {
+                "id": 2,
+                "button_text": "Book A Campus Tour",
+                "action": "external_link",
+                "timing": null,
+                "name": "Book A Campus Tour",
+                "content": [
+                    {
+                        "type": "external_link",
+                        "value": {
+                            "url": "https://www.lakeheadu.ca/admissions/campus-tours"
+                        },
+                        "id": "3a7408a6-636e-4198-b21b-10b9227c8d60"
+                    }
+                ]
+            }
+        },
+        {
+            "cta": {
+                "id": 8,
+                "button_text": "Stay Updated",
+                "action": "external_link",
+                "timing": null,
+                "name": "Stay Updated - Button form",
+                "content": [
+                    {
+                        "type": "external_link",
+                        "value": {
+                            "url": "https://www.lakeheadu.ca/admissions/campus-tours/virtual/stay-updated"
+                        },
+                        "id": "fd5a5ddd-1422-42cc-bd2f-b84ecf290373"
+                    }
+                ]
+            }
+        }
+    ],
+    "tour_timed_ctas": [
+        {
+            "cta": {
+                "id": 10,
+                "action": "form",
+                "timing": 0,
+                "name": "Stay Connected CTA",
+                "set_cookie_to_prevent_redisplay": true,
+                "gate_entry": false,
+                "content": [
+                    {
+                        "type": "form",
+                        "value": {
+                            "title": "Stay Connected",
+                            "iframe_url": "https://www.lakeheadu.ca/admissions/campus-tours/virtual/stay-updated",
+                            "paragraph": "<p data-block-key=\"701b0\">Stay in touch with all things Lakehead.</p>",
+                            "image": {
+                                "url": "https://media.circuitcdn.com/lakehead/images/A7308524.22f52a71.format-jpeg.fill-1024x1024.jpg",
+                                "title": "LUSU",
+                                "alt": "LUSU",
+                                "background_position": " 47% 39%;"
+                            }
+                        },
+                        "id": "fa2ecf56-6fdc-40d0-90f3-a8371e9dafb2"
+                    }
+                ]
+            }
+        }
+    ],
+    "viewer_type": "panolens",
+    "theme": "circuit_react",
+    "tour_guide": {
+        "url": "https://media.circuitcdn.com/lakehead/images/Wolfie-resize.8084973b.fill-120x120.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/Wolfie-resize.8084973b.fill-120x120.format-jpeg.jpg",
+        "width": 120,
+        "height": 120,
+        "alt": "Wolfie",
+        "title": "Wolfie"
+    },
+    "splash_image": {
+        "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.width-1920.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.width-1920.format-jpeg.jpg",
+        "width": 1920,
+        "height": 1279,
+        "alt": "Lake Tamblyn Bridge",
+        "background_position": "50% 36%",
+        "focus_x": 975.36,
+        "focus_y": 468.2310577644411,
+        "focus_width": 1888.32,
+        "focus_height": 740.7261815453863
+    },
+    "thumbnail": {
+        "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.width-360.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.width-360.format-jpeg.jpg",
+        "width": 360,
+        "height": 239,
+        "alt": "Lake Tamblyn Bridge",
+        "background_position": "50% 36%",
+        "focus_x": 182.88,
+        "focus_y": 87.49587396849212,
+        "focus_width": 354.05999999999995,
+        "focus_height": 138.41560390097524
+    },
+    "thumbnail_landscape": {
+        "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-360x160.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-360x160.format-jpeg.jpg",
+        "width": 360,
+        "height": 160,
+        "alt": "Lake Tamblyn Bridge",
+        "background_position": "50% 43%",
+        "focus_x": 182.88,
+        "focus_y": 69.4713160854893,
+        "focus_width": 354.05999999999995,
+        "focus_height": 138.9426321709786
+    },
+    "thumbnail_portrait": {
+        "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-150x175.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-150x175.format-jpeg.jpg",
+        "width": 150,
+        "height": 175,
+        "alt": "Lake Tamblyn Bridge",
+        "background_position": "13% 36%",
+        "focus_x": 20.97902097902098,
+        "focus_y": 64.06601650412604,
+        "focus_width": 257.91083916083915,
+        "focus_height": 101.3503375843961
+    },
+    "thumbnail_square": {
+        "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-300x300.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-300x300.format-jpeg.jpg",
+        "width": 300,
+        "height": 300,
+        "alt": "Lake Tamblyn Bridge",
+        "background_position": "26% 36%",
+        "focus_x": 78.71064467766116,
+        "focus_y": 109.82745686421606,
+        "focus_width": 442.3538230884558,
+        "focus_height": 173.74343585896474
+    },
+    "hero_image": {
+        "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-1440x360.format-jpeg.jpg",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_17940-011.aab1b9d4.fill-1440x360.format-jpeg.jpg",
+        "width": 1440,
+        "height": 360,
+        "alt": "Lake Tamblyn Bridge",
+        "background_position": "50% 22%",
+        "focus_x": 731.52,
+        "focus_y": 82.08,
+        "focus_width": 1416.2399999999998,
+        "focus_height": 555.84
+    },
+    "splash_type": "animated",
+    "splash_content": [
+        {
+            "type": "paragraph",
+            "value": "<p data-block-key=\"8ncrz\">Welcome to our Thunder Bay campus! Discover the opportunities that await you here, and see how Lakehead University is the perfect place for your journey of discovery, growth, and success.</p>",
+            "id": "d438ccc5-9a0b-42e9-ad1c-d0a764d6c49e"
+        }
+    ],
+    "guide_audio": null,
+    "splash_color": {
+        "name": "Cobalt",
+        "hls_decimal": [
+            0.5800000000000001,
+            0.24509803921568626,
+            1.0
+        ]
+    },
+    "get_splash_logo": {
+        "url": "https://media.circuitcdn.com/lakehead/images/Lakehead_ID_RGB_DarkBG.min-440x260.png",
+        "width": 1220,
+        "height": 260
+    },
+    "hide_from_universal_menu": false,
+    "description": "Welcome to our Thunder Bay campus! Discover the opportunities that await you here, and see how Lakehead University is the perfect place for your journey of discovery, growth, and success.",
+    "scenes": [
+        {
+            "scene": {
+                "id": 13,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "agora-circle",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/13/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Agora Circle"
+            }
+        },
+        {
+            "scene": {
+                "id": 15,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "the-agora",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/15/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "The Agora"
+            }
+        },
+        {
+            "scene": {
+                "id": 17,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "university-centre-uc",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/17/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "University Centre (UC)"
+            }
+        },
+        {
+            "scene": {
+                "id": 21,
+                "meta": {
+                    "type": "place.GalleryPage",
+                    "slug": "the-study",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/21/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "The Study"
+            }
+        },
+        {
+            "scene": {
+                "id": 16,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "student-central",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/16/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Student Central"
+            }
+        },
+        {
+            "scene": {
+                "id": 8,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "the-outpost",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/8/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "The Outpost"
+            }
+        },
+        {
+            "scene": {
+                "id": 11,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "laketamblyn",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/11/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Lake Tamblyn"
+            }
+        },
+        {
+            "scene": {
+                "id": 9,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "lake-tamblyn-bridge",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/9/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Lake Tamblyn Bridge"
+            }
+        },
+        {
+            "scene": {
+                "id": 26,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "athletics-centre",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/26/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Athletics Centre"
+            }
+        },
+        {
+            "scene": {
+                "id": 25,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "the-hanger",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/25/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "The Hangar"
+            }
+        },
+        {
+            "scene": {
+                "id": 23,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "tunnels-network",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/23/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Tunnels Network"
+            }
+        },
+        {
+            "scene": {
+                "id": 14,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "international-student-centre",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/14/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "International Student Centre"
+            }
+        },
+        {
+            "scene": {
+                "id": 18,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "campus-corridor",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/18/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Campus Corridor"
+            }
+        },
+        {
+            "scene": {
+                "id": 24,
+                "meta": {
+                    "type": "place.GalleryPage",
+                    "slug": "chancellor-paterson-library",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/24/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Chancellor Paterson Library"
+            }
+        },
+        {
+            "scene": {
+                "id": 12,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "cases",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/12/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Cases"
+            }
+        },
+        {
+            "scene": {
+                "id": 20,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "atac-advanced-technology-academic-centre",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/20/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "ATAC (Advanced Technology & Academic Centre)"
+            }
+        },
+        {
+            "scene": {
+                "id": 19,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "the-centennial-building-courtyard",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/19/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "The Centennial Building Courtyard"
+            }
+        },
+        {
+            "scene": {
+                "id": 22,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "student-health-and-wellness",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/22/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Student Health and Wellness"
+            }
+        },
+        {
+            "scene": {
+                "id": 50,
+                "meta": {
+                    "type": "place.GalleryPage",
+                    "slug": "residence-halls",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/50/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Thunder Bay Residence Halls"
+            }
+        },
+        {
+            "scene": {
+                "id": 28,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "residence-dorm-room",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/28/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Dorm Room"
+            }
+        },
+        {
+            "scene": {
+                "id": 27,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "residence-townhouse",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/27/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Residence Townhouses"
+            }
+        },
+        {
+            "scene": {
+                "id": 44,
+                "meta": {
+                    "type": "place.GalleryPage",
+                    "slug": "residence-townhouses",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/44/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Townhouses"
+            }
+        },
+        {
+            "scene": {
+                "id": 29,
+                "meta": {
+                    "type": "place.LocationPage",
+                    "slug": "residence-apartment",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/29/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Apartment"
+            }
+        },
+        {
+            "scene": {
+                "id": 88,
+                "meta": {
+                    "type": "place.GalleryPage",
+                    "slug": "your-next-chapter-begins-right-here",
+                    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/88/",
+                    "live": true,
+                    "has_unpublished_changes": false
+                },
+                "title": "Your Next Chapter Begins Right Here"
+            }
+        }
+    ],
+    "scenes_points": {
+        "type": "FeatureCollection",
+        "features": []
+    },
+    "point": null,
+    "starting_point": null,
+    "bounding_box": null,
+    "guide_audio_enabled": false,
+    "self_guided_enabled": false,
+    "slug_paths": [
+        "tour",
+        "featured-tours",
+        "lakehead-thunder-bay"
+    ],
+    "slug_path": "tour/featured-tours/lakehead-thunder-bay",
+    "tour_logo": {
+        "url": "https://media.circuitcdn.com/lakehead/images/Lakehead_ID_CMYK.min-440x260.png",
+        "full_url": "https://media.circuitcdn.com/lakehead/images/Lakehead_ID_CMYK.min-440x260.png",
+        "width": 1219,
+        "height": 260,
+        "alt": "Logo"
+    }
+}

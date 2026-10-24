@@ -1,0 +1,82 @@
+{
+  "agora": {
+    "vertical_seams_mae": {
+      "top.b-front.t": 1.642578125,
+      "top.r-right.t": 2.0042317708333335,
+      "top.t-back.t": 5.804036458333333,
+      "top.l-left.t": 1.9951171875,
+      "bottom.t-front.b": 5.071940104166667,
+      "bottom.r-right.b": 4.920572916666667,
+      "bottom.b-back.b": 3.9524739583333335,
+      "bottom.l-left.b": 4.150065104166667
+    },
+    "maximum_mae": 5.804036458333333,
+    "resolution": 1024,
+    "lateral_seams_mae": {
+      "front-right": 3.7731119791666665,
+      "right-back": 7.224283854166667,
+      "back-left": 5.09765625,
+      "left-front": 4.086588541666667
+    }
+  },
+  "corridor": {
+    "vertical_seams_mae": {
+      "top.b-front.t": 3.240234375,
+      "top.r-right.t": 3.6009114583333335,
+      "top.t-back.t": 1.5110677083333333,
+      "top.l-left.t": 2.8805338541666665,
+      "bottom.t-front.b": 4.0068359375,
+      "bottom.r-right.b": 4.158854166666667,
+      "bottom.b-back.b": 4.030924479166667,
+      "bottom.l-left.b": 4.462890625
+    },
+    "maximum_mae": 4.462890625,
+    "resolution": 1024,
+    "lateral_seams_mae": {
+      "front-right": 3.7337239583333335,
+      "right-back": 3.6904296875,
+      "back-left": 2.9078776041666665,
+      "left-front": 5.1513671875
+    }
+  },
+  "atac": {
+    "vertical_seams_mae": {
+      "top.b-front.t": 5.090169270833333,
+      "top.r-right.t": 5.015950520833333,
+      "top.t-back.t": 10.178059895833334,
+      "top.l-left.t": 6.165690104166667,
+      "bottom.t-front.b": 6.65625,
+      "bottom.r-right.b": 6.055338541666667,
+      "bottom.b-back.b": 4.433919270833333,
+      "bottom.l-left.b": 9.2451171875
+    },
+    "maximum_mae": 10.178059895833334,
+    "resolution": 1024,
+    "lateral_seams_mae": {
+      "front-right": 5.282552083333333,
+      "right-back": 8.001302083333334,
+      "back-left": 6.777669270833333,
+      "left-front": 6.651041666666667
+    }
+  },
+  "lake": {
+    "vertical_seams_mae": {
+      "top.b-front.t": 1.5107421875,
+      "top.r-right.t": 2.1920572916666665,
+      "top.t-back.t": 2.2568359375,
+      "top.l-left.t": 1.6663411458333333,
+      "bottom.t-front.b": 4.427083333333333,
+      "bottom.r-right.b": 4.5703125,
+      "bottom.b-back.b": 3.6585286458333335,
+      "bottom.l-left.b": 4.19140625
+    },
+    "maximum_mae": 4.5703125,
+    "resolution": 1024,
+    "lateral_seams_mae": {
+      "front-right": 4.7998046875,
+      "right-back": 4.325846354166667,
+      "back-left": 4.312825520833333,
+      "left-front": 4.183919270833333
+    }
+  }
+}

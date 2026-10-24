@@ -5,11 +5,11 @@ extends Node3D
 const WALK_SPEED: float = 12.5
 const CAMERA_OFFSET = Vector3(-17, 12, -23)
 const CAMERA_CLOSE_OFFSET = Vector3(-8, 7, -12)
-const COIN_SPOTS = [Vector3(20, 1.6, 2), Vector3(36, 1.6, -25), Vector3(-32, 1.6, 20)]
+var COIN_SPOTS = [Vector3(20, 1.6, 2), Vector3(36, 1.6, -25), Vector3(-32, 1.6, 20)]
 const COIN_TITLES = ["Library Scarab", "ATAC Scarab", "Lake Scarab"]
-const ALTAR_SPOT = Vector3(0, 0, 6)
-const VAULT_SPOT = Vector3(49, 0, -25)
-const QUEEN_SPOT = Vector3(-46, 0, 20)
+var ALTAR_SPOT = Vector3(0, 0, 6)
+var VAULT_SPOT = Vector3(49, 0, -25)
+var QUEEN_SPOT = Vector3(-46, 0, 20)
 
 var player: CharacterBody3D
 var player_model: Node3D
@@ -60,10 +60,15 @@ var bridge_tween: Tween
 var rune_nodes: Array[Node3D] = []
 var magic_particles: CPUParticles3D
 var reversal_amount := 0.0
+var tour_world: Node3D
+var vault_entry_offset := Vector3(0,1,5)
+var map_pickup_offset := Vector3(0,1,-2)
 
 func _ready() -> void:
     _create_world()
     _create_player()
+    if tour_world != null:
+        tour_world.setup_player()
     _create_hud()
     _make_sfx()
     _update_world_state()
@@ -79,7 +84,7 @@ func _process(delta: float) -> void:
         remaining_message -= delta
         if remaining_message <= 0.0:
             message_label.text = ""
-    if is_instance_valid(cam) and is_instance_valid(player):
+    if tour_world == null and is_instance_valid(cam) and is_instance_valid(player):
         if showcase_view > 0:
             var shots := [Vector3.ZERO, Vector3(-24, 8, -37), Vector3(8, 8, -13), Vector3(21, 10, -40), Vector3(-17, 10, 1)]
             var targets := [Vector3.ZERO, Vector3(-10, 3, -16), Vector3(21, 5, 8), Vector3(38, 7, -17), Vector3(-32, 0, 20)]
@@ -88,18 +93,23 @@ func _process(delta: float) -> void:
         else:
             cam.global_position = cam.global_position.lerp(player.global_position + (CAMERA_CLOSE_OFFSET if viewing_close else CAMERA_OFFSET), min(delta * 4.0, 1.0))
             cam.look_at(player.global_position + Vector3(0, 2.2, 5.0), Vector3.UP)
-    player_model.position.y = -1.0 + sin(clock * 2.5) * 0.04
+    player_model.position.y = (-1.095 if tour_world != null else -1.0) + sin(clock * 2.5) * (.008 if tour_world != null else .04)
     art.animate(delta, player.velocity.length() if not help_panel.visible and not is_map_open else 0.0)
     for rune in rune_nodes:
         rune.rotation.y += delta * .3
     _update_hud()
     _update_minimap()
+    if tour_world != null:
+        tour_world.update(delta)
     if is_instance_valid(locator):
         locator.rotation.y += delta * 0.45
         locator.position.y = 0.28 + sin(clock*2.4)*0.17
 
 
 func _physics_process(delta: float) -> void:
+    if tour_world != null:
+        tour_world.move_player(delta)
+        return
     if finished or is_map_open or altar_started or showcase_view > 0 or help_panel.visible:
         return
     var input_axis := Vector2.ZERO
@@ -128,7 +138,13 @@ func _physics_process(delta: float) -> void:
         player_model.rotation.y = lerp_angle(player_model.rotation.y, atan2(world_direction.x, world_direction.z), min(delta * 10.0, 1.0))
     _water_check()
 
+func _unhandled_input(event: InputEvent) -> void:
+    if tour_world != null and not (event is InputEventKey):
+        tour_world.handle_input(event)
+
 func _unhandled_key_input(event: InputEvent) -> void:
+    if tour_world != null and tour_world.handle_input(event):
+        return
     if not (event is InputEventKey):
         return
     var key_event := event as InputEventKey
@@ -360,6 +376,11 @@ func _make_pillar(parent: Node3D, at: Vector3, h: float) -> void:
     _cylinder(parent, at + Vector3(0, h * 0.77, 0), 0.53, 0.17, Color("#3C7A8A"))
 
 func _create_world() -> void:
+    if OS.get_environment("SPHINX_MODELED") != "1" and FileAccess.file_exists("res://assets/tour/manifest.json"):
+        tour_world = preload("res://tour_world.gd").new()
+        add_child(tour_world)
+        tour_world.build(self)
+        return
     var env := WorldEnvironment.new()
     add_child(env)
     var e := Environment.new()
@@ -547,6 +568,9 @@ func _create_player() -> void:
     cam.look_at(player.position + Vector3(0, 1.0, 0), Vector3.UP)
 
 func _create_hud() -> void:
+    if tour_world != null:
+        tour_world.create_hud()
+        return
     var layer := CanvasLayer.new()
     add_child(layer)
     hud_root = layer
@@ -698,9 +722,9 @@ func _update_hud() -> void:
         near_text = "ALTAR PUZZLE: Press 3, then 2, then 1. Progress: %d/3. ESC to leave." % altar_step
     elif map_found and player.position.distance_to(QUEEN_SPOT + Vector3.UP) < 5.0:
         near_text = "Press R to dismiss the time cage, then E to save the Queen!"
-    elif has_key and not vault_open and player.position.distance_to(VAULT_SPOT + Vector3(0, 1, 5)) < 5.0:
+    elif has_key and not vault_open and player.position.distance_to(VAULT_SPOT + vault_entry_offset) < 5.0:
         near_text = "Press E to unlock the secret map chamber."
-    elif vault_open and not map_found and player.position.distance_to(VAULT_SPOT + Vector3(0, 1, -2)) < 5.0:
+    elif vault_open and not map_found and player.position.distance_to(VAULT_SPOT + map_pickup_offset) < 5.0:
         near_text = "Press E to take the map from its pedestal."
     elif player.position.distance_to(ALTAR_SPOT + Vector3.UP) < 5.0:
         near_text = "Agora altar: collect all coins, then press E."
@@ -723,6 +747,8 @@ func _update_world_state() -> void:
     if not is_instance_valid(vault_door):
         return
     vault_door.visible = not vault_open
+    if tour_world != null:
+        tour_world.sync_scene_visibility()
 
 func _flash(words: String, duration: float = 2.6) -> void:
     if not is_instance_valid(message_label):
@@ -939,9 +965,11 @@ func _water_check() -> void:
         _flash("Splash! Reverse time to rebuild the bridge.", 2.2)
 
 func _interact() -> void:
+    if tour_world != null and tour_world.try_travel():
+        return
     # The nearest relevant object wins, so E has a predictable meaning.
     for i in range(3):
-        if not coins[i] and player.position.distance_to(COIN_SPOTS[i]) < 3.2:
+        if not coins[i] and _target_allowed("coin%d" % i) and player.position.distance_to(COIN_SPOTS[i]) < 3.2:
             if not ancient:
                 _flash("The scarab is lost in time. Press R!", 2.5)
                 return
@@ -950,7 +978,7 @@ func _interact() -> void:
             _play_sfx("res://assets/collect.wav")
             _flash("Collected %s!" % COIN_TITLES[i], 3.0)
             return
-    if player.position.distance_to(ALTAR_SPOT + Vector3.UP) < 4.0 and not has_key:
+    if _target_allowed("altar") and player.position.distance_to(ALTAR_SPOT + Vector3.UP) < 4.0 and not has_key:
         if coins[0] and coins[1] and coins[2]:
             altar_started = true
             altar_step = 0
@@ -958,7 +986,7 @@ func _interact() -> void:
         else:
             _flash("The altar needs all 3 scarabs.", 2.0)
         return
-    if player.position.distance_to(VAULT_SPOT + Vector3(0, 1, 5)) < 4.0 and not vault_open:
+    if _target_allowed("vault") and player.position.distance_to(VAULT_SPOT + vault_entry_offset) < 4.0 and not vault_open:
         if has_key:
             vault_open = true
             _play_sfx("res://assets/unlock.wav")
@@ -967,12 +995,12 @@ func _interact() -> void:
         else:
             _flash("Locked. Restore the scarabs at the Agora altar first.", 2.6)
         return
-    if vault_open and not map_found and player.position.distance_to(VAULT_SPOT + Vector3(0, 1, -2)) < 4.0:
+    if _target_allowed("map") and vault_open and not map_found and player.position.distance_to(VAULT_SPOT + map_pickup_offset) < 4.0:
         map_found = true
         _flash("Map found! Press M to see where Nefertiti is held.", 4.0)
         _show_map(true)
         return
-    if player.position.distance_to(QUEEN_SPOT + Vector3.UP) < 4.0:
+    if _target_allowed("queen") and player.position.distance_to(QUEEN_SPOT + Vector3.UP) < 4.0:
         if not map_found:
             _flash("Find the ancient map first!", 2.5)
         elif not ancient:
@@ -1201,9 +1229,9 @@ func _quest_target() -> Vector3:
     if not has_key:
         return ALTAR_SPOT + Vector3.UP
     if not vault_open:
-        return VAULT_SPOT + Vector3(0, 1, 5)
+        return VAULT_SPOT + vault_entry_offset
     if not map_found:
-        return VAULT_SPOT + Vector3(0, 1, -2)
+        return VAULT_SPOT + map_pickup_offset
     return QUEEN_SPOT + Vector3.UP
 
 func _update_quest_guide() -> void:
@@ -1264,6 +1292,8 @@ func _ankh_rune(parent: Node3D, at: Vector3) -> Node3D:
 
 func _set_reversal_color(value: float) -> void:
     reversal_amount = value
+    if tour_world != null:
+        tour_world.set_reversal_tint(value)
     sunlight.light_color = Color("cee4f4").lerp(Color("f2d9ad"),value)
     world_environment.ambient_light_color = Color("a6c2d3").lerp(Color("bdc1ac"),value)
     world_environment.fog_light_color = Color("afc9d8").lerp(Color("dfba84"),value)
@@ -1292,8 +1322,14 @@ func _animate_reversal() -> void:
     for obj in past_objects:
         if obj == bridge:
             continue
+        if not obj.has_meta("rest_scale"):
+            obj.set_meta("rest_scale",obj.scale)
+        var rest_scale: Vector3 = obj.get_meta("rest_scale")
         if ancient:
-            obj.scale = Vector3.ONE*.02
-            reversal_tween.parallel().tween_property(obj,"scale",Vector3.ONE,.75).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+            obj.scale = rest_scale*.02
+            reversal_tween.parallel().tween_property(obj,"scale",rest_scale,.75).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
         else:
-            obj.scale = Vector3.ONE
+            obj.scale = rest_scale
+
+func _target_allowed(key: String) -> bool:
+    return tour_world == null or tour_world.can_target(key)

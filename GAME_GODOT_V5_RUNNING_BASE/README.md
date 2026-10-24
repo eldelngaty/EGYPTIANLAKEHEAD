@@ -1,14 +1,15 @@
-# Sphinx Reversal — Lakehead Campus Edition
+# Sphinx Reversal — REAL Lakehead Tour
 
-Open project.godot in Godot 4.x and press F5. Tested with Godot 4.6.3; Godot 4.7 was not available for validation.
+Open project.godot in Godot 4.x and press F5. Tested on 4.6.3; 4.7 was unavailable.
 
-This continues the existing game. Agora now has a modular masonry facade, recessed entrance and landscaped forecourt. Paterson has horizontal window bands and a curved jade canopy; ATAC has a bowed glazed facade, inclined fins and glazed return elevations. The guardian has a striped nemes, linen kilt, gold collar, staff and walking limbs. Reversal transitions the sky and sunlight, animates runes and particles, and restores the bridge in staggered sections.
+The default environment uses actual offline panoramas from the official Lakehead virtual tour: Agora Circle, the Paterson Library approach (Campus Corridor), ATAC interior and Lake Tamblyn. Each cubemap has six reconstructed 1024px faces. Source metadata, image IDs, tile URLs, hashes, mapping conventions and reuse basis are in assets/tour/manifest.json and ../tour_evidence.
 
-Existing quest: collect three ancient scarabs, complete the 3–2–1 altar sequence, obtain the key and map, and rescue Nefertiti. Movement and interaction controls are unchanged. H opens the existing guide. V cycles architecture-facing views; F1 hides the HUD.
+Right-drag / arrows: look. WASD: move avatar within the local 3D proxy area. E: interact. R: reverse. M: discovered map. Blue hotspots: click, or look and press E to travel.
 
-Validation: headless import, 15 gameplay checks on both source and packaged PCK, and actual OpenGL screenshots. Graphical rendering used Mesa software rendering; target-device performance and audible output were not measured.
+Complete quest: three scarabs in three photo scenes → Agora altar 3–2–1 → golden key → ATAC map chest → map → Lake Tamblyn → reverse prison → rescue → victory.
 
-The campus is an approximate stylized reconstruction. Supplied virtual-tour and cubemap URLs returned HTTP 403 in this environment. No imagery was downloaded from them and no survey-level accuracy is claimed. New modular geometry and brick/concrete/paving/grass textures are procedural. Original project assets remain included.
+The photographs remain fixed at verified camera locations. Objects are 3D overlays; the photo is not a reconstructed navigable mesh. The library's separate gallery picture is explicitly displayed as a gallery picture.
 
-The PCK is a packaged game resource, not a standalone executable. Run with a matching Godot 4.6.3 binary using: godot --main-pack SphinxReversal.pck
-Windows export preset is included; Windows export templates were not installed, so no .exe is supplied.
+Source and PCK quest suites: 41/41 passed; legacy modeled mode: 15/15 passed. Actual graphical screenshots are in ../screenshots. Windows templates absent: no EXE. Legacy modeled mode remains available only through SPHINX_MODELED=1; it is not the default.
+
+Photos: Lakehead University / Circuit; included under user-confirmed permission to redistribute in ZIP and GitHub. No open license is claimed.

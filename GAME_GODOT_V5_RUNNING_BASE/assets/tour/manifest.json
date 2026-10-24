@@ -1,0 +1,1036 @@
+{
+  "title": "Sphinx Reversal \u2014 actual Lakehead tour environments",
+  "tour_id": 52,
+  "tour_api": "https://lakehead.madewithcircuit.com/api/v2/tours/lakehead-thunder-bay/?format=json",
+  "rights": {
+    "basis": "User explicitly confirmed permission includes redistribution in ZIP and GitHub in this conversation",
+    "public_license_claimed": false
+  },
+  "scenes": [
+    {
+      "id": "agora",
+      "name": "Agora Circle",
+      "source_page": "https://virtualtour.lakeheadu.ca/lakehead/lakehead-thunder-bay/agora-circle",
+      "source_api": "https://lakehead.madewithcircuit.com/api/v2/pages/13/",
+      "page_id": 13,
+      "image_id": 19,
+      "original_image_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1544_Agora_Circle_Panorama-005.jpg",
+      "cube_map_id": 8,
+      "available_levels": [
+        {
+          "nbTiles": 2,
+          "faceSize": 1024,
+          "zoomRange": [
+            0,
+            50
+          ]
+        },
+        {
+          "nbTiles": 4,
+          "faceSize": 2560,
+          "zoomRange": [
+            50,
+            100
+          ]
+        }
+      ],
+      "source_heading": "0.36",
+      "source_pitch": "0.01",
+      "source_north": 0,
+      "face_size": 1024,
+      "source_level": 1,
+      "tiles_per_face": [
+        2,
+        2
+      ],
+      "tile_coordinates": "column_row; official viewer tileUrl(face,col,row,level)",
+      "texture_folder": "res://assets/tour/agora",
+      "verified": true,
+      "verification": "Official tour 52 scene list + official page metadata cube_map.id",
+      "faces": {
+        "front": {
+          "file": "front.png",
+          "sha256": "d9cd719b3cdab7b974000d5150bd0f3d97e9034d2675717fef9419d6c4864792"
+        },
+        "right": {
+          "file": "right.png",
+          "sha256": "fe89f7e49c1e2da0bcfac70d2e275aae7812fea9d9d1f96f3b27869a1f7f5ff2"
+        },
+        "back": {
+          "file": "back.png",
+          "sha256": "6abf0cc014b9cdbce6f0a9286ee64e11da0b9a5115f9206b8e72318e305b008f"
+        },
+        "left": {
+          "file": "left.png",
+          "sha256": "d120d8f323776cf10d94147ec2fbc737836e000c11267e3d83eb51e7cc078eed"
+        },
+        "top": {
+          "file": "top.png",
+          "sha256": "da384b605cb9d6db5b3fbf6bcb9971b4ef77c9e206eaa5d1e7b062e6c66fc20f"
+        },
+        "bottom": {
+          "file": "bottom.png",
+          "sha256": "4e62adfd338ce90182dd68b3b47276af110e6017846564ce9416f6c6cee174b4"
+        }
+      },
+      "tile_sources": [
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/front/level_1/front_0_0.webp",
+          "sha256": "3311c61371642364ad3dd416ff8bfb6a22a01e0608d68ecb0a94edd4e9334d7f",
+          "face": "front",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/front/level_1/front_1_0.webp",
+          "sha256": "6e0c56232152f023e4949449b19189eae35f09adb81a90b267df44b4f9f09ab8",
+          "face": "front",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/front/level_1/front_0_1.webp",
+          "sha256": "6692657cb2a3554cd86c2512be8d3530ea912a15841476f1be530b2326e6f36e",
+          "face": "front",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/front/level_1/front_1_1.webp",
+          "sha256": "6cd35423e39804e981b2e7b083a46b52e2d525cfe4bc4f758aded83954b8f304",
+          "face": "front",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/right/level_1/right_0_0.webp",
+          "sha256": "8c8d32b2f8c4f92c5684008ecef4cc5e0a0994aca6c41826bcd5e73427c24d72",
+          "face": "right",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/right/level_1/right_1_0.webp",
+          "sha256": "fa04c6eb0f7c1d061cd81a18187ee8320277cbcb0b06bb178ec2b71da3cbd587",
+          "face": "right",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/right/level_1/right_0_1.webp",
+          "sha256": "8608998c00e32eeb5ded02234cb175f63da490a841ef64edf6ffc9e650c1296d",
+          "face": "right",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/right/level_1/right_1_1.webp",
+          "sha256": "30058d04578fe83d148fd6de03e79cb5a5331be43ce0d853abf933c6c6fff2a9",
+          "face": "right",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/back/level_1/back_0_0.webp",
+          "sha256": "8f540bb32b8e292343bcdb679bbcfdf6568942e3423f340c35622e1ccfe15512",
+          "face": "back",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/back/level_1/back_1_0.webp",
+          "sha256": "e597e8f6835d02ca4d27963b6c702c8606d5f225e6c2e42708f8ce23cb3a357c",
+          "face": "back",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/back/level_1/back_0_1.webp",
+          "sha256": "7886ecfca5582db87e9bac2035d57512043c339366bd75705c00570ccd459d24",
+          "face": "back",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/back/level_1/back_1_1.webp",
+          "sha256": "180764dc04e1a257ec0a451053705e4bfa595e93f8033508abfecfce90bdcb74",
+          "face": "back",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/left/level_1/left_0_0.webp",
+          "sha256": "f52e537383857a5828245d1d7f8b5683935d770cb692e0ff07264b9e2d62c553",
+          "face": "left",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/left/level_1/left_1_0.webp",
+          "sha256": "588317347e3c1a4bbcc66382360f7c51d2ab52447c823af6d7cd66b062ea85ba",
+          "face": "left",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/left/level_1/left_0_1.webp",
+          "sha256": "898222103fb2ed6bd1d81184b792d4571efc064ceeac03c311ba50c53e8bade8",
+          "face": "left",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/left/level_1/left_1_1.webp",
+          "sha256": "bfaea3842e61a40821ba7b41f49f2fa9a010a0468949ab5c8348048e79c64866",
+          "face": "left",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/top/level_1/top_0_0.webp",
+          "sha256": "483e53bddef127e426de542ec82bc58e8055b0f1b5fe00990fd794ff6a268a8e",
+          "face": "top",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/top/level_1/top_1_0.webp",
+          "sha256": "d4fb4486ebe8e20eb1c60f72d39ec42c3999df299ef076af8adc743798488bda",
+          "face": "top",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/top/level_1/top_0_1.webp",
+          "sha256": "8f91b5d48af8fc531d1f3c41fae8fc7b3043a0d76bb79be8636743d5d2cf28fe",
+          "face": "top",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/top/level_1/top_1_1.webp",
+          "sha256": "c2690e642a24909bb08f230db993424887eba4acfa4487878be406c9f40c76ee",
+          "face": "top",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/bottom/level_1/bottom_0_0.webp",
+          "sha256": "6157f25e31216794e16d497bb0e2c78ae8abecfd6bc969c4d824f6ee0831c0f8",
+          "face": "bottom",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/bottom/level_1/bottom_1_0.webp",
+          "sha256": "9803d14b2e7d37d7a82dc0bf10768613a304480dfb716bc9ae1b0b85fc5867e5",
+          "face": "bottom",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/bottom/level_1/bottom_0_1.webp",
+          "sha256": "892004f2352f67732aa6b8302a00f76198085b8145ddc371df249074e4f7733d",
+          "face": "bottom",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/8/bottom/level_1/bottom_1_1.webp",
+          "sha256": "facc6b0428b60ee0202adaec310cb6b23515969d887500983843e7b77d341d1d",
+          "face": "bottom",
+          "column": 1,
+          "row": 1
+        }
+      ],
+      "lateral_seam_mae": {
+        "front-right": 3.7731119791666665,
+        "right-back": 7.224283854166667,
+        "back-left": 5.09765625,
+        "left-front": 4.086588541666667
+      },
+      "godot_mapping": {
+        "front": "-Z",
+        "right": "+X",
+        "back": "+Z",
+        "left": "-X",
+        "top": "+Y (u=+X,v=-Z)",
+        "bottom": "-Y (u=+X,v=+Z)"
+      },
+      "yaw_degrees": -90
+    },
+    {
+      "id": "corridor",
+      "name": "Campus Corridor",
+      "source_page": "https://virtualtour.lakeheadu.ca/lakehead/lakehead-thunder-bay/campus-corridor",
+      "source_api": "https://lakehead.madewithcircuit.com/api/v2/pages/18/",
+      "page_id": 18,
+      "image_id": 21,
+      "original_image_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1580_Campus_Corridor_Panorama-007.jpg",
+      "cube_map_id": 16,
+      "available_levels": [
+        {
+          "nbTiles": 2,
+          "faceSize": 1024,
+          "zoomRange": [
+            0,
+            50
+          ]
+        },
+        {
+          "nbTiles": 4,
+          "faceSize": 2560,
+          "zoomRange": [
+            50,
+            100
+          ]
+        }
+      ],
+      "source_heading": "-0.09",
+      "source_pitch": "-0.10",
+      "source_north": 0,
+      "face_size": 1024,
+      "source_level": 1,
+      "tiles_per_face": [
+        2,
+        2
+      ],
+      "tile_coordinates": "column_row; official viewer tileUrl(face,col,row,level)",
+      "texture_folder": "res://assets/tour/corridor",
+      "verified": true,
+      "verification": "Official tour 52 scene list + official page metadata cube_map.id",
+      "faces": {
+        "front": {
+          "file": "front.png",
+          "sha256": "99dfb8ba10ab5c566d9e78fce97a82f4e44cbd36082439b69125fc9dd2426bb3"
+        },
+        "right": {
+          "file": "right.png",
+          "sha256": "74b2bb67e2bad32872f455192aa6f3dc542333a1a8ae6331baeddc4161828ae6"
+        },
+        "back": {
+          "file": "back.png",
+          "sha256": "12b375824e2188368940f50d2b2413dcb9f676fac274cc41173e37db1f64b82f"
+        },
+        "left": {
+          "file": "left.png",
+          "sha256": "b5c29c27e3ab62c15a4d9784c3efe97da7c945a6bb5705bb2d998e9e02c78e57"
+        },
+        "top": {
+          "file": "top.png",
+          "sha256": "a36c9bd36a0d36ba8ff7b4bd1c2b0fb3b6dd1a8d05de83dbca867b137b562098"
+        },
+        "bottom": {
+          "file": "bottom.png",
+          "sha256": "671652a6cae27805dc1475397ce5e9d60252c9a4ec83c05ecfe8dac2f4462208"
+        }
+      },
+      "tile_sources": [
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/front/level_1/front_0_0.webp",
+          "sha256": "999a06dc3126f934ff9755737b65138228e7137f681099330462c9ae5a040e5c",
+          "face": "front",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/front/level_1/front_1_0.webp",
+          "sha256": "96237da50c01f6e9255052349f73edf6dccb57fba6c6d3d2a5f8357606dece38",
+          "face": "front",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/front/level_1/front_0_1.webp",
+          "sha256": "afd9567c1e7a60ab390c2c2d25b2c26fb92764011204e27955173e74371c7fa7",
+          "face": "front",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/front/level_1/front_1_1.webp",
+          "sha256": "e8c031bd96c1fd2b3d8d11ddd68f58b76b6043626f0d6aff4e51d2390eec6fb1",
+          "face": "front",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/right/level_1/right_0_0.webp",
+          "sha256": "5c20aae9013c787a48cc8682eeabc1fad6332a1ba644abe5b879805e0a502dbf",
+          "face": "right",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/right/level_1/right_1_0.webp",
+          "sha256": "535f26cdc19632ad3b178536e2ccbd0b8bf7aff85fe225581148afec1648ca9d",
+          "face": "right",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/right/level_1/right_0_1.webp",
+          "sha256": "6d1dceb8f9e02b6f4f412dd3a107bc9278337ec9135d064af6c753bf0730ccdf",
+          "face": "right",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/right/level_1/right_1_1.webp",
+          "sha256": "fd26150245860418cf7a85214036aae7665b0c29740b8c7c26209ea826377f3b",
+          "face": "right",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/back/level_1/back_0_0.webp",
+          "sha256": "351d3273e5f4e09c68dfd52f02a844b387e5fbef3ee6bfbe2387c5a49b0c983f",
+          "face": "back",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/back/level_1/back_1_0.webp",
+          "sha256": "1771322be9f122386a9ba772e39edf212f62d3be68a4b6294d30eb93002989e2",
+          "face": "back",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/back/level_1/back_0_1.webp",
+          "sha256": "03c552172f083590b3ef589c464851d4c9102a782e2a569bd4a39e326d1f16e7",
+          "face": "back",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/back/level_1/back_1_1.webp",
+          "sha256": "b76b2598ab3f438fff402c30dfcecfabead1b5e83ef8f7c06018b9998af1460a",
+          "face": "back",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/left/level_1/left_0_0.webp",
+          "sha256": "44dee1b723d06c66d8408cea6101cd0077330579da002e83e4b97b0609219725",
+          "face": "left",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/left/level_1/left_1_0.webp",
+          "sha256": "65a911ddd193676984d4cefc616485458e889538021fba77994a680dc3c41f58",
+          "face": "left",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/left/level_1/left_0_1.webp",
+          "sha256": "3778b86d5b0f74a5978697ae2b477594623c3828472ec8c5a98e8868a1374441",
+          "face": "left",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/left/level_1/left_1_1.webp",
+          "sha256": "b50682e14a5b189891a75dfc1ceb1de7392ae5a820a7da04603be7c929db7368",
+          "face": "left",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/top/level_1/top_0_0.webp",
+          "sha256": "8b1d7c83bbdd4470409362505d0539f84f92444816c55d4399ab18f1f9b55b77",
+          "face": "top",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/top/level_1/top_1_0.webp",
+          "sha256": "64d0dde07074b8c1532d612bb4ed7de5eff2315e5ef270981b98da02d164e3cc",
+          "face": "top",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/top/level_1/top_0_1.webp",
+          "sha256": "710d7e2de143c882fde7644f08c4ced8e6baf22c4fff32d6397fc0bec00c1942",
+          "face": "top",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/top/level_1/top_1_1.webp",
+          "sha256": "33dd493919d6a1f4a9827cc943822700c9b7359a538382303470c596f3c236a8",
+          "face": "top",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/bottom/level_1/bottom_0_0.webp",
+          "sha256": "cf7fae0727bc6549bec4f92d3f4eb8233b570cffc8b7ef5a27f205a912fc3792",
+          "face": "bottom",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/bottom/level_1/bottom_1_0.webp",
+          "sha256": "df4e1151f2aa3b2ef8743e019abadc5e978b8e42785d76678d9ad8e51845f7d9",
+          "face": "bottom",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/bottom/level_1/bottom_0_1.webp",
+          "sha256": "5d696a29d7aec26f97ebaad122501788aa8ea9979cfb432a8e5bd9b0cdc76960",
+          "face": "bottom",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/16/bottom/level_1/bottom_1_1.webp",
+          "sha256": "c38b941c08e6b5daa2693e96f963689f9b54d4e19bf87e38565121becd86641c",
+          "face": "bottom",
+          "column": 1,
+          "row": 1
+        }
+      ],
+      "lateral_seam_mae": {
+        "front-right": 3.7337239583333335,
+        "right-back": 3.6904296875,
+        "back-left": 2.9078776041666665,
+        "left-front": 5.1513671875
+      },
+      "godot_mapping": {
+        "front": "-Z",
+        "right": "+X",
+        "back": "+Z",
+        "left": "-X",
+        "top": "+Y (u=+X,v=-Z)",
+        "bottom": "-Y (u=+X,v=+Z)"
+      },
+      "yaw_degrees": 35
+    },
+    {
+      "id": "atac",
+      "name": "ATAC (Advanced Technology & Academic Centre)",
+      "source_page": "https://virtualtour.lakeheadu.ca/lakehead/lakehead-thunder-bay/atac-advanced-technology-academic-centre",
+      "source_api": "https://lakehead.madewithcircuit.com/api/v2/pages/20/",
+      "page_id": 20,
+      "image_id": 26,
+      "original_image_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1658_ATAC_Panorama-012.jpg",
+      "cube_map_id": 19,
+      "available_levels": [
+        {
+          "nbTiles": 2,
+          "faceSize": 1024,
+          "zoomRange": [
+            0,
+            50
+          ]
+        },
+        {
+          "nbTiles": 4,
+          "faceSize": 2560,
+          "zoomRange": [
+            50,
+            100
+          ]
+        }
+      ],
+      "source_heading": "0.98",
+      "source_pitch": "0.02",
+      "source_north": 0,
+      "face_size": 1024,
+      "source_level": 1,
+      "tiles_per_face": [
+        2,
+        2
+      ],
+      "tile_coordinates": "column_row; official viewer tileUrl(face,col,row,level)",
+      "texture_folder": "res://assets/tour/atac",
+      "verified": true,
+      "verification": "Official tour 52 scene list + official page metadata cube_map.id",
+      "faces": {
+        "front": {
+          "file": "front.png",
+          "sha256": "efaa59b31150f55651e8f84b546602f9e8ee8bec2ce389b0d742e0ed2234c4c2"
+        },
+        "right": {
+          "file": "right.png",
+          "sha256": "26f60239cde5d7d89565e711ffa65425c93794c387096fe4af29eff3ed2b2012"
+        },
+        "back": {
+          "file": "back.png",
+          "sha256": "69a31d9fc8bc4c9699711941261de371e21c693159254e6d6a4a3ef87f0ec2bf"
+        },
+        "left": {
+          "file": "left.png",
+          "sha256": "53cb12bc93fc98f482aca049222a32e9ef69741e75162f2b57b175bb4a3d2e10"
+        },
+        "top": {
+          "file": "top.png",
+          "sha256": "a0f510af236e3b79b430902fe617912d6bd599cf82f37d29f7cbc05bca470339"
+        },
+        "bottom": {
+          "file": "bottom.png",
+          "sha256": "0708a6e98f19dfece6a46aef4f98be18318590184b007bf493955760f9eccb86"
+        }
+      },
+      "tile_sources": [
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/front/level_1/front_0_0.webp",
+          "sha256": "0292de966cc360233c1621aedf943ec69a3f4fc73c6a1ba1c77536ff516927ab",
+          "face": "front",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/front/level_1/front_1_0.webp",
+          "sha256": "994767c3337e158503d8c2cfe4d48b8310bf8eb39c80267587b68ce3eb1ecce4",
+          "face": "front",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/front/level_1/front_0_1.webp",
+          "sha256": "8135a6f52f522a6c869ae3c681bad7456915997c80921c0bd5703ddbfa753b17",
+          "face": "front",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/front/level_1/front_1_1.webp",
+          "sha256": "305f3498972c27b591259890c891a9aed4d59c9ff7a8f771a93e97c40f35f7e6",
+          "face": "front",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/right/level_1/right_0_0.webp",
+          "sha256": "3a98cad66e165ae6c21133de82f755f7224260bbeca53aa44d36a4764528d6d3",
+          "face": "right",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/right/level_1/right_1_0.webp",
+          "sha256": "bdef96704e16616d7a802ddefdce7805bc8e4e41b6304e68b2ba24c9ab7380f2",
+          "face": "right",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/right/level_1/right_0_1.webp",
+          "sha256": "885e252bc5ffa0dc8c35be0d83791acbadf68c96358bb446d39c378b438baca4",
+          "face": "right",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/right/level_1/right_1_1.webp",
+          "sha256": "7a280659a1ef884f6835abbbcad0e139f70599f79238850cfed972c8349f5491",
+          "face": "right",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/back/level_1/back_0_0.webp",
+          "sha256": "fcfdd56bb947bbf85ecbd70f1c1703cff2e1d132ab726567b5eb412c60f08b0b",
+          "face": "back",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/back/level_1/back_1_0.webp",
+          "sha256": "f7d7fbd1991dc0f4e38ba0f8b010d8bb8b99004415cd660c444040c7d61a0cf9",
+          "face": "back",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/back/level_1/back_0_1.webp",
+          "sha256": "1628b8579bde173e677590291fc38a7dea1e68b06028ce72390b2ba8f2d028e8",
+          "face": "back",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/back/level_1/back_1_1.webp",
+          "sha256": "239970a9b54728afc3264e0512bcf941aabf738c6bd9a2a8d8a99cd5de1cbc39",
+          "face": "back",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/left/level_1/left_0_0.webp",
+          "sha256": "a206893d381390b8a7dda5725546dd8b2940245faad7af6c7b013143663e8eba",
+          "face": "left",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/left/level_1/left_1_0.webp",
+          "sha256": "70aba774031de342dda3ea7a6621dcc39d2301e5d68f9235edca9a2cf518da5e",
+          "face": "left",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/left/level_1/left_0_1.webp",
+          "sha256": "4ade852b0ea4c9fa4caa84dbafc55f74300508a2812bdedc4d6e9cae3f36e5ab",
+          "face": "left",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/left/level_1/left_1_1.webp",
+          "sha256": "aec97f901b9f0bfedeb08ca12cc2d194c55181f0560c01bd0b2007cf1a006165",
+          "face": "left",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/top/level_1/top_0_0.webp",
+          "sha256": "3f655b89dd578317df60c2059587412ee130e1b834054dd409c3dc4879a5c9c8",
+          "face": "top",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/top/level_1/top_1_0.webp",
+          "sha256": "ebc172af4813fb3c3d1f58ad22c367cbb9ac37e12089257761f0cac714ffb08c",
+          "face": "top",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/top/level_1/top_0_1.webp",
+          "sha256": "8319a8852fc2c78fe8913224acc1875e7c654f06b81586e5569e32922833394f",
+          "face": "top",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/top/level_1/top_1_1.webp",
+          "sha256": "7f9bea62f7d5b27bd8d2fa5af67ca75cf7899758e7d120f470e612e8ff4b49ad",
+          "face": "top",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/bottom/level_1/bottom_0_0.webp",
+          "sha256": "d3738be9201e8d4406b86d289726714fbbb631151672414af9fefda4043e81f6",
+          "face": "bottom",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/bottom/level_1/bottom_1_0.webp",
+          "sha256": "0c7dd2e6bf804c83530159bf93f67c19b307ca045b00805058293a3ded3403bf",
+          "face": "bottom",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/bottom/level_1/bottom_0_1.webp",
+          "sha256": "3f7623f03fbd709d22c80165dd3985ee50eb7f5ea2fbca052078fad83d68ab5f",
+          "face": "bottom",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/19/bottom/level_1/bottom_1_1.webp",
+          "sha256": "3ffdd34015772909d206e2fe468c7cf481e8b7bd08ebb8932edb6a3147313e52",
+          "face": "bottom",
+          "column": 1,
+          "row": 1
+        }
+      ],
+      "lateral_seam_mae": {
+        "front-right": 5.282552083333333,
+        "right-back": 8.001302083333334,
+        "back-left": 6.777669270833333,
+        "left-front": 6.651041666666667
+      },
+      "godot_mapping": {
+        "front": "-Z",
+        "right": "+X",
+        "back": "+Z",
+        "left": "-X",
+        "top": "+Y (u=+X,v=-Z)",
+        "bottom": "-Y (u=+X,v=+Z)"
+      },
+      "yaw_degrees": 0
+    },
+    {
+      "id": "lake",
+      "name": "Lake Tamblyn",
+      "source_page": "https://virtualtour.lakeheadu.ca/lakehead/lakehead-thunder-bay/laketamblyn",
+      "source_api": "https://lakehead.madewithcircuit.com/api/v2/pages/11/",
+      "page_id": 11,
+      "image_id": 17,
+      "original_image_url": "https://media.circuitcdn.com/lakehead/original_images/LakeheadU-IMG_1520_Lake_Tamblyn_Panorama-003.jpg",
+      "cube_map_id": 11,
+      "available_levels": [
+        {
+          "nbTiles": 2,
+          "faceSize": 1024,
+          "zoomRange": [
+            0,
+            50
+          ]
+        },
+        {
+          "nbTiles": 4,
+          "faceSize": 2560,
+          "zoomRange": [
+            50,
+            100
+          ]
+        }
+      ],
+      "source_heading": "-0.86",
+      "source_pitch": "-0.05",
+      "source_north": 0,
+      "face_size": 1024,
+      "source_level": 1,
+      "tiles_per_face": [
+        2,
+        2
+      ],
+      "tile_coordinates": "column_row; official viewer tileUrl(face,col,row,level)",
+      "texture_folder": "res://assets/tour/lake",
+      "verified": true,
+      "verification": "Official tour 52 scene list + official page metadata cube_map.id",
+      "faces": {
+        "front": {
+          "file": "front.png",
+          "sha256": "4bfea2a71c413a48b876fdc4dbc8627d96ac975d08703c114468e40de11e5927"
+        },
+        "right": {
+          "file": "right.png",
+          "sha256": "89fa6101873468e66a4eb22e0dba428aa1c86f4a78c683b8077ef2d77bfa92ab"
+        },
+        "back": {
+          "file": "back.png",
+          "sha256": "358dbac26606ab1bb338355bec9abb48ca7cbecfad2db81d1b9225611818d1ba"
+        },
+        "left": {
+          "file": "left.png",
+          "sha256": "2a657f260290278bdb2f2275891167f8018215aeb459ae2ad17652978a988646"
+        },
+        "top": {
+          "file": "top.png",
+          "sha256": "a308a93162a54bd1b8bfff6b79923b23a69b67610aaf4c9380f78c0afc068463"
+        },
+        "bottom": {
+          "file": "bottom.png",
+          "sha256": "ba1e946db84542e5a77f37754386ca99dd37a552455960af513891f109f4ac87"
+        }
+      },
+      "tile_sources": [
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/front/level_1/front_0_0.webp",
+          "sha256": "fdc9260d021fe3e8f6f35b302bc561e0dc6d56c7b0c19fe08bb50be662593f25",
+          "face": "front",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/front/level_1/front_1_0.webp",
+          "sha256": "b58cf27035bf8d8d5851a5f0ac9e72d18b05134d72099d5b55ed051b1e2cc4c9",
+          "face": "front",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/front/level_1/front_0_1.webp",
+          "sha256": "288ba6ae546fe62994df422fdc1e2858bd28db96b1a7f9e5ffc4d44043d59ec0",
+          "face": "front",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/front/level_1/front_1_1.webp",
+          "sha256": "1d9eacba54b9e13031bd52111c1466be35d1bd58316b61ab0e767caffb7a5f70",
+          "face": "front",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/right/level_1/right_0_0.webp",
+          "sha256": "721ba092fa871b4ec31fdf5cec06f98eee41fd899a541624fb7100203eafc9d2",
+          "face": "right",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/right/level_1/right_1_0.webp",
+          "sha256": "7ff93df2e7daf6b8d45a2b8244719907b7348a3d9ad7b2b70cbc7d99bd0c934a",
+          "face": "right",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/right/level_1/right_0_1.webp",
+          "sha256": "4a2466d0e1058334a008c74d50e9fc058355282ed4c51c8a4d5e03194519e76b",
+          "face": "right",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/right/level_1/right_1_1.webp",
+          "sha256": "13a03fde07c1ce7b06b4b8707645ccb29145a787d74bca13cbd0d4c69c49b1c9",
+          "face": "right",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/back/level_1/back_0_0.webp",
+          "sha256": "57493f96816f2e265d4ab110bd74caa311b6bcd6789862db5f65284b7642bd47",
+          "face": "back",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/back/level_1/back_1_0.webp",
+          "sha256": "860f0d8fca42d8a1de4ab2218b8ced25d38e0e534db5571ca39ffb7efe8f80dc",
+          "face": "back",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/back/level_1/back_0_1.webp",
+          "sha256": "dc982f8928965a9372afc43a4f6c71df32a3ae0ff44b62bf7c3be5b9853ed842",
+          "face": "back",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/back/level_1/back_1_1.webp",
+          "sha256": "701f1fd35f67a786da4d74e73a641889cf9f91ce52330ff4a80b81067c8ee9c5",
+          "face": "back",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/left/level_1/left_0_0.webp",
+          "sha256": "6b17362de40d7e1bd36574827cb79c7c11589b5e1d5a086c43b481706693b848",
+          "face": "left",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/left/level_1/left_1_0.webp",
+          "sha256": "8d2c54e68b27e7eeb7841b2003b040d0bf13bc6502752ed5e8e0eea631cf63c6",
+          "face": "left",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/left/level_1/left_0_1.webp",
+          "sha256": "8fb5bf254af0a4e691159b4bc771ce30f81cf58728473b39e3f49f36abd56e6f",
+          "face": "left",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/left/level_1/left_1_1.webp",
+          "sha256": "f3d9d17c04ad6d545d1a1d74cbc1a276e095591fa8ad222ea7530d1a0146405a",
+          "face": "left",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/top/level_1/top_0_0.webp",
+          "sha256": "7fcb255eaa241b3e147e2b98a2cb47dc58724961b1f5c981cf5eb140ad9ca223",
+          "face": "top",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/top/level_1/top_1_0.webp",
+          "sha256": "d9c81ec6b0240ba12cc477eeae1faf0ac12f4cb974b2fb18898ba7274044f3cf",
+          "face": "top",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/top/level_1/top_0_1.webp",
+          "sha256": "7a533a64f4dbb504cff3f949009d834c4be6514fd63c2164b2b7e2e03352bc3e",
+          "face": "top",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/top/level_1/top_1_1.webp",
+          "sha256": "3ec7559452a2a5e744cd7a0de050603e9907601ac1962a46d01bfd77f3c5254f",
+          "face": "top",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/bottom/level_1/bottom_0_0.webp",
+          "sha256": "9f543d965f1e8ad476a32a7cc7ef89f47002c22467db2c8badb70e695e859e4c",
+          "face": "bottom",
+          "column": 0,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/bottom/level_1/bottom_1_0.webp",
+          "sha256": "be6b55cafb695c7a37c9e5c7327b32bb1311b599027e16a4f19a56e9a3e9eec9",
+          "face": "bottom",
+          "column": 1,
+          "row": 0
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/bottom/level_1/bottom_0_1.webp",
+          "sha256": "562c26ffcaf8a789f3b9925dd4e13be0aecfb1bf365572cd350f4747b3b22b2c",
+          "face": "bottom",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "source": "https://media.circuitcdn.com/lakehead/cube_maps/11/bottom/level_1/bottom_1_1.webp",
+          "sha256": "c22995752ecff99e731970b7187d751e91a636d83f81854b229806e96a410d8c",
+          "face": "bottom",
+          "column": 1,
+          "row": 1
+        }
+      ],
+      "lateral_seam_mae": {
+        "front-right": 4.7998046875,
+        "right-back": 4.325846354166667,
+        "back-left": 4.312825520833333,
+        "left-front": 4.183919270833333
+      },
+      "godot_mapping": {
+        "front": "-Z",
+        "right": "+X",
+        "back": "+Z",
+        "left": "-X",
+        "top": "+Y (u=+X,v=-Z)",
+        "bottom": "-Y (u=+X,v=+Z)"
+      },
+      "yaw_degrees": 180
+    }
+  ],
+  "gallery": {
+    "name": "Chancellor Paterson Library",
+    "page_id": 24,
+    "image_id": 49,
+    "source_page": "https://virtualtour.lakeheadu.ca/lakehead/lakehead-thunder-bay/chancellor-paterson-library",
+    "source_api": "https://lakehead.madewithcircuit.com/api/v2/pages/24/",
+    "source_image": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18150-017.width-1280.format-jpeg.jpg",
+    "local_file": "res://assets/tour/library_gallery.jpg",
+    "type": "ordinary photograph, not a 360 panorama"
+  },
+  "navigation": "Game-authored hotspot graph between verified camera locations; not a surveyed walking route",
+  "photographic_camera_height_m": 1.65,
+  "local_proxy_radius_m": 3.8,
+  "limitations": [
+    "Photographic people and scenery are static; gameplay objects are separate 3D meshes.",
+    "Photographic camera stays fixed; only the nearby 3D avatar moves."
+  ]
+}

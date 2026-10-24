@@ -1,0 +1,259 @@
+{
+  "id": 24,
+  "meta": {
+    "search_description": "Here we have the centre of academic life: The Chancellor Paterson Library. The library houses a collection of over half a million books, more than forty-four thousand print and an extensive Archives and Special Collections.Visit the Learning Commons on the fifth floor, which fosters collaborative and social learning or a find quiet area in one of the many study spaces.",
+    "type": "place.GalleryPage",
+    "detail_url": "https://lakehead.madewithcircuit.com/api/v2/pages/24/",
+    "html_url": "https://lakehead.madewithcircuit.com/scenes/lakehead-university/lakehead-university-thunder-bay/chancellor-paterson-library/",
+    "slug": "chancellor-paterson-library",
+    "show_in_menus": false,
+    "seo_title": "",
+    "first_published_at": "2025-09-19T17:42:08.955908-04:00",
+    "alias_of": null,
+    "parent": null
+  },
+  "title": "Chancellor Paterson Library",
+  "gallery_items": [
+    {
+      "id": 5,
+      "meta": {
+        "type": "place.GalleryPageGalleryItem"
+      },
+      "media": [
+        {
+          "type": "image",
+          "value": {
+            "id": 49,
+            "title": "Chancellor Paterson Library",
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18150-017.width-1280.format-jpeg.jpg",
+              "width": 1280,
+              "height": 853,
+              "alt": "Chancellor Paterson Library",
+              "background_position": "30% 24%",
+              "focus_x": 387.84000000000003,
+              "focus_y": 204.77119279819956,
+              "focus_width": 193.28000000000003,
+              "focus_height": 254.68417104276074
+            },
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18150-01.width-420.format-jpeg.jpegquality-60.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "Chancellor Paterson Library",
+              "background_position": "30% 24%",
+              "focus_x": 127.25999999999999,
+              "focus_y": 66.97674418604652,
+              "focus_width": 63.42,
+              "focus_height": 83.30232558139535
+            }
+          },
+          "id": "59f51e0b-bfac-4c6c-8ba2-89ce2eb30dad"
+        }
+      ],
+      "content": [
+        {
+          "type": "title",
+          "value": "Chancellor Paterson Library",
+          "id": "bf7d3107-8a68-4030-8e55-7f77c6e5a1fe"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"3riq2\">Here we have the centre of academic life: The Chancellor Paterson Library. The library houses a collection of over half a million books, more than forty-four thousand print and an extensive Archives and Special Collections.</p><p data-block-key=\"e2oji\">Visit the Learning Commons on the fifth floor, which fosters collaborative and social learning or a find quiet area in one of the many study spaces.</p>",
+          "id": "623c2228-7014-4b9d-a207-81200261fa4e"
+        }
+      ],
+      "guide_audio": null
+    },
+    {
+      "id": 6,
+      "meta": {
+        "type": "place.GalleryPageGalleryItem"
+      },
+      "media": [
+        {
+          "type": "image",
+          "value": {
+            "id": 50,
+            "title": "",
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_1959-Enhanced-NR0-045.width-1280.format-jpeg.jpg",
+              "width": 1280,
+              "height": 853,
+              "alt": "",
+              "background_position": "50% 63%",
+              "focus_x": 645.12,
+              "focus_y": 542.6436609152288,
+              "focus_width": 995.2,
+              "focus_height": 263.00300075018754
+            },
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_1959-Enh.width-420.format-jpeg.jpegquality-60.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "",
+              "background_position": "50% 63%",
+              "focus_x": 211.68,
+              "focus_y": 177.48837209302326,
+              "focus_width": 326.54999999999995,
+              "focus_height": 86.02325581395348
+            }
+          },
+          "id": "d79e05f0-efd9-4c55-be33-7e5c30e26c8c"
+        }
+      ],
+      "content": [
+        {
+          "type": "title",
+          "value": "Chancellor Paterson Library",
+          "id": "9e1df173-3424-4160-b53f-f51d1708e8fa"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"3riq2\">The main floor features space for collaborative and social learning. Offering numerous tables and quiet study spaces, the library is perfect for individual focus or group projects. Comfortable, accessible, and well-equipped to support your learning needs.</p>",
+          "id": "b32d9a6d-782a-4f08-9441-5b6ac23c76c7"
+        }
+      ],
+      "guide_audio": null
+    },
+    {
+      "id": 7,
+      "meta": {
+        "type": "place.GalleryPageGalleryItem"
+      },
+      "media": [
+        {
+          "type": "image",
+          "value": {
+            "id": 51,
+            "title": "Chancellor Paterson Library",
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_1971-Enhanced-NR0-047.width-1280.format-jpeg.jpg",
+              "width": 1280,
+              "height": 853,
+              "alt": "Chancellor Paterson Library",
+              "background_position": "62% 69%",
+              "focus_x": 795.5200000000001,
+              "focus_y": 590.6369092273069,
+              "focus_width": 636.1600000000001,
+              "focus_height": 350.03075768942233
+            },
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_1971-Enh.width-420.format-jpeg.jpegquality-60.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "Chancellor Paterson Library",
+              "background_position": "62% 69%",
+              "focus_x": 261.03,
+              "focus_y": 193.18604651162792,
+              "focus_width": 208.73999999999998,
+              "focus_height": 114.48837209302326
+            }
+          },
+          "id": "f7afffa5-bb83-4c84-9022-9dff9cab8fbd"
+        }
+      ],
+      "content": [
+        {
+          "type": "title",
+          "value": "Chancellor Paterson Library",
+          "id": "1513d760-7b8f-4ba9-ad2e-eed833ccd15a"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"kyoq1\">This area features quiet and group study areas, library services, and access to computers and printers.</p>",
+          "id": "44ca9dc8-4db4-4bdb-b5a6-0360931eb971"
+        }
+      ],
+      "guide_audio": null
+    },
+    {
+      "id": 8,
+      "meta": {
+        "type": "place.GalleryPageGalleryItem"
+      },
+      "media": [
+        {
+          "type": "image",
+          "value": {
+            "id": 52,
+            "title": "Chancellor Paterson Library",
+            "large": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_1974-Enhanced-NR0-048.width-1280.format-jpeg.jpg",
+              "width": 1280,
+              "height": 853,
+              "alt": "Chancellor Paterson Library",
+              "background_position": "38% 48%",
+              "focus_x": 487.68,
+              "focus_y": 416.58139534883725,
+              "focus_width": 998.4,
+              "focus_height": 566.3203300825206
+            },
+            "medium": {
+              "src": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_1974-Enh.width-420.format-jpeg.jpegquality-60.jpg",
+              "width": 420,
+              "height": 279,
+              "alt": "Chancellor Paterson Library",
+              "background_position": "38% 48%",
+              "focus_x": 160.02,
+              "focus_y": 136.25581395348837,
+              "focus_width": 327.59999999999997,
+              "focus_height": 185.2325581395349
+            }
+          },
+          "id": "f52935b6-7aa0-4c0e-809e-653eb71dbd1d"
+        }
+      ],
+      "content": [
+        {
+          "type": "title",
+          "value": "Chancellor Paterson Library",
+          "id": "db2c8945-9191-4db5-855a-d8d3b55a7787"
+        },
+        {
+          "type": "paragraph",
+          "value": "<p data-block-key=\"3riq2\">Our computer lab provides modern computers, high-speed internet, and software to support student research, assignments, and projects. A quiet, well-equipped space for productive work.</p>",
+          "id": "60b7fa48-233f-47f7-912f-85968e2f4c26"
+        }
+      ],
+      "guide_audio": null
+    }
+  ],
+  "labels": [],
+  "get_thumbnail": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18150-017.aa5df72b.fill-440x330.jpg",
+  "thumbnail": {
+    "url": "https://media.circuitcdn.com/lakehead/images/WebRes_IMG_18150-017.aa5df72b.fill-440x330.jpg",
+    "width": 440,
+    "height": 330,
+    "alt": "Chancellor Paterson Library"
+  },
+  "parents": [
+    {
+      "id": 5,
+      "title": "Lakehead University",
+      "type": "place.ProjectPage",
+      "slug": "lakehead-university",
+      "live": true
+    },
+    {
+      "id": 51,
+      "title": "Lakehead University - Thunder Bay",
+      "type": "place.GroupPage",
+      "slug": "lakehead-university-thunder-bay",
+      "live": false
+    }
+  ],
+  "slug_paths": [
+    "scenes",
+    "lakehead-university",
+    "lakehead-university-thunder-bay",
+    "chancellor-paterson-library"
+  ],
+  "title_paths": [
+    "Scenes",
+    "Lakehead University",
+    "Lakehead University - Thunder Bay",
+    "Chancellor Paterson Library"
+  ],
+  "slug_path": "scenes/lakehead-university/lakehead-university-thunder-bay/chancellor-paterson-library"
+}
